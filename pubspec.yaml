@@ -67,7 +67,6 @@ flutter:
 
     - assets/images/trainers/
     - assets/images/trainers/back/
-    - assets/images/trainers/icon/
     - assets/images/trainers/class/
 
     - assets/images/attacks_icons/
@@ -86,9 +85,7 @@ flutter:
     - assets/images/types/electric/back/
     - assets/images/types/electric/icon/colorful/
     - assets/images/types/electric/icon/white/
-    - assets/images/types/fairy/back/
     - assets/images/types/fairy/icon/colorful/
-    - assets/images/types/fairy/icon/white/
     - assets/images/types/fighting/back/
     - assets/images/types/fighting/icon/colorful/
     - assets/images/types/fighting/icon/white/
