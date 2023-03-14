@@ -80,27 +80,27 @@ class _PokemonScreenState extends State<PokemonScreen> {
               ],
             ),
 
-            AttackCCard(
-              number: '1',
+            AttackCard.C(
+              number: 1,
               attack: widget.pokemon.attacks[0],
             ),
-            AttackCCard(
-              number: '2',
+            AttackCard.C(
+              number: 2,
               attack: widget.pokemon.attacks[0],
             ),
-            AttackCCard(
-              number: '3',
+            AttackCard.C(
+              number: 3,
               attack: widget.pokemon.attacks[0],
             ),
-            AttackACard(
-              number: '1',
+            AttackCard.A(
+              number: 1,
               attack: widget.pokemon.attacks[0],
             ), // ATAQUE A1
-            AttackACard(
-              number: '2',
+            AttackCard.A(
+              number: 2,
               attack: widget.pokemon.attacks[0],
             ), // ATAQUE A2
-            AttackSCard(
+            AttackCard.S(
               attack: widget.pokemon.attacks[0],
             ),
           ],
