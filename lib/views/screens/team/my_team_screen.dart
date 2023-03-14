@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:poke_app/screens/team/my_pokemons_screen.dart';
-import 'package:poke_app/screens/team/my_trainers_screen.dart';
+import 'package:poke_app/views/screens/team/my_pokemons_screen.dart';
+import 'package:poke_app/views/screens/team/my_trainers_screen.dart';
 
 class TeamScreen extends StatefulWidget {
   @override

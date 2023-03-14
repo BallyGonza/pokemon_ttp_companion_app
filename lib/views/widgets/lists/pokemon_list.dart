@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:poke_app/cards/card-pokemon.dart';
-import 'package:poke_app/screens/pokemon-screen.dart';
-import '../models/pokemons.dart';
+import 'package:poke_app/data/data.dart';
+import 'package:poke_app/views/widgets/widgets.dart';
+import 'package:poke_app/views/screens/pokemon_screen.dart';
 
-class ListPokemons extends StatefulWidget {
-  const ListPokemons({Key? key}) : super(key: key);
+class PokemonList extends StatefulWidget {
+  const PokemonList({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => ListPokemonsState();
+  State<StatefulWidget> createState() => PokemonListState();
 }
 
-class ListPokemonsState extends State<ListPokemons> {
+class PokemonListState extends State<PokemonList> {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
       child: ListView.builder(
           shrinkWrap: true,
-          itemCount: pokemons.length,
+          itemCount: defaultPokemons.length,
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
-              child: CardPokemon(
-                pokemon: pokemons[index],
+              child: PokemonCard(
+                pokemon: defaultPokemons[index],
               ),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => PokemonScreen(
-                      pokemon: pokemons[index],
+                      pokemon: defaultPokemons[index],
                     ),
                   ),
                 );

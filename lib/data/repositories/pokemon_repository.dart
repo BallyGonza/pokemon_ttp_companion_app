@@ -1,34 +1,15 @@
-import 'types.dart';
-import 'attacks-c.dart';
-import 'attacks-a.dart';
-import 'attacks-s.dart';
+import 'package:poke_app/data/data.dart';
 
-class Pokemon {
-  int id;
-  String name;
-  String image;
-  String sprite;
-  int hp;
-  int basicAttack;
-  int speed;
-  List<PokemonType> types;
-  List<AttackC> attacksC;
-  List<AttackA> attacksA;
-  List<AttackS> attacksS;
+class PokemonRepository {
+  PokemonRepository();
 
-  Pokemon({
-    required this.id,
-    required this.name,
-    required this.image,
-    required this.sprite,
-    required this.hp,
-    required this.basicAttack,
-    required this.speed,
-    required this.types,
-    required this.attacksC,
-    required this.attacksA,
-    required this.attacksS,
-  });
+  Future<List<Pokemon>> getPokemons() async {
+    return defaultPokemons;
+  }
+
+  Future<Pokemon> getPokemon(int id) async {
+    return defaultPokemons.firstWhere((element) => element.id == id);
+  }
 }
 
 Pokemon bulbasaur = Pokemon(
@@ -40,9 +21,16 @@ Pokemon bulbasaur = Pokemon(
   basicAttack: 49,
   speed: 45,
   types: [grass, poison],
-  attacksC: [tackle, vineWhip],
-  attacksA: [sleepPowder, razorLeaf, poisonPowder, megaDrain],
-  attacksS: [solarBeam, sludgeBomb],
+  attacks: [
+    tackle,
+    vineWhip,
+    sleepPowder,
+    razorLeaf,
+    poisonPowder,
+    megaDrain,
+    solarBeam,
+    sludgeBomb
+  ],
 );
 
 Pokemon ivysaur = Pokemon(
@@ -54,9 +42,16 @@ Pokemon ivysaur = Pokemon(
   basicAttack: 62,
   speed: 80,
   types: [grass, poison],
-  attacksC: [tackle, vineWhip],
-  attacksA: [sleepPowder, razorLeaf, poisonPowder, megaDrain],
-  attacksS: [solarBeam, sludgeBomb],
+  attacks: [
+    tackle,
+    vineWhip,
+    sleepPowder,
+    razorLeaf,
+    poisonPowder,
+    megaDrain,
+    solarBeam,
+    sludgeBomb
+  ],
 );
 
 Pokemon venusaur = Pokemon(
@@ -68,12 +63,19 @@ Pokemon venusaur = Pokemon(
   basicAttack: 82,
   speed: 100,
   types: [grass, poison],
-  attacksC: [tackle, vineWhip],
-  attacksA: [sleepPowder, razorLeaf, poisonPowder, megaDrain],
-  attacksS: [solarBeam, sludgeBomb],
+  attacks: [
+    tackle,
+    vineWhip,
+    sleepPowder,
+    razorLeaf,
+    poisonPowder,
+    megaDrain,
+    solarBeam,
+    sludgeBomb
+  ],
 );
 
-final pokemons = <Pokemon>[bulbasaur,ivysaur,venusaur];
+final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 
 // );
 //   static List<Pokemon> pokemons() {
@@ -4669,4 +4671,3 @@ final pokemons = <Pokemon>[bulbasaur,ivysaur,venusaur];
 //           ),
 //     ];
   
-

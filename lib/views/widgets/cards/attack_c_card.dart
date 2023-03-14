@@ -1,12 +1,10 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
-import 'package:poke_app/models/attacks-c.dart';
+import 'package:poke_app/data/data.dart';
 
 class AttackCCard extends StatefulWidget {
-  String number;
-  AttackC attack;
-  AttackCCard({Key? key, required this.number, required this.attack})
+  final String number;
+  final Attack attack;
+  const AttackCCard({Key? key, required this.number, required this.attack})
       : super(key: key);
 
   @override

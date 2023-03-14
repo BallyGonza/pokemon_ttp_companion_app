@@ -1,5 +1,5 @@
-import 'biblioteca_iconos_types.dart';
-import 'biblioteca_colores.dart';
+import 'constants/images.dart';
+import 'constants/colors.dart';
 
 // Bulbasaur
 int bulbasaur_id = 001; //ID

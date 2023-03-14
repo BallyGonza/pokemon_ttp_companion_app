@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:poke_app/lists/list-pokemons.dart';
+import 'package:poke_app/views/widgets/widgets.dart';
 
 class PokedexScreen extends StatefulWidget {
   const PokedexScreen({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
         ],
         elevation: 0.9,
       ),
-      body: const ListPokemons(),
+      body: const PokemonList(),
     );
   }
 }

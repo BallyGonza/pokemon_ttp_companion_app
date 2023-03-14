@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:poke_app/screens/pokedex-screen.dart';
-import 'package:poke_app/screens/team/my_pokemons_screen.dart';
+import 'package:poke_app/views/screens/pokedex_screen.dart';
+import 'package:poke_app/views/screens/team/my_pokemons_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class LandingScreen extends StatelessWidget {
+  const LandingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
