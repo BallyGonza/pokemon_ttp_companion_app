@@ -7,21 +7,21 @@ class AttackCard extends StatelessWidget {
     required this.number,
     required this.attack,
   })  : color = Colors.amberAccent[100],
-        type = "c",
+        type = "C",
         super(key: key);
   AttackCard.A({
     Key? key,
     required this.number,
     required this.attack,
   })  : color = Colors.blueAccent[100],
-        type = "a",
+        type = "A",
         super(key: key);
   AttackCard.S({
     Key? key,
     required this.attack,
     this.number,
   })  : color = Colors.deepPurple[100],
-        type = "s",
+        type = "S",
         super(key: key);
 
   final int? number;
@@ -35,7 +35,7 @@ class AttackCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Card(
         child: ListTile(
-          leading: type == 's'
+          leading: type == 'S'
               ? Image.asset(
                   "assets/images/attacks_icons/$type.png",
                   width: 45,

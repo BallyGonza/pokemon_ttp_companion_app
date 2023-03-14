@@ -1,26 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:poke_app/data/models/pokemon.dart';
+import 'package:poke_app/data/data.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
-class PokemonScreen extends StatefulWidget {
+class PokemonScreen extends StatelessWidget {
+  const PokemonScreen({
+    Key? key,
+    required this.pokemon,
+  }) : super(key: key);
+
   final Pokemon pokemon;
-  const PokemonScreen({Key? key, required this.pokemon}) : super(key: key);
 
-  @override
-  State<PokemonScreen> createState() => _PokemonScreenState();
-}
-
-class _PokemonScreenState extends State<PokemonScreen> {
   @override
   Widget build(BuildContext context) {
+    List<Attack> attacksA =
+        pokemon.attacks.where((element) => element.id == 'A').toList();
+    List<Attack> attacksC =
+        pokemon.attacks.where((element) => element.id == 'C').toList();
+    List<Attack> attacksS =
+        pokemon.attacks.where((element) => element.id == 'S').toList();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: widget.pokemon.types[0].color,
+        backgroundColor: pokemon.types[0].color,
         automaticallyImplyLeading: false,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
-            widget.pokemon.name,
+            pokemon.name,
             textAlign: TextAlign.left,
             style: const TextStyle(
                 fontSize: 30.0, //tamaño del texto
@@ -34,7 +39,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Image.asset(
-              widget.pokemon.sprite, // SPRITE POKEMON
+              pokemon.sprite, // SPRITE POKEMON
             ),
           ),
         ],
@@ -42,7 +47,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(widget.pokemon.types[0].backImg),
+            image: AssetImage(pokemon.types[0].backImg),
             fit: BoxFit.cover,
           ),
         ),
@@ -65,43 +70,42 @@ class _PokemonScreenState extends State<PokemonScreen> {
                         ),
                       ),
                       child: Image.asset(
-                        widget.pokemon.image,
+                        pokemon.image,
                       ), // IMAGEN POKEMON
                     ),
                   ],
                 ),
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    spec('Speed:', widget.pokemon.speed),
-                    spec('Basic Damage:', widget.pokemon.basicAttack),
+                    spec('Speed:', pokemon.speed),
+                    spec('Basic Damage:', pokemon.basicAttack),
                   ],
                 ),
               ],
             ),
-
             AttackCard.C(
               number: 1,
-              attack: widget.pokemon.attacks[0],
+              attack: attacksC[0],
             ),
             AttackCard.C(
               number: 2,
-              attack: widget.pokemon.attacks[0],
+              attack: attacksC[0],
             ),
             AttackCard.C(
               number: 3,
-              attack: widget.pokemon.attacks[0],
+              attack: attacksC[1],
             ),
             AttackCard.A(
               number: 1,
-              attack: widget.pokemon.attacks[0],
-            ), // ATAQUE A1
+              attack: attacksA[0],
+            ),
             AttackCard.A(
               number: 2,
-              attack: widget.pokemon.attacks[0],
-            ), // ATAQUE A2
+              attack: attacksA[1],
+            ),
             AttackCard.S(
-              attack: widget.pokemon.attacks[0],
+              attack: attacksS[0],
             ),
           ],
         ),
@@ -109,31 +113,31 @@ class _PokemonScreenState extends State<PokemonScreen> {
     );
   }
 
-  Row spec(String title, int value) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: const TextStyle(
-              // Estilo del texto
-              fontSize: 15.0, //tamaño del texto
-              color: Colors.black, // Color texto
-              fontFamily: 'Source Sans Pro',
-              fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        Text(
-          value.toString(),
-          style: const TextStyle(
-              fontSize: 15.0, //tamaño del texto
-              color: Colors.black, // Color texto
-              fontFamily: 'Source Sans Pro',
-              fontWeight: FontWeight.bold),
-        )
-      ],
+  Widget spec(String title, int value) {
+    return SizedBox(
+      width: 120,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+                // Estilo del texto
+                fontSize: 15.0, //tamaño del texto
+                color: Colors.black, // Color texto
+                fontFamily: 'Source Sans Pro',
+                fontWeight: FontWeight.bold),
+          ),
+          Text(
+            value.toString(),
+            style: const TextStyle(
+                fontSize: 15.0, //tamaño del texto
+                color: Colors.black, // Color texto
+                fontFamily: 'Source Sans Pro',
+                fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }
