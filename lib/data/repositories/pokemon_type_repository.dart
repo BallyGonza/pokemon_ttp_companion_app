@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:poke_app/data/constants/constants.dart';
 import 'package:poke_app/data/models/models.dart';
 
@@ -6,186 +5,186 @@ class PokemonTypeRepository {
   PokemonTypeRepository();
 }
 
-PokemonType bug = PokemonType(
+PokemonTypeModel bug = PokemonTypeModel(
   name: 'Bug',
-  image: 'assets/images/pokemon_types/bug/icon/colorful/bug.png',
-  backImg: 'assets/images/pokemon_types/bug/back/bug.png',
-  color: const Color(bugColor),
-  weaknesses: ['Fire', 'Flying', 'Rock'],
-  resistances: ['Grass', 'Fighting', 'Ground'],
+  image: bugIcon,
+  backImg: bugBack,
+  color: bugColor,
+  weaknesses: [fire, flying, rock],
+  resistances: [grass, fighting, ground],
 );
 
-PokemonType dark = PokemonType(
+PokemonTypeModel dark = PokemonTypeModel(
   name: 'Dark',
-  image: 'assets/images/pokemon_types/dark/icon/colorful/dark.png',
-  backImg: 'assets/images/pokemon_types/dark/back/dark.png',
-  color: const Color(darkColor),
-  weaknesses: ['Fighting', 'Bug', 'Fairy'],
-  resistances: ['Ghost', 'Dark'],
-  immunities: ['Psychic'],
+  image: darkIcon,
+  backImg: darkBack,
+  color: darkColor,
+  weaknesses: [fighting, bug, fairy],
+  resistances: [ghost, dark],
+  immunities: [psychic],
 );
 
-PokemonType dragon = PokemonType(
+PokemonTypeModel dragon = PokemonTypeModel(
   name: 'Dragon',
-  image: 'assets/images/pokemon_types/dragon/icon/colorful/dragon.png',
-  backImg: 'assets/images/pokemon_types/dragon/back/dragon.png',
-  color: const Color(dragonColor),
-  weaknesses: ['Ice', 'Dragon', 'Fairy'],
-  resistances: ['Fire', 'Water', 'Grass', 'Electric'],
+  image: dragonIcon,
+  backImg: dragonBack,
+  color: dragonColor,
+  weaknesses: [ice, dragon, fairy],
+  resistances: [fire, water, grass, electric],
 );
 
-PokemonType electric = PokemonType(
+PokemonTypeModel electric = PokemonTypeModel(
   name: 'Electric',
-  image: 'assets/images/pokemon_types/electric/icon/colorful/electric.png',
-  backImg: 'assets/images/pokemon_types/electric/back/electric.png',
-  color: const Color(electricColor),
-  weaknesses: ['Ground', 'Fighting'],
-  resistances: ['Steel', 'Flying', 'Electric'],
+  image: electricIcon,
+  backImg: electricBack,
+  color: electricColor,
+  weaknesses: [ground, fighting],
+  resistances: [steel, flying, electric],
 );
 
-PokemonType fairy = PokemonType(
+PokemonTypeModel fairy = PokemonTypeModel(
   name: 'Fairy',
-  image: 'assets/images/pokemon_types/fairy/icon/colorful/fairy.png',
-  backImg: 'assets/images/pokemon_types/fairy/back/fairy.png',
-  color: const Color(fairyColor),
-  weaknesses: ['Poison', 'Steel'],
-  resistances: ['Fighting', 'Bug', 'Dark'],
-  immunities: ['Dragon'],
+  image: fairyIcon,
+  backImg: fairyBack,
+  color: fairyColor,
+  weaknesses: [poison, steel],
+  resistances: [fighting, bug, dark],
+  immunities: [dragon],
 );
 
-PokemonType fighting = PokemonType(
+PokemonTypeModel fighting = PokemonTypeModel(
   name: 'Fighting',
-  image: 'assets/images/pokemon_types/fighting/icon/colorful/fighting.png',
-  backImg: 'assets/images/pokemon_types/fighting/back/fighting.png',
-  color: const Color(fightingColor),
-  weaknesses: ['Flying', 'Psychic', 'Fairy'],
-  resistances: ['Bug', 'Rock', 'Dark'],
+  image: fightIcon,
+  backImg: fightBack,
+  color: fightingColor,
+  weaknesses: [flying, psychic, fairy],
+  resistances: [bug, rock, dark],
 );
 
-PokemonType fire = PokemonType(
+PokemonTypeModel fire = PokemonTypeModel(
   name: 'Fire',
-  image: 'assets/images/pokemon_types/fire/icon/colorful/fire.png',
-  backImg: 'assets/images/pokemon_types/fire/back/fire.png',
-  color: const Color(fireColor),
-  weaknesses: ['Water', 'Ground', 'Rock'],
-  resistances: ['Fire', 'Ice', 'Grass', 'Bug', 'Steel', 'Fairy'],
+  image: fireIcon,
+  backImg: fireBack,
+  color: fireColor,
+  weaknesses: [water, ground, rock],
+  resistances: [fire, ice, grass, bug, steel, fairy],
 );
 
-PokemonType flying = PokemonType(
+PokemonTypeModel flying = PokemonTypeModel(
   name: 'Flying',
-  image: 'assets/images/pokemon_types/flying/icon/colorful/flying.png',
-  backImg: 'assets/images/pokemon_types/flying/back/flying.png',
-  color: const Color(flyingColor),
-  weaknesses: ['Electric', 'Rock', 'Ice'],
-  resistances: ['Fighting', 'Bug', 'Grass'],
-  immunities: ['Ground'],
+  image: flyIcon,
+  backImg: flyBack,
+  color: flyingColor,
+  weaknesses: [electric, rock, ice],
+  resistances: [fighting, bug, grass],
+  immunities: [ground],
 );
 
-PokemonType ghost = PokemonType(
+PokemonTypeModel ghost = PokemonTypeModel(
   name: 'Ghost',
-  image: 'assets/images/pokemon_types/ghost/icon/colorful/ghost.png',
-  backImg: 'assets/images/pokemon_types/ghost/back/ghost.png',
-  color: const Color(ghostColor),
-  weaknesses: ['Ghost', 'Dark'],
-  resistances: ['Poison', 'Bug'],
-  immunities: ['Normal', 'Fighting'],
+  image: ghostIcon,
+  backImg: ghostBack,
+  color: ghostColor,
+  weaknesses: [ghost, dark],
+  resistances: [poison, bug],
+  immunities: [normal, fighting],
 );
 
-PokemonType grass = PokemonType(
+PokemonTypeModel grass = PokemonTypeModel(
   name: 'Grass',
-  image: 'assets/images/pokemon_types/grass/icon/colorful/grass.png',
-  backImg: 'assets/images/pokemon_types/grass/back/grass.png',
-  color: const Color(grassColor),
-  weaknesses: ['Fire', 'Flying', 'Ice', 'Poison', 'Bug'],
-  resistances: ['Water', 'Electric', 'Grass', 'Ground'],
+  image: grassIcon,
+  backImg: grassBack,
+  color: grassColor,
+  weaknesses: [fire, flying, ice, poison, bug],
+  resistances: [water, electric, grass, ground],
 );
 
-PokemonType ground = PokemonType(
+PokemonTypeModel ground = PokemonTypeModel(
   name: 'Ground',
-  image: 'assets/images/pokemon_types/ground/icon/colorful/ground.png',
-  backImg: 'assets/images/pokemon_types/ground/back/ground.png',
-  color: const Color(groundColor),
-  weaknesses: ['Water', 'Grass', 'Ice'],
-  resistances: ['Poison', 'Rock', 'Fairy'],
-  immunities: ['Electric'],
+  image: groundIcon,
+  backImg: groundBack,
+  color: groundColor,
+  weaknesses: [water, grass, ice],
+  resistances: [poison, rock, fairy],
+  immunities: [electric],
 );
 
-PokemonType ice = PokemonType(
+PokemonTypeModel ice = PokemonTypeModel(
   name: 'Ice',
-  image: 'assets/images/pokemon_types/ice/icon/colorful/ice.png',
-  backImg: 'assets/images/pokemon_types/ice/back/ice.png',
-  color: const Color(iceColor),
-  weaknesses: ['Fire', 'Fighting', 'Rock', 'Steel'],
-  resistances: ['Ice'],
+  image: iceIcon,
+  backImg: iceBack,
+  color: iceColor,
+  weaknesses: [fire, fighting, rock, steel],
+  resistances: [ice],
 );
 
-PokemonType normal = PokemonType(
+PokemonTypeModel normal = PokemonTypeModel(
   name: 'Normal',
-  image: 'assets/images/pokemon_types/normal/icon/colorful/normal.png',
-  backImg: 'assets/images/pokemon_types/normal/back/normal.png',
-  color: const Color(normalColor),
-  weaknesses: ['Fighting'],
-  immunities: ['Ghost'],
+  image: normalIcon,
+  backImg: normalBack,
+  color: normalColor,
+  weaknesses: [fighting],
+  immunities: [ghost],
 );
 
-PokemonType poison = PokemonType(
+PokemonTypeModel poison = PokemonTypeModel(
   name: 'Poison',
-  image: 'assets/images/pokemon_types/poison/icon/colorful/poison.png',
-  backImg: 'assets/images/pokemon_types/poison/back/poison.png',
-  color: const Color(poisonColor),
-  weaknesses: ['Ground', 'Psychic'],
-  resistances: ['Grass', 'Fighting', 'Poison'],
+  image: poisonIcon,
+  backImg: poisonBack,
+  color: poisonColor,
+  weaknesses: [ground, psychic],
+  resistances: [grass, fighting, poison],
 );
 
-PokemonType psychic = PokemonType(
+PokemonTypeModel psychic = PokemonTypeModel(
   name: 'Psychic',
-  image: 'assets/images/pokemon_types/psychic/icon/colorful/psychic.png',
-  backImg: 'assets/images/pokemon_types/psychic/back/psychic.png',
-  color: const Color(psychicColor),
-  weaknesses: ['Bug', 'Ghost', 'Dark'],
-  resistances: ['Fighting', 'Psychic'],
+  image: psyIcon,
+  backImg: psyBack,
+  color: psychicColor,
+  weaknesses: [bug, ghost, dark],
+  resistances: [fighting, psychic],
 );
 
-PokemonType rock = PokemonType(
+PokemonTypeModel rock = PokemonTypeModel(
   name: 'Rock',
-  image: 'assets/images/pokemon_types/rock/icon/colorful/rock.png',
-  backImg: 'assets/images/pokemon_types/rock/back/rock.png',
-  color: const Color(rockColor),
-  weaknesses: ['Water', 'Grass', 'Fighting', 'Ground'],
-  resistances: ['Fire', 'Flying', 'Poison', 'Normal'],
+  image: rockIcon,
+  backImg: rockBack,
+  color: rockColor,
+  weaknesses: [water, grass, fighting, ground],
+  resistances: [fire, flying, poison, normal],
 );
 
-PokemonType steel = PokemonType(
+PokemonTypeModel steel = PokemonTypeModel(
   name: 'Steel',
-  image: 'assets/images/pokemon_types/steel/icon/colorful/steel.png',
-  backImg: 'assets/images/pokemon_types/steel/back/steel.png',
-  color: const Color(steelColor),
-  weaknesses: ['Fire', 'Fighting', 'Ground'],
+  image: steelIcon,
+  backImg: steelBack,
+  color: steelColor,
+  weaknesses: [fire, fighting, ground],
   resistances: [
-    'Normal',
-    'Grass',
-    'Ice',
-    'Flying',
-    'Psychic',
-    'Bug',
-    'Rock',
-    'Dragon',
-    'Steel',
-    'Fairy'
+    normal,
+    grass,
+    ice,
+    flying,
+    psychic,
+    bug,
+    rock,
+    dragon,
+    steel,
+    fairy
   ],
-  immunities: ['Poison'],
+  immunities: [poison],
 );
 
-PokemonType water = PokemonType(
+PokemonTypeModel water = PokemonTypeModel(
   name: 'Water',
-  image: 'assets/images/pokemon_types/water/icon/colorful/water.png',
-  backImg: 'assets/images/pokemon_types/water/back/water.png',
-  color: const Color(waterColor),
-  weaknesses: ['Grass', 'Electric'],
-  resistances: ['Fire', 'Water', 'Ice', 'Steel'],
+  image: waterIcon,
+  backImg: waterBack,
+  color: waterColor,
+  weaknesses: [grass, electric],
+  resistances: [fire, water, ice, steel],
 );
 
-List<PokemonType> types = [
+List<PokemonTypeModel> types = [
   bug,
   dark,
   dragon,

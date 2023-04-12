@@ -1,15 +1,13 @@
-import 'package:flutter/material.dart';
-
-class PokemonType {
+class PokemonTypeModel {
   String name;
   String image;
   String backImg;
-  Color color;
-  List<String>? weaknesses;
-  List<String>? resistances;
-  List<String>? immunities;
+  int color;
+  List<PokemonTypeModel>? weaknesses;
+  List<PokemonTypeModel>? resistances;
+  List<PokemonTypeModel>? immunities;
 
-  PokemonType({
+  PokemonTypeModel({
     required this.name,
     required this.image,
     required this.backImg,

@@ -25,7 +25,7 @@ class AttackCard extends StatelessWidget {
         super(key: key);
 
   final int? number;
-  final Attack attack;
+  final AttackModel attack;
   final Color? color;
   final String? type;
 

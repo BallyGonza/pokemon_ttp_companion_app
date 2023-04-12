@@ -1,64 +1,84 @@
-const String normalIcon = "images/type_icons/NORMAL1.png";
-const String fireIcon = "images/type_icons/FIRE1.png";
-const String waterIcon = "images/type_icons/WATER1.png";
-const String grassIcon = "images/type_icons/GRASS1.png";
-const String poisonIcon = "images/type_icons/POISON1.png";
-const String steelIcon = "images/type_icons/STEEL1.png";
-const String rockIcon = "images/type_icons/ROCK1.png";
-const String fightIcon = "images/type_icons/FIGHT1.png";
-const String psyIcon = "images/type_icons/PSY1.png";
-const String darkIcon = "images/type_icons/DARK1.png";
-const String ghostIcon = "images/type_icons/GHOST1.png";
-const String dragonIcon = "images/type_icons/DRAGON1.png";
-const String iceIcon = "images/type_icons/ICE1.png";
-const String flyIcon = "images/type_icons/FLY1.png";
-const String electricIcon = "images/type_icons/ELECTRIC1.png";
-const String bugIcon = "images/type_icons/BUG1.png";
-const String groundIcon = "images/type_icons/GROUND1.png";
+const String normalIcon =
+    "assets/images/pokemon_types/normal/icon/colorful/normal.png";
+const String fireIcon =
+    "assets/images/pokemon_types/fire/icon/colorful/fire.png";
+const String waterIcon =
+    "assets/images/pokemon_types/water/icon/colorful/water.png";
+const String grassIcon =
+    "assets/images/pokemon_types/grass/icon/colorful/grass.png";
+const String poisonIcon =
+    "assets/images/pokemon_types/poison/icon/colorful/poison.png";
+const String steelIcon =
+    "assets/images/pokemon_types/steel/icon/colorful/steel.png";
+const String rockIcon =
+    "assets/images/pokemon_types/rock/icon/colorful/rock.png";
+const String fightIcon =
+    "assets/images/pokemon_types/fighting/icon/colorful/fighting.png";
+const String psyIcon =
+    "assets/images/pokemon_types/psychic/icon/colorful/psychic.png";
+const String darkIcon =
+    "assets/images/pokemon_types/dark/icon/colorful/dark.png";
+const String ghostIcon =
+    "assets/images/pokemon_types/ghost/icon/colorful/ghost.png";
+const String dragonIcon =
+    "assets/images/pokemon_types/dragon/icon/colorful/dragon.png";
+const String iceIcon = "assets/images/pokemon_types/ice/icon/colorful/ice.png";
+const String flyIcon =
+    "assets/images/pokemon_types/flying/icon/colorful/flying.png";
+const String electricIcon =
+    "assets/images/pokemon_types/electric/icon/colorful/electric.png";
+const String bugIcon = "assets/images/pokemon_types/bug/icon/colorful/bug.png";
+const String groundIcon =
+    "assets/images/pokemon_types/ground/icon/colorful/ground.png";
+const String fairyIcon =
+    "assets/images/pokemon_types/fairy/icon/colorful/fairy.png";
 
 // Pokeball Fondo Poke
 
-const pokeballBack = 'images/pokeball.png';
+const pokeballBack = 'assets/images/pokeball.png';
 
 // Fondo pokedex
 
-const pokedexBack = 'images/back_pokedex.jpg';
+const pokedexBack = 'assets/images/back_pokedex.jpg';
 
 // Fondos por Type
 
-const String normalBback = "images/backs_pokemons/B_Normal.png";
-const String fireBack = "images/backs_pokemons/B_Fire.png";
-const String waterBack = "images/backs_pokemons/B_Water.png";
-const String grassBack = "images/backs_pokemons/b_Grass.png";
-const String poisonBack = "images/backs_pokemons/B_Poison.png";
-const String steelBack = "images/backs_pokemons/B_Steel.png";
-const String rockBack = "images/backs_pokemons/B_Rock.png";
-const String fightBack = "images/backs_pokemons/B_Fight.png";
-const String psyBack = "images/backs_pokemons/B_Psy.png";
-const String darkBack = "images/backs_pokemons/B_Dark.png";
-const String ghostBack = "images/backs_pokemons/B_Ghost.png";
-const String dragonBack = "images/backs_pokemons/B_Dragon.png";
-const String iceBack = "images/backs_pokemons/B_Ice.png";
-const String flyBack = "images/backs_pokemons/B_Fly.png";
-const String electricBack = "images/backs_pokemons/B_Electric.png";
-const String bugBack = "images/backs_pokemons/B_Bug.png";
-const String groundBack = "images/backs_pokemons/B_Ground.png";
-const String trainersBack = "images/backs_pokemons/B_Trainers.png";
+const String normalBack = "assets/images/pokemon_types/normal/back/normal.png";
+const String fireBack = "assets/images/pokemon_types/fire/back/fire.png";
+const String waterBack = "assets/images/pokemon_types/water/back/water.png";
+const String grassBack = "assets/images/pokemon_types/grass/back/grass.png";
+const String poisonBack = "assets/images/pokemon_types/poison/back/poison.png";
+const String steelBack = "assets/images/pokemon_types/steel/back/steel.png";
+const String rockBack = "assets/images/pokemon_types/rock/back/rock.png";
+const String fightBack =
+    "assets/images/pokemon_types/fighting/back/fighting.png";
+const String psyBack = "assets/images/pokemon_types/psychic/back/psychic.png";
+const String darkBack = "assets/images/pokemon_types/dark/back/dark.png";
+const String ghostBack = "assets/images/pokemon_types/ghost/back/ghost.png";
+const String dragonBack = "assets/images/pokemon_types/dragon/back/dragon.png";
+const String iceBack = "assets/images/pokemon_types/ice/back/ice.png";
+const String flyBack = "assets/images/pokemon_types/flying/back/flying.png";
+const String electricBack =
+    "assets/images/pokemon_types/electric/back/electric.png";
+const String bugBack = "assets/images/pokemon_types/bug/back/bug.png";
+const String groundBack = "assets/images/pokemon_types/ground/back/ground.png";
+const String fairyBack = "assets/images/pokemon_types/fairy/back/fairy.png";
+const String trainersBack = "assets/images/trainers/back/trainers.png";
 
 // Iconos C1,C2,C3,A1,A2,S Ataques
 
-const String c1Icon = "images/ataques_iconos/attLogos_C1.png";
-const String c2Icon = "images/ataques_iconos/attLogos_C2.png";
-const String c3Icon = "images/ataques_iconos/attLogos_C3.png";
-const String a1Icon = "images/ataques_iconos/attLogos_A1.png";
-const String a2Icon = "images/ataques_iconos/attLogos_A2.png";
-const String sIcon = "images/ataques_iconos/attLogos_S.png";
+const String c1Icon = "assets/images/attacks_icons/C1.png";
+const String c2Icon = "assets/images/attacks_icons/C2.png";
+const String c3Icon = "assets/images/attacks_icons/C3.png";
+const String a1Icon = "assets/images/attacks_icons/A1.png";
+const String a2Icon = "assets/images/attacks_icons/A2.png";
+const String sIcon = "assets/images/attacks_icons/S.png";
 
 // Iconos Trainers
 
-const String c1Trainer = "images/trainers_iconos/AttLogosTrainers_C1.png";
-const String c2Trainer = "images/trainers_iconos/AttLogosTrainers_C2.png";
-const String c3Trainer = "images/trainers_iconos/AttLogosTrainers_C3.png";
-const String a1Trainer = "images/trainers_iconos/AttLogosTrainers_A1.png";
-const String a2Trainer = "images/trainers_iconos/AttLogosTrainers_A2.png";
-const String sTrainer = "images/trainers_iconos/AttLogosTrainers_S.png";
+const String c1Trainer = "assets/images/trainers/class/C1.png";
+const String c2Trainer = "assets/images/trainers/class/C2.png";
+const String c3Trainer = "assets/images/trainers/class/C3.png";
+const String a1Trainer = "assets/images/trainers/class/A1.png";
+const String a2Trainer = "assets/images/trainers/class/A2.png";
+const String sTrainer = "assets/images/trainers/class/S.png";

@@ -8,19 +8,19 @@ class PokemonScreen extends StatelessWidget {
     required this.pokemon,
   }) : super(key: key);
 
-  final Pokemon pokemon;
+  final PokemonModel pokemon;
 
   @override
   Widget build(BuildContext context) {
-    List<Attack> attacksA =
+    List<AttackModel> attacksA =
         pokemon.attacks.where((element) => element.id == 'A').toList();
-    List<Attack> attacksC =
+    List<AttackModel> attacksC =
         pokemon.attacks.where((element) => element.id == 'C').toList();
-    List<Attack> attacksS =
+    List<AttackModel> attacksS =
         pokemon.attacks.where((element) => element.id == 'S').toList();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: pokemon.types[0].color,
+        backgroundColor: Color(pokemon.types[0].color),
         automaticallyImplyLeading: false,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),

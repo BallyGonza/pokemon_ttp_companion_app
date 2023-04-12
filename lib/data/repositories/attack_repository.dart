@@ -4,7 +4,7 @@ class AttackRepository {
   AttackRepository();
 }
 
-Attack sleepPowder = Attack(
+AttackModel sleepPowder = AttackModel(
   id: 'A',
   name: 'Sleep Powder',
   image: '',
@@ -16,7 +16,7 @@ Attack sleepPowder = Attack(
       'A weak attack that can be used only on a target with a grass-like body.',
 );
 
-Attack razorLeaf = Attack(
+AttackModel razorLeaf = AttackModel(
   id: 'A',
   name: 'Razor Leaf',
   image: '',
@@ -28,7 +28,7 @@ Attack razorLeaf = Attack(
       'A strong attack that can be used only on a target with a grass-like body.',
 );
 
-Attack poisonPowder = Attack(
+AttackModel poisonPowder = AttackModel(
   id: 'A',
   name: 'Poison Powder',
   image: '',
@@ -40,7 +40,7 @@ Attack poisonPowder = Attack(
       'A weak attack that can be used only on a target with a grass-like body.',
 );
 
-Attack megaDrain = Attack(
+AttackModel megaDrain = AttackModel(
   id: 'A',
   name: 'Mega Drain',
   image: '',
@@ -52,7 +52,7 @@ Attack megaDrain = Attack(
       'A strong attack that can be used only on a target with a grass-like body.',
 );
 
-Attack tackle = Attack(
+AttackModel tackle = AttackModel(
   id: 'C',
   name: 'Tackle',
   image: '',
@@ -64,7 +64,7 @@ Attack tackle = Attack(
       'A physical attack in which the user charges the target and then hits it with a sharp, hard punch.',
 );
 
-Attack vineWhip = Attack(
+AttackModel vineWhip = AttackModel(
   id: 'C',
   name: 'Vine Whip',
   image: '',
@@ -76,7 +76,7 @@ Attack vineWhip = Attack(
       'A weak attack that can be used only on a target with a vines or a grass-like body.',
 );
 
-Attack solarBeam = Attack(
+AttackModel solarBeam = AttackModel(
   id: 'S',
   name: 'Solar Beam',
   image: '',
@@ -88,7 +88,7 @@ Attack solarBeam = Attack(
       'A strong attack that can be used only on a target with a grass-like body.',
 );
 
-Attack sludgeBomb = Attack(
+AttackModel sludgeBomb = AttackModel(
   id: 'S',
   name: 'Sludge Bomb',
   image: '',

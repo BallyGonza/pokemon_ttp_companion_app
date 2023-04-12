@@ -3,16 +3,16 @@ import 'package:poke_app/data/data.dart';
 class PokemonRepository {
   PokemonRepository();
 
-  Future<List<Pokemon>> getPokemons() async {
+  Future<List<PokemonModel>> getPokemons() async {
     return defaultPokemons;
   }
 
-  Future<Pokemon> getPokemon(int id) async {
+  Future<PokemonModel> getPokemon(int id) async {
     return defaultPokemons.firstWhere((element) => element.id == id);
   }
 }
 
-Pokemon bulbasaur = Pokemon(
+PokemonModel bulbasaur = PokemonModel(
   id: 001,
   name: 'Bulbasaur',
   image: 'assets/images/images_pokemons/001.png',
@@ -33,7 +33,7 @@ Pokemon bulbasaur = Pokemon(
   ],
 );
 
-Pokemon ivysaur = Pokemon(
+PokemonModel ivysaur = PokemonModel(
   id: 002,
   name: 'Ivysaur',
   image: 'assets/images/images_pokemons/002.png',
@@ -54,7 +54,7 @@ Pokemon ivysaur = Pokemon(
   ],
 );
 
-Pokemon venusaur = Pokemon(
+PokemonModel venusaur = PokemonModel(
   id: 003,
   name: 'Venusaur',
   image: 'assets/images/images_pokemons/003.png',
@@ -75,12 +75,12 @@ Pokemon venusaur = Pokemon(
   ],
 );
 
-final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
+final List<PokemonModel> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 
 // );
-//   static List<Pokemon> pokemons() {
+//   static List<PokemonModel> pokemons() {
 //     return [
-//       Pokemon(
+//       PokemonModel(
 //           001, //ID
 //           "Bulbasaur", //Name
 //           "images/images_pokemones/001.png", //Url Imagen
@@ -111,7 +111,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, //  speed
 //           "/001" //Screen URL
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           002,
 //           "Ivysaur",
 //           "images/images_pokemones/002.png",
@@ -142,7 +142,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/002" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           003,
 //           "Venusaur",
 //           "images/images_pokemones/003.png",
@@ -173,7 +173,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/003" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           004, //ID
 //           "Charmander", //Name
 //           "images/images_pokemones/004.png", //Url Imagen
@@ -204,7 +204,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/004" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           005, //ID
 //           "Charmeleon", //Name
 //           "images/images_pokemones/005.png", //Url Imagen
@@ -235,7 +235,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/005" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           006, //ID
 //           "Charizard", //Name
 //           "images/images_pokemones/006.png", //Url Imagen
@@ -266,7 +266,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/006" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           007, //ID
 //           "Squirtle", //Name
 //           "images/images_pokemones/007.png", //Url Imagen
@@ -297,7 +297,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/007" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           008, //ID
 //           "Wartortle", //Name
 //           "images/images_pokemones/008.png", //Url Imagen
@@ -328,7 +328,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/008" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           009, //ID
 //           "Blastoise", //Name
 //           "images/images_pokemones/009.png", //Url Imagen
@@ -359,7 +359,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/009" //  Url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           013, //ID
 //           "Weedle", //Name
 //           "images/images_pokemones/013.png", //Url Imagen
@@ -390,7 +390,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/013" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           014, //ID
 //           "Kakuna", //Name
 //           "images/images_pokemones/014.png", //Url Imagen
@@ -421,7 +421,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/014" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           015, //ID
 //           "Beedrill", //Name
 //           "images/images_pokemones/015.png", //Url Imagen
@@ -452,7 +452,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/015" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           016, //ID
 //           "Pidgey", //Name
 //           "images/images_pokemones/016.png", //Url Imagen
@@ -483,7 +483,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/016" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           017, //ID
 //           "Pidgeotto", //Name
 //           "images/images_pokemones/017.png", //Url Imagen
@@ -514,7 +514,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/017" //Url Pagina
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           018, //ID
 //           "Pidgeot", //Name
 //           "images/images_pokemones/018.png", //Url Imagen
@@ -545,7 +545,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/018" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           025, //ID
 //           "Pikachu", //Name
 //           "images/images_pokemones/025.png", //Url Imagen
@@ -576,7 +576,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/025" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           026, //ID
 //           "Raichu", //Name
 //           "images/images_pokemones/026.png", //Url Imagen
@@ -607,7 +607,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/026" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           032, //ID
 //           "Nidoran", //Name
 //           "images/images_pokemones/032.png", //Url Imagen
@@ -638,7 +638,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/032" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           033, //ID
 //           "Nidorino", //Name
 //           "images/images_pokemones/033.png", //Url Imagen
@@ -669,7 +669,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/033" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           034, //ID
 //           "Nidoking", //Name
 //           "images/images_pokemones/034.png", //Url Imagen
@@ -700,7 +700,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/034" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           035, //ID
 //           "Clefairy", //Name
 //           "images/images_pokemones/035.png", //Url Imagen
@@ -731,7 +731,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/035" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           036, //ID
 //           "Clefable", //Name
 //           "images/images_pokemones/036.png", //Url Imagen
@@ -762,7 +762,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/036" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           037, //ID
 //           "Vulpix", //Name
 //           "images/images_pokemones/037.png", //Url Imagen
@@ -793,7 +793,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/037" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           038, //ID
 //           "Ninetales", //Name
 //           "images/images_pokemones/038.png", //Url Imagen
@@ -824,7 +824,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/038" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           039, //ID
 //           "Jigglypuff", //Name
 //           "images/images_pokemones/039.png", //Url Imagen
@@ -855,7 +855,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/039" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           040, //ID
 //           "Wigglytuff", //Name
 //           "images/images_pokemones/040.png", //Url Imagen
@@ -886,7 +886,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/040" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           041, //ID
 //           "Zubat", //Name
 //           "images/images_pokemones/041.png", //Url Imagen
@@ -917,7 +917,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/041" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           042, //ID
 //           "Golbat", //Name
 //           "images/images_pokemones/042.png", //Url Imagen
@@ -948,7 +948,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/042" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           043, //ID
 //           "Oddish", //Name
 //           "images/images_pokemones/043.png", //Url Imagen
@@ -979,7 +979,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/043" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           044, //ID
 //           "Gloom", //Name
 //           "images/images_pokemones/044.png", //Url Imagen
@@ -1010,7 +1010,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/044" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           045, //ID
 //           "Vileplume", //Name
 //           "images/images_pokemones/045.png", //Url Imagen
@@ -1041,7 +1041,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/045" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           046, //ID
 //           "Paras", //Name
 //           "images/images_pokemones/046.png", //Url Imagen
@@ -1072,7 +1072,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/046" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           047, //ID
 //           "Parasect", //Name
 //           "images/images_pokemones/047.png", //Url Imagen
@@ -1103,7 +1103,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/047" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           050, //ID
 //           "Diglett", //Name
 //           "images/images_pokemones/050.png", //Url Imagen
@@ -1134,7 +1134,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/050" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           051, //ID
 //           "Dugtrio", //Name
 //           "images/images_pokemones/051.png", //Url Imagen
@@ -1165,7 +1165,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/051" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           052, //ID
 //           "Meowth", //Name
 //           "images/images_pokemones/052.png", //Url Imagen
@@ -1196,7 +1196,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/052" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           053, //ID
 //           "Persian", //Name
 //           "images/images_pokemones/053.png", //Url Imagen
@@ -1227,7 +1227,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/053" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           054, //ID
 //           "Psyduck", //Name
 //           "images/images_pokemones/054.png", //Url Imagen
@@ -1258,7 +1258,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/054" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           055, //ID
 //           "Golduck", //Name
 //           "images/images_pokemones/055.png", //Url Imagen
@@ -1289,7 +1289,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/055" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           056, //ID
 //           "Mankey", //Name
 //           "images/images_pokemones/056.png", //Url Imagen
@@ -1320,7 +1320,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/056" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           057, //ID
 //           "Primeape", //Name
 //           "images/images_pokemones/057.png", //Url Imagen
@@ -1351,7 +1351,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/057" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           058, //ID
 //           "Growlithe", //Name
 //           "images/images_pokemones/058.png", //Url Imagen
@@ -1382,7 +1382,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/058" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           059, //ID
 //           "Arcanine", //Name
 //           "images/images_pokemones/059.png", //Url Imagen
@@ -1413,7 +1413,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/059" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           060, //ID
 //           "Poliwag", //Name
 //           "images/images_pokemones/060.png", //Url Imagen
@@ -1444,7 +1444,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/060" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           061, //ID
 //           "Poliwhirl", //Name
 //           "images/images_pokemones/061.png", //Url Imagen
@@ -1475,7 +1475,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/061" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           062, //ID
 //           "Poliwrath", //Name
 //           "images/images_pokemones/062.png", //Url Imagen
@@ -1506,7 +1506,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/062" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           063, //ID
 //           "Abra", //Name
 //           "images/images_pokemones/063.png", //Url Imagen
@@ -1537,7 +1537,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/063" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           064, //ID
 //           "Kadabra", //Name
 //           "images/images_pokemones/064.png", //Url Imagen
@@ -1568,7 +1568,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/064" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           065, //ID
 //           "Alakazam", //Name
 //           "images/images_pokemones/065.png", //Url Imagen
@@ -1599,7 +1599,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/065" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           066, //ID
 //           "Machop", //Name
 //           "images/images_pokemones/066.png", //Url Imagen
@@ -1630,7 +1630,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/066" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           067, //ID
 //           "Machoke", //Name
 //           "images/images_pokemones/067.png", //Url Imagen
@@ -1661,7 +1661,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/067" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           068, //ID
 //           "Machamp", //Name
 //           "images/images_pokemones/068.png", //Url Imagen
@@ -1692,7 +1692,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/068" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           072, //ID
 //           "Tentacool", //Name
 //           "images/images_pokemones/072.png", //Url Imagen
@@ -1723,7 +1723,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/072" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           073, //ID
 //           "Tentacruel", //Name
 //           "images/images_pokemones/073.png", //Url Imagen
@@ -1754,7 +1754,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/073" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           074, //ID
 //           "Geodude", //Name
 //           "images/images_pokemones/074.png", //Url Imagen
@@ -1785,7 +1785,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/074" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           075, //ID
 //           "Graveler", //Name
 //           "images/images_pokemones/075.png", //Url Imagen
@@ -1816,7 +1816,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/075" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           076, //ID
 //           "Golem", //Name
 //           "images/images_pokemones/076.png", //Url Imagen
@@ -1847,7 +1847,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/076" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           081, //ID
 //           "Magnemite", //Name
 //           "images/images_pokemones/081.png", //Url Imagen
@@ -1878,7 +1878,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/081" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           082, //ID
 //           "Magneton", //Name
 //           "images/images_pokemones/082.png", //Url Imagen
@@ -1909,7 +1909,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/082" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           083, //ID
 //           "Farfetch'd", //Name
 //           "images/images_pokemones/083.png", //Url Imagen
@@ -1940,7 +1940,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/083" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           084, //ID
 //           "Doduo", //Name
 //           "images/images_pokemones/084.png", //Url Imagen
@@ -1971,7 +1971,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/084" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           085, //ID
 //           "Dodrio", //Name
 //           "images/images_pokemones/085.png", //Url Imagen
@@ -2002,7 +2002,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/085" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           088, //ID
 //           "Grimer", //Name
 //           "images/images_pokemones/088.png", //Url Imagen
@@ -2033,7 +2033,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/088" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           089, //ID
 //           "Muk", //Name
 //           "images/images_pokemones/089.png", //Url Imagen
@@ -2064,7 +2064,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/089" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           092, //ID
 //           "Gastly", //Name
 //           "images/images_pokemones/092.png", //Url Imagen
@@ -2095,7 +2095,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/092" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           093, //ID
 //           "Hunter", //Name
 //           "images/images_pokemones/093.png", //Url Imagen
@@ -2126,7 +2126,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/093" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           094, //ID
 //           "Gengar", //Name
 //           "images/images_pokemones/094.png", //Url Imagen
@@ -2157,7 +2157,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/094" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           095, //ID
 //           "Onix", //Name
 //           "images/images_pokemones/095.png", //Url Imagen
@@ -2188,7 +2188,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/095" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           096, //ID
 //           "Drowzee", //Name
 //           "images/images_pokemones/096.png", //Url Imagen
@@ -2219,7 +2219,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/096" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           097, //ID
 //           "Hypno", //Name
 //           "images/images_pokemones/097.png", //Url Imagen
@@ -2250,7 +2250,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/097" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           100, //ID
 //           "Voltorb", //Name
 //           "images/images_pokemones/100.png", //Url Imagen
@@ -2281,7 +2281,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/100" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           101, //ID
 //           "Electrode", //Name
 //           "images/images_pokemones/101.png", //Url Imagen
@@ -2312,7 +2312,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/101" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           102, //ID
 //           "Exeggcute", //Name
 //           "images/images_pokemones/102.png", //Url Imagen
@@ -2343,7 +2343,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/102" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           103, //ID
 //           "Exeggutor", //Name
 //           "images/images_pokemones/103.png", //Url Imagen
@@ -2374,7 +2374,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/103" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           104, //ID
 //           "Cubone", //Name
 //           "images/images_pokemones/104.png", //Url Imagen
@@ -2405,7 +2405,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/104" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           105, //ID
 //           "Marowak", //Name
 //           "images/images_pokemones/105.png", //Url Imagen
@@ -2436,7 +2436,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/105" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           106, //ID
 //           "Hitmonlee", //Name
 //           "images/images_pokemones/106.png", //Url Imagen
@@ -2467,7 +2467,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/106" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           107, //ID
 //           "Hitmonchan", //Name
 //           "images/images_pokemones/107.png", //Url Imagen
@@ -2498,7 +2498,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/107" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           108, //ID
 //           "Lickitung", //Name
 //           "images/images_pokemones/108.png", //Url Imagen
@@ -2529,7 +2529,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/108" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           111, //ID
 //           "Rhyhorn", //Name
 //           "images/images_pokemones/111.png", //Url Imagen
@@ -2560,7 +2560,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/111" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           112, //ID
 //           "Rhydon", //Name
 //           "images/images_pokemones/112.png", //Url Imagen
@@ -2591,7 +2591,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/112" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           120, //ID
 //           "Staryu", //Name
 //           "images/images_pokemones/120.png", //Url Imagen
@@ -2622,7 +2622,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/120" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           121, //ID
 //           "Starmie", //Name
 //           "images/images_pokemones/121.png", //Url Imagen
@@ -2653,7 +2653,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/121" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           122, //ID
 //           "Mr.Mime", //Name
 //           "images/images_pokemones/122.png", //Url Imagen
@@ -2684,7 +2684,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/122" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           123, //ID
 //           "Scyther", //Name
 //           "images/images_pokemones/123.png", //Url Imagen
@@ -2715,7 +2715,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/123" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           124, //ID
 //           "Jynx", //Name
 //           "images/images_pokemones/124.png", //Url Imagen
@@ -2746,7 +2746,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/124" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           125, //ID
 //           "Electabuzz", //Name
 //           "images/images_pokemones/125.png", //Url Imagen
@@ -2777,7 +2777,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/125" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           126, //ID
 //           "Magmar", //Name
 //           "images/images_pokemones/126.png", //Url Imagen
@@ -2808,7 +2808,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/126" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           131, //ID
 //           "Lapras", //Name
 //           "images/images_pokemones/131.png", //Url Imagen
@@ -2839,7 +2839,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/131" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           147, //ID
 //           "Dratini", //Name
 //           "images/images_pokemones/147.png", //Url Imagen
@@ -2870,7 +2870,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/147" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           148, //ID
 //           "Dragonair", //Name
 //           "images/images_pokemones/148.png", //Url Imagen
@@ -2901,7 +2901,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/148" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           149, //ID
 //           "Dragonite", //Name
 //           "images/images_pokemones/149.png", //Url Imagen
@@ -2932,7 +2932,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/149" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           163, //ID
 //           "Hoothoot", //Name
 //           "images/images_pokemones/163.png", //Url Imagen
@@ -2963,7 +2963,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/163" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           164, //ID
 //           "Noctowl", //Name
 //           "images/images_pokemones/164.png", //Url Imagen
@@ -2994,7 +2994,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/164" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           167, //ID
 //           "Spinarak", //Name
 //           "images/images_pokemones/167.png", //Url Imagen
@@ -3025,7 +3025,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/167" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           168, //ID
 //           "Ariados", //Name
 //           "images/images_pokemones/168.png", //Url Imagen
@@ -3056,7 +3056,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/168" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           177, //ID
 //           "Natu", //Name
 //           "images/images_pokemones/177.png", //Url Imagen
@@ -3087,7 +3087,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/177" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           178, //ID
 //           "Xatu", //Name
 //           "images/images_pokemones/178.png", //Url Imagen
@@ -3118,7 +3118,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/178" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           179, //ID
 //           "Mareep", //Name
 //           "images/images_pokemones/179.png", //Url Imagen
@@ -3149,7 +3149,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/179" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           180, //ID
 //           "Flaaffy", //Name
 //           "images/images_pokemones/180.png", //Url Imagen
@@ -3180,7 +3180,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/180" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           181, //ID
 //           "Ampharos", //Name
 //           "images/images_pokemones/181.png", //Url Imagen
@@ -3211,7 +3211,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/181" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           185, //ID
 //           "Sudowoodo", //Name
 //           "images/images_pokemones/185.png", //Url Imagen
@@ -3242,7 +3242,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/185" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           198, //ID
 //           "Murkrow", //Name
 //           "images/images_pokemones/198.png", //Url Imagen
@@ -3273,7 +3273,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/198" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           200, //ID
 //           "Misdreavus", //Name
 //           "images/images_pokemones/200.png", //Url Imagen
@@ -3304,7 +3304,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/200" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           207, //ID
 //           "Gligar", //Name
 //           "images/images_pokemones/207.png", //Url Imagen
@@ -3335,7 +3335,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/207" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           214, //ID
 //           "Heracross", //Name
 //           "images/images_pokemones/214.png", //Url Imagen
@@ -3366,7 +3366,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/214" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           215, //ID
 //           "Sneasel", //Name
 //           "images/images_pokemones/215.png", //Url Imagen
@@ -3397,7 +3397,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/215" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           218, //ID
 //           "Slugma", //Name
 //           "images/images_pokemones/218.png", //Url Imagen
@@ -3428,7 +3428,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/218" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           219, //ID
 //           "Magcargo", //Name
 //           "images/images_pokemones/219.png", //Url Imagen
@@ -3459,7 +3459,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/219" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           220, //ID
 //           "Swinub", //Name
 //           "images/images_pokemones/220.png", //Url Imagen
@@ -3490,7 +3490,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/220" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           221, //ID
 //           "Piloswine", //Name
 //           "images/images_pokemones/221.png", //Url Imagen
@@ -3521,7 +3521,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/221" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           227, //ID
 //           "Skarmory", //Name
 //           "images/images_pokemones/227.png", //Url Imagen
@@ -3552,7 +3552,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/227" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           228, //ID
 //           "Houndour", //Name
 //           "images/images_pokemones/228.png", //Url Imagen
@@ -3583,7 +3583,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/228" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           229, //ID
 //           "Houndoom ", //Name
 //           "images/images_pokemones/229.png", //Url Imagen
@@ -3614,7 +3614,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/229" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           231, //ID
 //           "Phanpy", //Name
 //           "images/images_pokemones/231.png", //Url Imagen
@@ -3645,7 +3645,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/231" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           232, //ID
 //           "Donphan", //Name
 //           "images/images_pokemones/232.png", //Url Imagen
@@ -3676,7 +3676,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/232" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           276, //ID
 //           "Taillow", //Name
 //           "images/images_pokemones/276.png", //Url Imagen
@@ -3707,7 +3707,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/276" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           277, //ID
 //           "Swellow", //Name
 //           "images/images_pokemones/277.png", //Url Imagen
@@ -3738,7 +3738,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/277" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           285, //ID
 //           "Shroomish", //Name
 //           "images/images_pokemones/285.png", //Url Imagen
@@ -3769,7 +3769,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/285" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           286, //ID
 //           "Breloom", //Name
 //           "images/images_pokemones/286.png", //Url Imagen
@@ -3800,7 +3800,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/286" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           296, //ID
 //           "Makuhita", //Name
 //           "images/images_pokemones/296.png", //Url Imagen
@@ -3831,7 +3831,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/296" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           297, //ID
 //           "Hariyama", //Name
 //           "images/images_pokemones/297.png", //Url Imagen
@@ -3862,7 +3862,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/297" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           302, //ID
 //           "Sableye", //Name
 //           "images/images_pokemones/302.png", //Url Imagen
@@ -3893,7 +3893,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/302" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           303, //ID
 //           "Mawile ", //Name
 //           "images/images_pokemones/303.png", //Url Imagen
@@ -3924,7 +3924,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/303" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           304, //ID
 //           "Aron", //Name
 //           "images/images_pokemones/304.png", //Url Imagen
@@ -3955,7 +3955,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/304" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           305, //ID
 //           "Lairon", //Name
 //           "images/images_pokemones/305.png", //Url Imagen
@@ -3986,7 +3986,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/305" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           306, //ID
 //           "Aggron", //Name
 //           "images/images_pokemones/306.png", //Url Imagen
@@ -4017,7 +4017,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/306" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           309, //ID
 //           "Electrike", //Name
 //           "images/images_pokemones/309.png", //Url Imagen
@@ -4048,7 +4048,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/309" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           310, //ID
 //           "Manectric", //Name
 //           "images/images_pokemones/310.png", //Url Imagen
@@ -4079,7 +4079,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/310" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           315, //ID
 //           "Roselia", //Name
 //           "images/images_pokemones/315.png", //Url Imagen
@@ -4110,7 +4110,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/315" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           328, //ID
 //           "Trapinch", //Name
 //           "images/images_pokemones/328.png", //Url Imagen
@@ -4141,7 +4141,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/328" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           329, //ID
 //           "Vribava", //Name
 //           "images/images_pokemones/329.png", //Url Imagen
@@ -4172,7 +4172,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/329" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           330, //ID
 //           "Flygon", //Name
 //           "images/images_pokemones/330.png", //Url Imagen
@@ -4203,7 +4203,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/330" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           335, //ID
 //           "Zangoose", //Name
 //           "images/images_pokemones/335.png", //Url Imagen
@@ -4234,7 +4234,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/335" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           336, //ID
 //           "Seviper", //Name
 //           "images/images_pokemones/336.png", //Url Imagen
@@ -4265,7 +4265,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/336" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           341, //ID
 //           "Corphish", //Name
 //           "images/images_pokemones/341.png", //Url Imagen
@@ -4296,7 +4296,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/341" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           342, //ID
 //           "Crawdaunt", //Name
 //           "images/images_pokemones/342.png", //Url Imagen
@@ -4327,7 +4327,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/342" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           355, //ID
 //           "Duskull", //Name
 //           "images/images_pokemones/355.png", //Url Imagen
@@ -4358,7 +4358,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/355" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           356, //ID
 //           "Dusclops", //Name
 //           "images/images_pokemones/356.png", //Url Imagen
@@ -4389,7 +4389,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/356" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           359, //ID
 //           "Absol", //Name
 //           "images/images_pokemones/359.png", //Url Imagen
@@ -4420,7 +4420,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/359" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           361, //ID
 //           "Snorunt", //Name
 //           "images/images_pokemones/361.png", //Url Imagen
@@ -4451,7 +4451,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/361" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           362, //ID
 //           "Glalie", //Name
 //           "images/images_pokemones/362.png", //Url Imagen
@@ -4482,7 +4482,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/362" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           371, //ID
 //           "Bagon", //Name
 //           "images/images_pokemones/371.png", //Url Imagen
@@ -4513,7 +4513,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/371" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           372, //ID
 //           "Shelgon", //Name
 //           "images/images_pokemones/372.png", //Url Imagen
@@ -4544,7 +4544,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/372" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           373, //ID
 //           "Salamence", //Name
 //           "images/images_pokemones/373.png", //Url Imagen
@@ -4576,7 +4576,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/373" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           374, //ID
 //           "Beldum", //Name
 //           "images/images_pokemones/374.png", //Url Imagen
@@ -4607,7 +4607,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/374" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           375, //ID
 //           "Metang", //Name
 //           "images/images_pokemones/375.png", //Url Imagen
@@ -4638,7 +4638,7 @@ final List<Pokemon> defaultPokemons = [bulbasaur, ivysaur, venusaur];
 //           0, // Speed
 //           "/375" //  url
 //           ),
-//       Pokemon(
+//       PokemonModel(
 //           376, //ID
 //           "Metagross", //Name
 //           "images/images_pokemones/376.png", //Url Imagen

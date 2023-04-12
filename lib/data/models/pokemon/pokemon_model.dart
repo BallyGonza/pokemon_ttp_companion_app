@@ -1,8 +1,6 @@
-import 'package:poke_app/data/models/attack.dart';
+import 'package:poke_app/data/data.dart';
 
-import 'pokemon_type.dart';
-
-class Pokemon {
+class PokemonModel {
   int id;
   String name;
   String image;
@@ -10,10 +8,10 @@ class Pokemon {
   int hp;
   int basicAttack;
   int speed;
-  List<PokemonType> types;
-  List<Attack> attacks;
+  List<PokemonTypeModel> types;
+  List<AttackModel> attacks;
 
-  Pokemon({
+  PokemonModel({
     required this.id,
     required this.name,
     required this.image,
