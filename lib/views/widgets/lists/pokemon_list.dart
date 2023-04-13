@@ -13,27 +13,24 @@ class PokemonList extends StatefulWidget {
 class PokemonListState extends State<PokemonList> {
   @override
   Widget build(BuildContext context) {
-    return Scrollbar(
-      child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: defaultPokemons.length,
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              child: PokemonCard(
-                pokemon: defaultPokemons[index],
-              ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PokemonScreen(
-                      pokemon: defaultPokemons[index],
-                    ),
+    return ListView.builder(
+        itemCount: defaultPokemons.length,
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+            child: PokemonCard(
+              pokemon: defaultPokemons[index],
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PokemonScreen(
+                    pokemon: defaultPokemons[index],
                   ),
-                );
-              },
-            );
-          }),
-    );
+                ),
+              );
+            },
+          );
+        });
   }
 }

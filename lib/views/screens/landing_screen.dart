@@ -73,10 +73,8 @@ class LandingScreen extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
-                  PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) {
-                    return const PokedexScreen();
-                  }),
+                  MaterialPageRoute(
+                      builder: (context) => const PokedexScreen()),
                 );
               },
               child: Card(

@@ -21,12 +21,9 @@ class PokemonCard extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(10),
-            child: Hero(
-              tag: pokemon.id,
-              child: Image.asset(
-                pokemon.image,
-                height: 70,
-              ),
+            child: Image.asset(
+              pokemon.image,
+              height: 70,
             ),
           ),
           Text(
