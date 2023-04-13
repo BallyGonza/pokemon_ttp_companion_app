@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_app/theme.dart';
 
 import 'views/screens/landing_screen.dart';
 
@@ -13,13 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ),
+      theme: pokemonAppTheme,
       home: const LandingScreen(),
     );
   }

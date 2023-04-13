@@ -16,7 +16,9 @@ class TeamScreenState extends State<TeamScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
-      body: _selectedItemIndex == 0 ? const MyPokemons() : const MyTrainers(),
+      body: _selectedItemIndex == 0
+          ? const MyPokemonsScreen()
+          : const MyTrainers(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {

@@ -44,7 +44,8 @@ class LandingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyPokemons()),
+                  MaterialPageRoute(
+                      builder: (context) => const MyPokemonsScreen()),
                 );
               },
               child: Card(

@@ -13,26 +13,25 @@ class _PokedexScreenState extends State<PokedexScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: pokedexColor,
+        child: const Icon(Icons.search),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        title: const Text(
-          'Pokedex',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
-            color: pokedexColor,
+        title: const Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Pokedex',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 30,
+              color: pokedexColor,
+            ),
           ),
         ),
-        actions: <Widget>[
-          IconButton(
-              icon: const Icon(
-                Icons.search,
-                color: pokedexColor,
-              ),
-              onPressed: () {})
-        ],
-        elevation: 0.9,
       ),
       body: const PokemonList(),
     );

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:poke_app/data/data.dart';
+import 'package:poke_app/views/screens/attack_screen.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
-class PokemonScreen extends StatelessWidget {
-  const PokemonScreen({
+class MyPokemonScreen extends StatelessWidget {
+  const MyPokemonScreen({
     Key? key,
     required this.pokemon,
   }) : super(key: key);
@@ -83,26 +84,92 @@ class PokemonScreen extends StatelessWidget {
                 AttackCard(
                   number: 1,
                   attack: pokemon.commonAttacks[0],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AttackScreen(
+                          attackType: 'C1',
+                          attacks: pokemon.commonAttacks,
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 AttackCard(
                   number: 2,
                   attack: pokemon.commonAttacks[1],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AttackScreen(
+                          attacks: pokemon.commonAttacks,
+                          attackType: 'C2',
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 AttackCard(
                   number: 3,
                   attack: pokemon.commonAttacks[2],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AttackScreen(
+                          attacks: pokemon.commonAttacks,
+                          attackType: 'C3',
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 AttackCard(
                   number: 1,
                   attack: pokemon.advancedAttacks[0],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AttackScreen(
+                          attacks: pokemon.advancedAttacks,
+                          attackType: 'A1',
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 AttackCard(
                   number: 2,
                   attack: pokemon.advancedAttacks[1],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AttackScreen(
+                          attacks: pokemon.advancedAttacks,
+                          attackType: 'A2',
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 AttackCard(
                   number: 1,
                   attack: pokemon.specialAttacks[0],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AttackScreen(
+                          attacks: pokemon.specialAttacks,
+                          attackType: 'S',
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),

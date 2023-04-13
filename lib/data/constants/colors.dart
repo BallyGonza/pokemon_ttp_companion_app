@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 //Biblioteca de Colores
 const int normalColor = 0xffb929ba3;
 const int fireColor = 0xffbff983f;
@@ -27,7 +29,11 @@ const Color pokedexColor = Color.fromARGB(250, 234, 83, 71);
 const Color trainersColor = Color(0xFF4A6290);
 
 //Trainers Colors
-
 const Color commonTrainerColor = Color(0xFFCADEDF);
 const Color advancedTrainerColor = Color(0xFF71A3C8);
 const Color specialTrainerColor = Color(0xFF0C5C75);
+
+//Attacks Colors
+int commonAttackColor = Colors.amberAccent[100]!.value;
+int advancedAttackColor = Colors.blue[100]!.value;
+int specialAttackColor = Colors.deepPurple[100]!.value;

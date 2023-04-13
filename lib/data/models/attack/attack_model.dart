@@ -1,10 +1,11 @@
 import 'package:poke_app/data/models/models.dart';
 
 class AttackModel {
-  String id;
+  int id;
   String name;
   String image;
   PokemonTypeModel type;
+  AttackTypeModel attackType;
   int damage;
   int pp;
   int accuracy;
@@ -18,6 +19,7 @@ class AttackModel {
     required this.damage,
     required this.pp,
     required this.accuracy,
+    required this.attackType,
     required this.description,
   });
 }
