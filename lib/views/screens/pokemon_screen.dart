@@ -12,35 +12,27 @@ class PokemonScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<AttackModel> attacksA =
-        pokemon.attacks.where((element) => element.id == 'A').toList();
-    List<AttackModel> attacksC =
-        pokemon.attacks.where((element) => element.id == 'C').toList();
-    List<AttackModel> attacksS =
-        pokemon.attacks.where((element) => element.id == 'S').toList();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(pokemon.types[0].color),
         automaticallyImplyLeading: false,
         title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Text(
             pokemon.name,
             textAlign: TextAlign.left,
             style: const TextStyle(
-                fontSize: 30.0, //tamaño del texto
-                color: Colors.white, // Color texto
-                fontFamily: 'Source Sans Pro',
-                fontWeight: FontWeight.bold),
+              fontSize: 30,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         elevation: 0.5,
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Image.asset(
-              pokemon.sprite, // SPRITE POKEMON
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Image.asset(pokemon.sprite),
           ),
         ],
       ),
@@ -64,14 +56,14 @@ class PokemonScreen extends StatelessWidget {
                       height: 150,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/images/pokeball.png"),
+                          image: AssetImage(pokeballBack),
                           fit: BoxFit.fill,
                           opacity: 0.7,
                         ),
                       ),
                       child: Image.asset(
                         pokemon.image,
-                      ), // IMAGEN POKEMON
+                      ),
                     ),
                   ],
                 ),
@@ -79,33 +71,33 @@ class PokemonScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     spec('Speed:', pokemon.speed),
-                    spec('Basic Damage:', pokemon.basicAttack),
+                    spec('Basic Damage:', pokemon.damage),
                   ],
                 ),
               ],
             ),
             AttackCard.C(
               number: 1,
-              attack: attacksC[0],
+              attack: pokemon.commonAttacks[0],
             ),
             AttackCard.C(
               number: 2,
-              attack: attacksC[0],
+              attack: pokemon.commonAttacks[1],
             ),
             AttackCard.C(
               number: 3,
-              attack: attacksC[1],
+              attack: pokemon.commonAttacks[2],
             ),
             AttackCard.A(
               number: 1,
-              attack: attacksA[0],
+              attack: pokemon.advancedAttacks[0],
             ),
             AttackCard.A(
               number: 2,
-              attack: attacksA[1],
+              attack: pokemon.advancedAttacks[1],
             ),
             AttackCard.S(
-              attack: attacksS[0],
+              attack: pokemon.specialAttacks[0],
             ),
           ],
         ),
@@ -122,19 +114,18 @@ class PokemonScreen extends StatelessWidget {
           Text(
             title,
             style: const TextStyle(
-                // Estilo del texto
-                fontSize: 15.0, //tamaño del texto
-                color: Colors.black, // Color texto
-                fontFamily: 'Source Sans Pro',
-                fontWeight: FontWeight.bold),
+              fontSize: 15,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           Text(
             value.toString(),
             style: const TextStyle(
-                fontSize: 15.0, //tamaño del texto
-                color: Colors.black, // Color texto
-                fontFamily: 'Source Sans Pro',
-                fontWeight: FontWeight.bold),
+              fontSize: 15,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
           )
         ],
       ),

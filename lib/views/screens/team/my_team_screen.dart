@@ -3,17 +3,20 @@ import 'package:poke_app/views/screens/team/my_pokemons_screen.dart';
 import 'package:poke_app/views/screens/team/my_trainers_screen.dart';
 
 class TeamScreen extends StatefulWidget {
+  const TeamScreen({super.key});
+
   @override
-  _TeamScreenState createState() => _TeamScreenState();
+  TeamScreenState createState() => TeamScreenState();
 }
 
-class _TeamScreenState extends State<TeamScreen> {
+class TeamScreenState extends State<TeamScreen> {
   int _selectedItemIndex = 0;
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
-      body: _selectedItemIndex == 0 ? MyPokemons() : MyTrainers(),
+      body: _selectedItemIndex == 0 ? const MyPokemons() : const MyTrainers(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {
@@ -21,7 +24,7 @@ class _TeamScreenState extends State<TeamScreen> {
           });
         },
         currentIndex: _selectedItemIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Text("My Pokémon"),
             activeIcon: Text(
@@ -61,7 +64,7 @@ class _TeamScreenState extends State<TeamScreen> {
                   child: FloatingActionButton(
                     onPressed: () {},
                     backgroundColor: Colors.white,
-                    child: Icon(
+                    child: const Icon(
                       Icons.add,
                       color: Colors.black,
                     ),
@@ -120,7 +123,7 @@ class BNBCustomPainter extends CustomPainter {
     path.quadraticBezierTo(size.width * 0.20, 0, size.width * 0.35, 0);
     path.quadraticBezierTo(size.width * 0.40, 0, size.width * 0.40, 20);
     path.arcToPoint(Offset(size.width * 0.60, 20),
-        radius: Radius.circular(10.0), clockwise: false);
+        radius: const Radius.circular(10.0), clockwise: false);
     path.quadraticBezierTo(size.width * 0.60, 0, size.width * 0.65, 0);
     path.quadraticBezierTo(size.width * 0.80, 0, size.width, 20);
     path.lineTo(size.width, size.height);

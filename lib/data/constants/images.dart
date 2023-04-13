@@ -33,16 +33,13 @@ const String groundIcon =
 const String fairyIcon =
     "assets/images/pokemon_types/fairy/icon/colorful/fairy.png";
 
-// Pokeball Fondo Poke
-
+// Pokeball Fondo Pokemon en Pokedex
 const pokeballBack = 'assets/images/pokeball.png';
 
 // Fondo pokedex
-
 const pokedexBack = 'assets/images/back_pokedex.jpg';
 
 // Fondos por Type
-
 const String normalBack = "assets/images/pokemon_types/normal/back/normal.png";
 const String fireBack = "assets/images/pokemon_types/fire/back/fire.png";
 const String waterBack = "assets/images/pokemon_types/water/back/water.png";
@@ -66,19 +63,17 @@ const String fairyBack = "assets/images/pokemon_types/fairy/back/fairy.png";
 const String trainersBack = "assets/images/trainers/back/trainers.png";
 
 // Iconos C1,C2,C3,A1,A2,S Ataques
-
-const String c1Icon = "assets/images/attacks_icons/C1.png";
-const String c2Icon = "assets/images/attacks_icons/C2.png";
-const String c3Icon = "assets/images/attacks_icons/C3.png";
-const String a1Icon = "assets/images/attacks_icons/A1.png";
-const String a2Icon = "assets/images/attacks_icons/A2.png";
-const String sIcon = "assets/images/attacks_icons/S.png";
+const String c1AttackIcon = "assets/images/attacks_icons/C1.png";
+const String c2AttackIcon = "assets/images/attacks_icons/C2.png";
+const String c3AttackIcon = "assets/images/attacks_icons/C3.png";
+const String a1AttackIcon = "assets/images/attacks_icons/A1.png";
+const String a2AttackIcon = "assets/images/attacks_icons/A2.png";
+const String sAttackIcon = "assets/images/attacks_icons/S.png";
 
 // Iconos Trainers
-
-const String c1Trainer = "assets/images/trainers/class/C1.png";
-const String c2Trainer = "assets/images/trainers/class/C2.png";
-const String c3Trainer = "assets/images/trainers/class/C3.png";
-const String a1Trainer = "assets/images/trainers/class/A1.png";
-const String a2Trainer = "assets/images/trainers/class/A2.png";
-const String sTrainer = "assets/images/trainers/class/S.png";
+const String c1TrainerIcon = "assets/images/trainers/class/C1.png";
+const String c2TrainerIcon = "assets/images/trainers/class/C2.png";
+const String c3TrainerIcon = "assets/images/trainers/class/C3.png";
+const String a1TrainerIcon = "assets/images/trainers/class/A1.png";
+const String a2TrainerIcon = "assets/images/trainers/class/A2.png";
+const String sTrainerIcon = "assets/images/trainers/class/S.png";

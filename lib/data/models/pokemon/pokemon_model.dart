@@ -6,10 +6,12 @@ class PokemonModel {
   String image;
   String sprite;
   int hp;
-  int basicAttack;
+  int damage;
   int speed;
   List<PokemonTypeModel> types;
-  List<AttackModel> attacks;
+  List<AttackModel> commonAttacks;
+  List<AttackModel> advancedAttacks;
+  List<AttackModel> specialAttacks;
 
   PokemonModel({
     required this.id,
@@ -17,9 +19,11 @@ class PokemonModel {
     required this.image,
     required this.sprite,
     required this.hp,
-    required this.basicAttack,
+    required this.damage,
     required this.speed,
     required this.types,
-    required this.attacks,
+    required this.commonAttacks,
+    required this.advancedAttacks,
+    required this.specialAttacks,
   });
 }

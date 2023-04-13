@@ -18,18 +18,24 @@ PokemonModel bulbasaur = PokemonModel(
   image: 'assets/images/images_pokemons/001.png',
   sprite: 'assets/images/sprites_pokemons/1.gif',
   hp: 45,
-  basicAttack: 49,
+  damage: 49,
   speed: 45,
   types: [grass, poison],
-  attacks: [
-    tackle,
+  commonAttacks: [
     vineWhip,
+    vineWhip,
+    vineWhip,
+    tackle,
+  ],
+  advancedAttacks: [
     sleepPowder,
     razorLeaf,
     poisonPowder,
     megaDrain,
+  ],
+  specialAttacks: [
     solarBeam,
-    sludgeBomb
+    sludgeBomb,
   ],
 );
 
@@ -39,18 +45,24 @@ PokemonModel ivysaur = PokemonModel(
   image: 'assets/images/images_pokemons/002.png',
   sprite: 'assets/images/sprites_pokemons/2.gif',
   hp: 60,
-  basicAttack: 62,
+  damage: 62,
   speed: 80,
   types: [grass, poison],
-  attacks: [
-    tackle,
+  commonAttacks: [
     vineWhip,
+    vineWhip,
+    vineWhip,
+    tackle,
+  ],
+  advancedAttacks: [
     sleepPowder,
     razorLeaf,
     poisonPowder,
     megaDrain,
+  ],
+  specialAttacks: [
     solarBeam,
-    sludgeBomb
+    sludgeBomb,
   ],
 );
 
@@ -60,18 +72,24 @@ PokemonModel venusaur = PokemonModel(
   image: 'assets/images/images_pokemons/003.png',
   sprite: 'assets/images/sprites_pokemons/3.gif',
   hp: 80,
-  basicAttack: 82,
+  damage: 82,
   speed: 100,
   types: [grass, poison],
-  attacks: [
-    tackle,
+  commonAttacks: [
     vineWhip,
+    vineWhip,
+    vineWhip,
+    tackle,
+  ],
+  advancedAttacks: [
     sleepPowder,
     razorLeaf,
     poisonPowder,
     megaDrain,
+  ],
+  specialAttacks: [
     solarBeam,
-    sludgeBomb
+    sludgeBomb,
   ],
 );
 

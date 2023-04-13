@@ -17,44 +17,44 @@ class LandingScreen extends StatelessWidget {
                 image: AssetImage('assets/images/home.png'),
                 fit: BoxFit.fill,
               ).image,
-              radius: 80.0,
+              radius: 80,
             ),
             const SizedBox(
-              height: 40.0,
+              height: 40,
             ),
             const Text(
               "¡Welcome Trainer!",
               style: TextStyle(
-                  fontSize: 30.0, //tamaño del texto
-                  color: Colors.black, // Color texto
-                  fontFamily: 'Source Sans Pro',
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(
-              // Dejo un espacio de tamaño definido entre el texto y las card
-              height: 20.0, // Alto
-              width: 150.0, // Ancho
-              child: Divider(
-                // Tiene un divisor, de color claro
-                color: Colors.red, // Color del divisor
+                fontSize: 30,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(
-              height: 10.0,
+              height: 20,
+              width: 150,
+              child: Divider(
+                color: Colors.red,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyPokemons()),
+                  MaterialPageRoute(builder: (context) => const MyPokemons()),
                 );
               },
               child: Card(
                   color: Colors.black,
                   margin: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 25.0),
+                    vertical: 10,
+                    horizontal: 25,
+                  ),
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const <Widget>[
@@ -62,10 +62,9 @@ class LandingScreen extends StatelessWidget {
                           'My Pokemons',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              // Estilo del texto
-                              fontSize: 20.0, //tamaño del texto
-                              color: Colors.white, // Color texto
-                              fontFamily: 'Source Sans Pro'),
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
@@ -83,9 +82,11 @@ class LandingScreen extends StatelessWidget {
               child: Card(
                   color: Colors.red,
                   margin: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 25.0),
+                    vertical: 10,
+                    horizontal: 25,
+                  ),
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const <Widget>[
@@ -93,10 +94,9 @@ class LandingScreen extends StatelessWidget {
                           'Pokedex',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              // Estilo del texto
-                              fontSize: 20.0, //tamaño del texto
-                              color: Colors.white, // Color texto
-                              fontFamily: 'Source Sans Pro'),
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),

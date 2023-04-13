@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_app/data/data.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
 class PokedexScreen extends StatefulWidget {
@@ -18,15 +19,16 @@ class _PokedexScreenState extends State<PokedexScreen> {
         title: const Text(
           'Pokedex',
           style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30.0,
-              color: Color(0xffbea5347)),
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
+            color: pokedexColor,
+          ),
         ),
         actions: <Widget>[
           IconButton(
               icon: const Icon(
                 Icons.search,
-                color: Color(0xffbea5347),
+                color: pokedexColor,
               ),
               onPressed: () {})
         ],

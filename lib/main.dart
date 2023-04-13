@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           bodyText1: TextStyle(
             color: Colors.white,
-            fontFamily: 'Source Sans Pro',
           ),
         ),
       ),
