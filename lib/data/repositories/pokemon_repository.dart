@@ -100,7 +100,7 @@ PokemonModel venusaur = PokemonModel(
 );
 
 final List<PokemonModel> defaultPokemons = [bulbasaur, ivysaur, venusaur];
-final List<PokemonModel> defaultCatchedPokemons = [bulbasaur, venusaur];
+final List<PokemonModel> defaultCatchedPokemons = [];
 
 
 // );

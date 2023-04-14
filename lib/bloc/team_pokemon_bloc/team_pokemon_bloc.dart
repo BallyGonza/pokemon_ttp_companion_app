@@ -22,7 +22,8 @@ class TeamPokemonBloc extends Bloc<TeamPokemonEvent, TeamPokemonState> {
     TeamPokemonInitialEvent event,
     Emitter<TeamPokemonState> emit,
   ) async {
-    userBox.get([0]) ?? userBox.put([0], defaultUser);
+    userBox.get(0) ?? userBox.put(0, defaultUser);
+    user = userBox.get(0)!;
     pokemonTeam = user.pokemonTeam;
     emit(TeamPokemonState.loaded(pokemonTeam));
   }

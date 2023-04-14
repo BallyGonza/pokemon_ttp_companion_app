@@ -18,20 +18,8 @@ class PokemonListState extends State<PokemonList> {
     return ListView.builder(
         itemCount: widget.pokemons.length,
         itemBuilder: (BuildContext context, int index) {
-          return GestureDetector(
-            child: PokemonCard(
-              pokemon: widget.pokemons[index],
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PokemonScreen(
-                    pokemon: widget.pokemons[index],
-                  ),
-                ),
-              );
-            },
+          return PokemonCard(
+            pokemon: widget.pokemons[index],
           );
         });
   }

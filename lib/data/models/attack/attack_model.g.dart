@@ -8,7 +8,7 @@ part of 'attack_model.dart';
 
 class AttackModelAdapter extends TypeAdapter<AttackModel> {
   @override
-  final int typeId = 6;
+  final int typeId = 0;
 
   @override
   AttackModel read(BinaryReader reader) {

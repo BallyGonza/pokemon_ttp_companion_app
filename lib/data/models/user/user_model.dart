@@ -3,7 +3,7 @@ import 'package:poke_app/data/data.dart';
 
 part 'user_model.g.dart';
 
-@HiveType(typeId: 0)
+@HiveType(typeId: 6)
 class UserModel {
   @HiveField(0)
   int id;

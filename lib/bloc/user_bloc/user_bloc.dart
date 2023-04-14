@@ -21,6 +21,8 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     UserInitialEvent event,
     Emitter<UserState> emit,
   ) async {
-    userBox.get([0]) ?? userBox.put([0], defaultUser);
+    userBox.get(0) ?? userBox.put(0, defaultUser);
+    user = userBox.get(0)!;
+    emit(UserState.loaded(user));
   }
 }

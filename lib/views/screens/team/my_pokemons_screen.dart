@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:poke_app/bloc/bloc.dart';
 import 'package:poke_app/data/repositories/user_repository.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
@@ -25,7 +27,20 @@ class _MyPokemonsScreenState extends State<MyPokemonsScreen> {
               )),
         ),
       ),
-      body: MyPokemonList(pokemonList: defaultUser.catchedPokemons),
+      body: BlocBuilder<CatchedPokemonsBloc, CatchedPokemonsState>(
+        builder: (context, state) {
+          return state.maybeWhen(
+            loaded: (catchedPokemons) {
+              return MyPokemonList(
+                catchedPokemons: catchedPokemons,
+              );
+            },
+            orElse: () => const Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        },
+      ),
     );
   }
 }

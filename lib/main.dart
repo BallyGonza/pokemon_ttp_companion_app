@@ -9,13 +9,13 @@ import 'views/screens/landing_screen.dart';
 
 Future<void> main() async {
   Hive
-    ..registerAdapter(UserModelAdapter())
-    ..registerAdapter(PokemonModelAdapter())
-    ..registerAdapter(PokemonTypeModelAdapter())
     ..registerAdapter(AttackModelAdapter())
     ..registerAdapter(AttackTypeModelAdapter())
+    ..registerAdapter(PokemonModelAdapter())
+    ..registerAdapter(PokemonTypeModelAdapter())
     ..registerAdapter(TrainerModelAdapter())
-    ..registerAdapter(TrainerTypeModelAdapter());
+    ..registerAdapter(TrainerTypeModelAdapter())
+    ..registerAdapter(UserModelAdapter());
 
   WidgetsFlutterBinding.ensureInitialized();
 

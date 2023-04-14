@@ -3,7 +3,7 @@ import 'package:poke_app/data/models/models.dart';
 
 part 'attack_model.g.dart';
 
-@HiveType(typeId: 6)
+@HiveType(typeId: 0)
 class AttackModel {
   @HiveField(0)
   int id;

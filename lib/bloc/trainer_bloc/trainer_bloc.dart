@@ -23,7 +23,8 @@ class TrainerBloc extends Bloc<TrainerEvent, TrainerState> {
     TrainerInitialEvent event,
     Emitter<TrainerState> emit,
   ) async {
-    userBox.get([0]) ?? userBox.put([0], defaultUser);
+    userBox.get(0) ?? userBox.put(0, defaultUser);
+    user = userBox.get(0)!;
     userTrainers = user.trainers;
     emit(TrainerState.loaded(userTrainers));
   }
