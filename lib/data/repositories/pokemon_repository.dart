@@ -20,6 +20,8 @@ PokemonModel bulbasaur = PokemonModel(
   hp: 45,
   damage: 49,
   speed: 45,
+  isCaptured: false,
+  isFavorite: false,
   types: [grass, poison],
   commonAttacks: [
     vineWhip,
@@ -47,6 +49,8 @@ PokemonModel ivysaur = PokemonModel(
   hp: 60,
   damage: 62,
   speed: 80,
+  isCaptured: false,
+  isFavorite: false,
   types: [grass, poison],
   commonAttacks: [
     vineWhip,
@@ -74,6 +78,8 @@ PokemonModel venusaur = PokemonModel(
   hp: 80,
   damage: 82,
   speed: 100,
+  isCaptured: false,
+  isFavorite: false,
   types: [grass, poison],
   commonAttacks: [
     vineWhip,

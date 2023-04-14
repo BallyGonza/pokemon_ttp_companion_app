@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/views/screens/pokedex_screen.dart';
 import 'package:poke_app/views/screens/team/my_pokemons_screen.dart';
+import 'package:poke_app/views/screens/team/my_team_screen.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);
@@ -44,8 +45,7 @@ class LandingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const MyPokemonsScreen()),
+                  MaterialPageRoute(builder: (context) => const MyTeamScreen()),
                 );
               },
               child: Card(

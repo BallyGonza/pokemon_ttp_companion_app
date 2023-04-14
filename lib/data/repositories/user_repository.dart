@@ -11,8 +11,9 @@ class UserRepository {
 UserModel defaultUser = UserModel(
   id: 0,
   name: 'Ash Ketchum',
-  pokemons: [...defaultCatchedPokemons],
-  team: [],
+  catchedPokemons: [...defaultCatchedPokemons],
+  pokemonTeam: [],
+  pokedex: [...defaultPokemons],
   trainers: [],
   coins: 0,
 );

@@ -46,13 +46,14 @@ class _AttackScreenState extends State<AttackScreen> {
         ],
       ),
       body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(widget.attacks[0].type.backImg),
-              fit: BoxFit.cover,
-            ),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(widget.attacks[0].type.backImg),
+            fit: BoxFit.cover,
           ),
-          child: AttacksList(attacks: widget.attacks)),
+        ),
+        child: AttacksList(attacks: widget.attacks),
+      ),
     );
   }
 }

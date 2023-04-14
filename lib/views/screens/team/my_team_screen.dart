@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:poke_app/views/screens/team/my_pokemons_screen.dart';
 import 'package:poke_app/views/screens/team/my_trainers_screen.dart';
 
-class TeamScreen extends StatefulWidget {
-  const TeamScreen({super.key});
+class MyTeamScreen extends StatefulWidget {
+  const MyTeamScreen({super.key});
 
   @override
-  TeamScreenState createState() => TeamScreenState();
+  MyTeamScreenState createState() => MyTeamScreenState();
 }
 
-class TeamScreenState extends State<TeamScreen> {
+class MyTeamScreenState extends State<MyTeamScreen> {
   int _selectedItemIndex = 0;
 
   @override
@@ -18,7 +18,7 @@ class TeamScreenState extends State<TeamScreen> {
       backgroundColor: Colors.red,
       body: _selectedItemIndex == 0
           ? const MyPokemonsScreen()
-          : const MyTrainers(),
+          : const MyTrainersScreen(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {

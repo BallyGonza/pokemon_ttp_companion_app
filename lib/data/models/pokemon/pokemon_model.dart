@@ -12,6 +12,8 @@ class PokemonModel {
   List<AttackModel> commonAttacks;
   List<AttackModel> advancedAttacks;
   List<AttackModel> specialAttacks;
+  bool isFavorite;
+  bool isCaptured;
 
   PokemonModel({
     required this.id,
@@ -25,5 +27,7 @@ class PokemonModel {
     required this.commonAttacks,
     required this.advancedAttacks,
     required this.specialAttacks,
+    required this.isFavorite,
+    required this.isCaptured,
   });
 }

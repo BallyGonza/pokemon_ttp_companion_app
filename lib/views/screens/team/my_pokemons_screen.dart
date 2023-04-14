@@ -25,7 +25,7 @@ class _MyPokemonsScreenState extends State<MyPokemonsScreen> {
               )),
         ),
       ),
-      body: MyPokemonList(pokemonList: defaultUser.pokemons),
+      body: MyPokemonList(pokemonList: defaultUser.catchedPokemons),
     );
   }
 }

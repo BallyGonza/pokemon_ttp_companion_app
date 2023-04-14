@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-class MyTrainers extends StatefulWidget {
-  const MyTrainers({Key? key}) : super(key: key);
+class MyTrainersScreen extends StatefulWidget {
+  const MyTrainersScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyTrainers> createState() => _MyTrainersState();
+  State<MyTrainersScreen> createState() => _MyTrainersScreenState();
 }
 
-class _MyTrainersState extends State<MyTrainers> {
+class _MyTrainersScreenState extends State<MyTrainersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +27,6 @@ class _MyTrainersState extends State<MyTrainers> {
             ),
           ),
         ),
-        elevation: 0.5,
       ),
       body: Container(
         constraints: const BoxConstraints.expand(),

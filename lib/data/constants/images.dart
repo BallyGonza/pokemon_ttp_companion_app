@@ -71,9 +71,9 @@ const String a2AttackIcon = "assets/images/attacks_icons/A2.png";
 const String sAttackIcon = "assets/images/attacks_icons/S.png";
 
 // Iconos Trainers
-const String c1TrainerIcon = "assets/images/trainers/class/C1.png";
-const String c2TrainerIcon = "assets/images/trainers/class/C2.png";
-const String c3TrainerIcon = "assets/images/trainers/class/C3.png";
-const String a1TrainerIcon = "assets/images/trainers/class/A1.png";
-const String a2TrainerIcon = "assets/images/trainers/class/A2.png";
-const String sTrainerIcon = "assets/images/trainers/class/S.png";
+const String c1TrainerIcon = "assets/images/trainers/class/c1.png";
+const String c2TrainerIcon = "assets/images/trainers/class/c2.png";
+const String c3TrainerIcon = "assets/images/trainers/class/c3.png";
+const String a1TrainerIcon = "assets/images/trainers/class/a1.png";
+const String a2TrainerIcon = "assets/images/trainers/class/a2.png";
+const String sTrainerIcon = "assets/images/trainers/class/s.png";
