@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'catched_pokemons_event.dart';
+part of 'team_pokemon_event.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$CatchedPokemonsEvent {
+mixin _$TeamPokemonEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
@@ -34,34 +34,33 @@ mixin _$CatchedPokemonsEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CatchedPokemonsInitialEvent value) init,
+    required TResult Function(TeamPokemonInitialEvent value) init,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CatchedPokemonsInitialEvent value)? init,
+    TResult? Function(TeamPokemonInitialEvent value)? init,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CatchedPokemonsInitialEvent value)? init,
+    TResult Function(TeamPokemonInitialEvent value)? init,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CatchedPokemonsEventCopyWith<$Res> {
-  factory $CatchedPokemonsEventCopyWith(CatchedPokemonsEvent value,
-          $Res Function(CatchedPokemonsEvent) then) =
-      _$CatchedPokemonsEventCopyWithImpl<$Res, CatchedPokemonsEvent>;
+abstract class $TeamPokemonEventCopyWith<$Res> {
+  factory $TeamPokemonEventCopyWith(
+          TeamPokemonEvent value, $Res Function(TeamPokemonEvent) then) =
+      _$TeamPokemonEventCopyWithImpl<$Res, TeamPokemonEvent>;
 }
 
 /// @nodoc
-class _$CatchedPokemonsEventCopyWithImpl<$Res,
-        $Val extends CatchedPokemonsEvent>
-    implements $CatchedPokemonsEventCopyWith<$Res> {
-  _$CatchedPokemonsEventCopyWithImpl(this._value, this._then);
+class _$TeamPokemonEventCopyWithImpl<$Res, $Val extends TeamPokemonEvent>
+    implements $TeamPokemonEventCopyWith<$Res> {
+  _$TeamPokemonEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -70,39 +69,36 @@ class _$CatchedPokemonsEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$CatchedPokemonsInitialEventCopyWith<$Res> {
-  factory _$$CatchedPokemonsInitialEventCopyWith(
-          _$CatchedPokemonsInitialEvent value,
-          $Res Function(_$CatchedPokemonsInitialEvent) then) =
-      __$$CatchedPokemonsInitialEventCopyWithImpl<$Res>;
+abstract class _$$TeamPokemonInitialEventCopyWith<$Res> {
+  factory _$$TeamPokemonInitialEventCopyWith(_$TeamPokemonInitialEvent value,
+          $Res Function(_$TeamPokemonInitialEvent) then) =
+      __$$TeamPokemonInitialEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CatchedPokemonsInitialEventCopyWithImpl<$Res>
-    extends _$CatchedPokemonsEventCopyWithImpl<$Res,
-        _$CatchedPokemonsInitialEvent>
-    implements _$$CatchedPokemonsInitialEventCopyWith<$Res> {
-  __$$CatchedPokemonsInitialEventCopyWithImpl(
-      _$CatchedPokemonsInitialEvent _value,
-      $Res Function(_$CatchedPokemonsInitialEvent) _then)
+class __$$TeamPokemonInitialEventCopyWithImpl<$Res>
+    extends _$TeamPokemonEventCopyWithImpl<$Res, _$TeamPokemonInitialEvent>
+    implements _$$TeamPokemonInitialEventCopyWith<$Res> {
+  __$$TeamPokemonInitialEventCopyWithImpl(_$TeamPokemonInitialEvent _value,
+      $Res Function(_$TeamPokemonInitialEvent) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CatchedPokemonsInitialEvent implements CatchedPokemonsInitialEvent {
-  const _$CatchedPokemonsInitialEvent();
+class _$TeamPokemonInitialEvent implements TeamPokemonInitialEvent {
+  const _$TeamPokemonInitialEvent();
 
   @override
   String toString() {
-    return 'CatchedPokemonsEvent.init()';
+    return 'TeamPokemonEvent.init()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CatchedPokemonsInitialEvent);
+            other is _$TeamPokemonInitialEvent);
   }
 
   @override
@@ -139,7 +135,7 @@ class _$CatchedPokemonsInitialEvent implements CatchedPokemonsInitialEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CatchedPokemonsInitialEvent value) init,
+    required TResult Function(TeamPokemonInitialEvent value) init,
   }) {
     return init(this);
   }
@@ -147,7 +143,7 @@ class _$CatchedPokemonsInitialEvent implements CatchedPokemonsInitialEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CatchedPokemonsInitialEvent value)? init,
+    TResult? Function(TeamPokemonInitialEvent value)? init,
   }) {
     return init?.call(this);
   }
@@ -155,7 +151,7 @@ class _$CatchedPokemonsInitialEvent implements CatchedPokemonsInitialEvent {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CatchedPokemonsInitialEvent value)? init,
+    TResult Function(TeamPokemonInitialEvent value)? init,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -165,6 +161,6 @@ class _$CatchedPokemonsInitialEvent implements CatchedPokemonsInitialEvent {
   }
 }
 
-abstract class CatchedPokemonsInitialEvent implements CatchedPokemonsEvent {
-  const factory CatchedPokemonsInitialEvent() = _$CatchedPokemonsInitialEvent;
+abstract class TeamPokemonInitialEvent implements TeamPokemonEvent {
+  const factory TeamPokemonInitialEvent() = _$TeamPokemonInitialEvent;
 }

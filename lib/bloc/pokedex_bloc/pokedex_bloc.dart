@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:poke_app/data/data.dart';
+import 'package:poke_app/data/repositories/user_repository.dart';
 
 import 'pokedex_event.dart';
 import 'pokedex_state.dart';
@@ -21,7 +22,7 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
     PokedexInitialEvent event,
     Emitter<PokedexState> emit,
   ) async {
-    user = userBox.get([0])!;
+    userBox.get([0]) ?? userBox.put([0], defaultUser);
     pokedex = user.pokedex;
     emit(PokedexState.loaded(pokedex));
   }

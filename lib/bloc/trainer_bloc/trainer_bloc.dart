@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:poke_app/data/data.dart';
+import 'package:poke_app/data/repositories/user_repository.dart';
 
 import 'trainer_event.dart';
 import 'trainer_state.dart';
@@ -22,7 +23,7 @@ class TrainerBloc extends Bloc<TrainerEvent, TrainerState> {
     TrainerInitialEvent event,
     Emitter<TrainerState> emit,
   ) async {
-    user = userBox.get([0])!;
+    userBox.get([0]) ?? userBox.put([0], defaultUser);
     userTrainers = user.trainers;
     emit(TrainerState.loaded(userTrainers));
   }
