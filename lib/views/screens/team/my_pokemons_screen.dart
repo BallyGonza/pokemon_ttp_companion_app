@@ -17,12 +17,13 @@ class _MyPokemonsScreenState extends State<MyPokemonsScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.black,
         title: const Align(
           alignment: Alignment.centerLeft,
           child: Text('My Pokemons',
               style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
+                color: Colors.white,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
               )),
         ),

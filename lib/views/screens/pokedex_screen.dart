@@ -1,3 +1,4 @@
+import 'package:easy_search_bar/easy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:poke_app/bloc/bloc.dart';
@@ -12,28 +13,23 @@ class PokedexScreen extends StatefulWidget {
 }
 
 class _PokedexScreenState extends State<PokedexScreen> {
+  String searchValue = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+      appBar: EasySearchBar(
+        searchBackgroundColor: pokedexColor,
+        searchCursorColor: Colors.white,
+        foregroundColor: Colors.white,
         backgroundColor: pokedexColor,
-        child: const Icon(Icons.search),
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        title: const Align(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Pokedex',
+        title: const Text('Pokedex',
             style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
-              color: pokedexColor,
-            ),
-          ),
-        ),
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.bold)),
+        onSearch: (value) {
+          setState(() {});
+        },
       ),
       body: BlocBuilder<PokedexBloc, PokedexState>(
         builder: (context, state) {

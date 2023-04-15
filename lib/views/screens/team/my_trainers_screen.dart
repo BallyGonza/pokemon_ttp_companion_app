@@ -15,13 +15,13 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
       appBar: AppBar(
         backgroundColor: trainersColor,
         automaticallyImplyLeading: false,
-        title: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8),
+        title: const Align(
+          alignment: Alignment.centerLeft,
           child: Text(
             "Trainer Cards",
             textAlign: TextAlign.left,
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 25,
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
@@ -36,95 +36,85 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const SizedBox(
-                height: 10,
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.fromLTRB(25, 30, 25, 0),
+              child: Card(
+                child: ListTile(
+                  leading: Image.asset(
+                    c1TrainerIcon,
+                    width: 45,
+                  ),
+                  tileColor: commonTrainerColor,
+                  title: const Text('C1'),
+                ),
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(25, 30, 25, 0),
-                child: Card(
-                  child: ListTile(
-                      leading: Image.asset(
-                        c1TrainerIcon,
-                        width: 45,
-                      ),
-                      tileColor: commonTrainerColor,
-                      title: const Text('C1')),
-                ),
-              ), // ATAQUE C1
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
-                child: Card(
-                  child: ListTile(
-                      leading: Image.asset(
-                        c2TrainerIcon,
-                        width: 45,
-                      ),
-                      tileColor: commonTrainerColor,
-                      title: const Text('C2')),
-                ),
-              ), // ATAQUE C2
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
-                child: Card(
-                  child: ListTile(
-                      leading: Image.asset(
-                        c3TrainerIcon,
-                        width: 45,
-                      ),
-                      tileColor: commonTrainerColor,
-                      title: const Text('C3')),
-                ),
-              ), // ATAQUE C3
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
-                child: Card(
-                  child: ListTile(
-                      leading: Image.asset(
-                        a1TrainerIcon,
-                        width: 45,
-                      ),
-                      tileColor: advancedTrainerColor,
-                      title: const Text('A1')),
-                ),
-              ), // ATAQUE A1
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
-                child: Card(
-                  child: ListTile(
-                      leading: Image.asset(
-                        a2TrainerIcon,
-                        width: 45,
-                      ),
-                      tileColor: advancedTrainerColor,
-                      title: const Text('A2')),
-                ),
-              ), // ATAQUE A2
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
-                child: Card(
-                  child: ListTile(
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              child: Card(
+                child: ListTile(
                     leading: Image.asset(
-                      sTrainerIcon,
+                      c2TrainerIcon,
                       width: 45,
                     ),
-                    tileColor: specialTrainerColor,
-                    title: const Text(
-                      "S",
-                    ),
-                  ), // ATAQUE S
-                ),
+                    tileColor: commonTrainerColor,
+                    title: const Text('C2')),
               ),
-            ],
-          ),
+            ), // ATAQUE C2
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              child: Card(
+                child: ListTile(
+                    leading: Image.asset(
+                      c3TrainerIcon,
+                      width: 45,
+                    ),
+                    tileColor: commonTrainerColor,
+                    title: const Text('C3')),
+              ),
+            ), // ATAQUE C3
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              child: Card(
+                child: ListTile(
+                    leading: Image.asset(
+                      a1TrainerIcon,
+                      width: 45,
+                    ),
+                    tileColor: advancedTrainerColor,
+                    title: const Text('A1')),
+              ),
+            ), // ATAQUE A1
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              child: Card(
+                child: ListTile(
+                    leading: Image.asset(
+                      a2TrainerIcon,
+                      width: 45,
+                    ),
+                    tileColor: advancedTrainerColor,
+                    title: const Text('A2')),
+              ),
+            ), // ATAQUE A2
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              child: Card(
+                child: ListTile(
+                  leading: Image.asset(
+                    sTrainerIcon,
+                    width: 45,
+                  ),
+                  tileColor: specialTrainerColor,
+                  title: const Text(
+                    "S",
+                  ),
+                ), // ATAQUE S
+              ),
+            ),
+          ],
         ),
       ),
     );

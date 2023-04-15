@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_app/data/constants/colors.dart';
 import 'package:poke_app/views/screens/pokedex_screen.dart';
 import 'package:poke_app/views/screens/team/my_pokemons_screen.dart';
 
@@ -85,7 +86,7 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Card(
-                  color: Colors.blue[900],
+                  color: trainersColor,
                   margin: const EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 25,
