@@ -20,6 +20,19 @@ final List<PokemonModel> defaultPokemons = [
   charmeleon,
   charizard,
   squirtle,
+  wartortle,
+  blastoise,
+  weedle,
+  kakuna,
+  beedrill,
+  pidgey,
+  pidgeotto,
+  pidgeot,
+  pikachu,
+  raichu,
+  nidoranM,
+  nidorino,
+  nidoking,
 ];
 
 PokemonModel bulbasaur = PokemonModel(
@@ -226,536 +239,374 @@ PokemonModel squirtle = PokemonModel(
   ],
 );
 
-// );
-//   static List<PokemonModel> pokemons() {
-//     return [
-//       PokemonModel(
-//           001, //ID
-//           "Bulbasaur", //Name
-//           "images/images_pokemones/001.png", //Url Imagen
-//           "images/sprites_pokemones/1.gif", //Url Sprite
-//           grass, //Int Color
-//           grass_Icon, //Url Icono primer tipo
-//           poison_Icon, //url Icono segundo tipo
-//           "Vine Whip", //nombre ataque C1
-//           "Vine Whip", //nombre ataque C2
-//           "Vine Whip", //nombre ataque C3
-//           "Tackle", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Sleep Powder", //nombre ataque A1
-//           "Razor Leaf", //nombre ataque A2
-//           "Poison Powder", //nombre ataque A3
-//           "Mega Drain", //nombre ataque A4
-//           "-", // nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Solar Beam", //nombre ataque S1
-//           "Slugde Bomb", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, //  speed
-//           "/001" //Screen URL
-//           ),
-//       PokemonModel(
-//           002,
-//           "Ivysaur",
-//           "images/images_pokemones/002.png",
-//           "images/sprites_pokemones/2.gif",
-//           grass, //Int Color
-//           grass_Icon, //Url Icono primer tipo
-//           poison_Icon, //url Icono segundo tipo
-//           "Vine Whip", //nombre ataque C1
-//           "Vine Whip", //nombre ataque C2
-//           "Vine Whip", //nombre ataque C3
-//           "Tackle", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Sleep Powder", //nombre ataque A1
-//           "Razor Leaf", //nombre ataque A2
-//           "Poison Powder", //nombre ataque A3
-//           "Mega Drain", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Solar Beam", //nombre ataque S1
-//           "Slugde Bomb", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/002" //  Url
-//           ),
-//       PokemonModel(
-//           003,
-//           "Venusaur",
-//           "images/images_pokemones/003.png",
-//           "images/sprites_pokemones/3.gif",
-//           grass, //Int Color
-//           grass_Icon, //Url Icono primer tipo
-//           poison_Icon, //url Icono segundo tipo
-//           "Vine Whip", //nombre ataque C1
-//           "Vine Whip", //nombre ataque C2
-//           "Vine Whip", //nombre ataque C3
-//           "Tackle", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Sleep Powder", //nombre ataque A1
-//           "Razor Leaf", //nombre ataque A2
-//           "Poison Powder", //nombre ataque A3
-//           "Mega Drain", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Solar Beam", //nombre ataque S1
-//           "Slugde Bomb", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/003" //  Url
-//           ),
-//       PokemonModel(
-//           004, //ID
-//           "Charmander", //Name
-//           "images/images_pokemones/004.png", //Url Imagen
-//           "images/sprites_pokemones/4.gif", //Url Sprite
-//           fire, //Int Color
-//           fire_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Ember", //nombre ataque C1
-//           "Ember", //nombre ataque C2
-//           "Scratch", //nombre ataque C3
-//           "-", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Flamethrower", //nombre ataque A1
-//           "Slash", //nombre ataque A2
-//           "Smokescreen", //nombre ataque A3
-//           "Rage", //nombre ataque A4
-//           "Sunny Day", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Fire Spin", //nombre ataque S1
-//           "Overheat", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/004" //  Url
-//           ),
-//       PokemonModel(
-//           005, //ID
-//           "Charmeleon", //Name
-//           "images/images_pokemones/005.png", //Url Imagen
-//           "images/sprites_pokemones/5.gif", //Url Sprite
-//           fire, //Int Color
-//           fire_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Ember", //nombre ataque C1
-//           "Ember", //nombre ataque C2
-//           "Scratch", //nombre ataque C3
-//           "-", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Flamethrower", //nombre ataque A1
-//           "Slash", //nombre ataque A2
-//           "Smokescreen", //nombre ataque A3
-//           "Rage", //nombre ataque A4
-//           "Sunny Day", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Fire Spin", //nombre ataque S1
-//           "Overheat", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/005" //  Url
-//           ),
-//       PokemonModel(
-//           006, //ID
-//           "Charizard", //Name
-//           "images/images_pokemones/006.png", //Url Imagen
-//           "images/sprites_pokemones/6.gif", //Url Sprite
-//           fire, //Int Color
-//           fire_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Ember", //nombre ataque C1
-//           "Ember", //nombre ataque C2
-//           "Scratch", //nombre ataque C3
-//           "-", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Flamethrower", //nombre ataque A1
-//           "Slash", //nombre ataque A2
-//           "Smokescreen", //nombre ataque A3
-//           "Rage", //nombre ataque A4
-//           "Sunny Day", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Fire Spin", //nombre ataque S1
-//           "Overheat", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/006" //  Url
-//           ),
-//       PokemonModel(
-//           007, //ID
-//           "Squirtle", //Name
-//           "images/images_pokemones/007.png", //Url Imagen
-//           "images/sprites_pokemones/7.gif", //Url Sprite
-//           water, //Int Color
-//           water_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Bubble", //nombre ataque C1
-//           "Bubble", //nombre ataque C2
-//           "Tackle", //nombre ataque C3
-//           "Leer", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Water Gun", //nombre ataque A1
-//           "Water Gun", //nombre ataque A2
-//           "Bite", //nombre ataque A3
-//           "Rain Dance", //nombre ataque A4
-//           "Iron Defence", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Hydro Pump", //nombre ataque S1
-//           "Surf", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/007" //  Url
-//           ),
-//       PokemonModel(
-//           008, //ID
-//           "Wartortle", //Name
-//           "images/images_pokemones/008.png", //Url Imagen
-//           "images/sprites_pokemones/8.gif", //Url Sprite
-//           water, //Int Color
-//           water_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Bubble", //nombre ataque C1
-//           "Bubble", //nombre ataque C2
-//           "Tackle", //nombre ataque C3
-//           "Leer", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Water Gun", //nombre ataque A1
-//           "Water Gun", //nombre ataque A2
-//           "Bite", //nombre ataque A3
-//           "Rain Dance", //nombre ataque A4
-//           "Iron Defence", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Hydro Pump", //nombre ataque S1
-//           "Surf", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/008" //  Url
-//           ),
-//       PokemonModel(
-//           009, //ID
-//           "Blastoise", //Name
-//           "images/images_pokemones/009.png", //Url Imagen
-//           "images/sprites_pokemones/9.gif", //Url Sprite
-//           water, //Int Color
-//           water_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Bubble", //nombre ataque C1
-//           "Bubble", //nombre ataque C2
-//           "Tackle", //nombre ataque C3
-//           "Leer", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Water Gun", //nombre ataque A1
-//           "Water Gun", //nombre ataque A2
-//           "Bite", //nombre ataque A3
-//           "Rain Dance", //nombre ataque A4
-//           "Iron Defence", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque A7
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Hydro Pump", //nombre ataque S1
-//           "Surf", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/009" //  Url
-//           ),
-//       PokemonModel(
-//           013, //ID
-//           "Weedle", //Name
-//           "images/images_pokemones/013.png", //Url Imagen
-//           "images/sprites_pokemones/13.gif", //Url Sprite
-//           bug, //Int Color
-//           bug_Icon, //Url Icono primer tipo
-//           poison_Icon, //url Icono segundo tipo
-//           "Poison Sting", //nombre ataque C1
-//           "Poison Sting", //nombre ataque C2
-//           "String Shot", //nombre ataque C3
-//           "-", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Focus Energy", //nombre ataque A1
-//           "Focus Energy", //nombre ataque A2
-//           "-", //nombre ataque A3
-//           "-", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Pin Missile", //nombre ataque S1
-//           "-", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/013" //  url
-//           ),
-//       PokemonModel(
-//           014, //ID
-//           "Kakuna", //Name
-//           "images/images_pokemones/014.png", //Url Imagen
-//           "images/sprites_pokemones/14.gif", //Url Sprite
-//           bug, //Int Color
-//           bug_Icon, //Url Icono primer tipo
-//           poison_Icon, //url Icono segundo tipo
-//           "Poison Sting", //nombre ataque C1
-//           "Poison Sting", //nombre ataque C2
-//           "String Shot", //nombre ataque C3
-//           "-", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Focus Energy", //nombre ataque A1
-//           "Focus Energy", //nombre ataque A2
-//           "Harden", //nombre ataque A3
-//           "-", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Pin Missile", //nombre ataque S1
-//           "-", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/014" //  url
-//           ),
-//       PokemonModel(
-//           015, //ID
-//           "Beedrill", //Name
-//           "images/images_pokemones/015.png", //Url Imagen
-//           "images/sprites_pokemones/15.gif", //Url Sprite
-//           bug, //Int Color
-//           bug_Icon, //Url Icono primer tipo
-//           poison_Icon, //url Icono segundo tipo
-//           "Poison Sting", //nombre ataque C1
-//           "Poison Sting", //nombre ataque C2
-//           "String Shot", //nombre ataque C3
-//           "Agility", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Focus Energy", //nombre ataque A1
-//           "Focus Energy", //nombre ataque A2
-//           "Harden", //nombre ataque A3
-//           "Rage", //nombre ataque A4
-//           "Twineedle", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Pin Missile", //nombre ataque S1
-//           "X-Scissor", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/015" //  url
-//           ),
-//       PokemonModel(
-//           016, //ID
-//           "Pidgey", //Name
-//           "images/images_pokemones/016.png", //Url Imagen
-//           "images/sprites_pokemones/16.gif", //Url Sprite
-//           fly, //Int Color
-//           normal_Icon, //Url Icono primer tipo
-//           fire_Icon, //url Icono segundo tipo
-//           "Gust", //nombre ataque C1
-//           "Gust", //nombre ataque C2
-//           "Tackle", //nombre ataque C3
-//           "Quick Attack", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Wing Attack", //nombre ataque A1
-//           "Feather Dance", //nombre ataque A2
-//           "Twister", //nombre ataque A3
-//           "-", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Mirror Move", //nombre ataque S1
-//           "Air Slash", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/016" //  url
-//           ),
-//       PokemonModel(
-//           017, //ID
-//           "Pidgeotto", //Name
-//           "images/images_pokemones/017.png", //Url Imagen
-//           "images/sprites_pokemones/17.gif", //Url Sprite
-//           fly, //Int Color
-//           normal_Icon, //Url Icono primer tipo
-//           fire_Icon, //url Icono segundo tipo
-//           "Gust", //nombre ataque C1
-//           "Gust", //nombre ataque C2
-//           "Tackle", //nombre ataque C3
-//           "Quick Attack", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Wing Attack", //nombre ataque A1
-//           "Feather Dance", //nombre ataque A2
-//           "Twister", //nombre ataque A3
-//           "-", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Mirror Move", //nombre ataque S1
-//           "Air Slash", //nombre ataque S2
-//           "Fly", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/017" //Url Pagina
-//           ),
-//       PokemonModel(
-//           018, //ID
-//           "Pidgeot", //Name
-//           "images/images_pokemones/018.png", //Url Imagen
-//           "images/sprites_pokemones/18.gif", //Url Sprite
-//           fly, //Int Color
-//           normal_Icon, //Url Icono primer tipo
-//           fire_Icon, //url Icono segundo tipo
-//           "Gust", //nombre ataque C1
-//           "Gust", //nombre ataque C2
-//           "Tackle", //nombre ataque C3
-//           "Quick Attack", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Wing Attack", //nombre ataque A1
-//           "Feather Dance", //nombre ataque A2
-//           "Twister", //nombre ataque A3
-//           "-", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Mirror Move", //nombre ataque S1
-//           "Air Slash", //nombre ataque S2
-//           "Fly", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/018" //  url
-//           ),
-//       PokemonModel(
-//           025, //ID
-//           "Pikachu", //Name
-//           "images/images_pokemones/025.png", //Url Imagen
-//           "images/sprites_pokemones/25.gif", //Url Sprite
-//           electric, //Int Color
-//           electric_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Thundershock", //nombre ataque C1
-//           "Thundershock", //nombre ataque C2
-//           "Quick Attack", //nombre ataque C3
-//           "Agility", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Thunderwave", //nombre ataque A1
-//           "Thunderbolt", //nombre ataque A2
-//           "Double Team", //nombre ataque A3
-//           "Light Screen", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Thunder", //nombre ataque S1
-//           "Slam", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/025" //  url
-//           ),
-//       PokemonModel(
-//           026, //ID
-//           "Raichu", //Name
-//           "images/images_pokemones/026.png", //Url Imagen
-//           "images/sprites_pokemones/26.gif", //Url Sprite
-//           electric, //Int Color
-//           electric_Icon, //Url Icono primer tipo
-//           "", //url Icono segundo tipo
-//           "Thundershock", //nombre ataque C1
-//           "Thundershock", //nombre ataque C2
-//           "Quick Attack", //nombre ataque C3
-//           "Agility", //nombre ataque C4
-//           "-", //nombre ataque C5
-//           "Thunderwave", //nombre ataque A1
-//           "Thunderbolt", //nombre ataque A2
-//           "Double Team", //nombre ataque A3
-//           "Light Screen", //nombre ataque A4
-//           "-", //nombre ataque A5
-//           "-", // nombre ataque A6
-//           "-", // nombre ataque
-//           "-", // nombre ataque A8
-//           "-", // nombre ataque A9
-//           "-", // nombre ataque A10
-//           "Thunder", //nombre ataque S1
-//           "Slam", //nombre ataque S2
-//           "-", //nombre ataque S3
-//           0, // cantidad de hp
-//           0, // cantidad de ataque basico
-//           0, // Speed
-//           "/026" //  url
-//           ),
+PokemonModel wartortle = PokemonModel(
+  id: 008,
+  name: 'Wartortle',
+  image: 'assets/images/images_pokemons/008.png',
+  sprite: 'assets/images/sprites_pokemons/8.gif',
+  hp: 59,
+  damage: 63,
+  speed: 58,
+  isCaptured: false,
+  isFavorite: false,
+  types: [water],
+  commonAttacks: [
+    bubble,
+    bubble,
+    tackle,
+    leer,
+  ],
+  advancedAttacks: [
+    waterGun,
+    waterGun,
+    bite,
+    rainDance,
+    ironDefense,
+  ],
+  specialAttacks: [
+    hydroPump,
+    surf,
+  ],
+);
+
+PokemonModel blastoise = PokemonModel(
+  id: 009,
+  name: 'Blastoise',
+  image: 'assets/images/images_pokemons/009.png',
+  sprite: 'assets/images/sprites_pokemons/9.gif',
+  hp: 79,
+  damage: 83,
+  speed: 78,
+  isCaptured: false,
+  isFavorite: false,
+  types: [water],
+  commonAttacks: [
+    bubble,
+    bubble,
+    tackle,
+    leer,
+  ],
+  advancedAttacks: [
+    waterGun,
+    waterGun,
+    bite,
+    rainDance,
+    ironDefense,
+  ],
+  specialAttacks: [
+    hydroPump,
+    surf,
+  ],
+);
+
+PokemonModel weedle = PokemonModel(
+  id: 013,
+  name: 'Weedle',
+  image: 'assets/images/images_pokemons/013.png',
+  sprite: 'assets/images/sprites_pokemons/13.gif',
+  hp: 40,
+  damage: 35,
+  speed: 50,
+  isCaptured: false,
+  isFavorite: false,
+  types: [bug, poison],
+  commonAttacks: [
+    poisonSting,
+    poisonSting,
+    stringShot,
+  ],
+  advancedAttacks: [
+    focusEnergy,
+    focusEnergy,
+  ],
+  specialAttacks: [
+    pinMissile,
+  ],
+);
+
+PokemonModel kakuna = PokemonModel(
+  id: 014,
+  name: 'Kakuna',
+  image: 'assets/images/images_pokemons/014.png',
+  sprite: 'assets/images/sprites_pokemons/14.gif',
+  hp: 45,
+  damage: 25,
+  speed: 35,
+  isCaptured: false,
+  isFavorite: false,
+  types: [bug, poison],
+  commonAttacks: [
+    poisonSting,
+    poisonSting,
+    stringShot,
+  ],
+  advancedAttacks: [
+    focusEnergy,
+    focusEnergy,
+    harden,
+  ],
+  specialAttacks: [
+    pinMissile,
+  ],
+);
+
+PokemonModel beedrill = PokemonModel(
+  id: 015,
+  name: 'Beedrill',
+  image: 'assets/images/images_pokemons/015.png',
+  sprite: 'assets/images/sprites_pokemons/15.gif',
+  hp: 65,
+  damage: 90,
+  speed: 75,
+  isCaptured: false,
+  isFavorite: false,
+  types: [bug, poison],
+  commonAttacks: [
+    poisonSting,
+    poisonSting,
+    stringShot,
+    agility,
+  ],
+  advancedAttacks: [
+    focusEnergy,
+    focusEnergy,
+    harden,
+    rage,
+    twineedle,
+  ],
+  specialAttacks: [
+    pinMissile,
+    xScissor,
+  ],
+);
+
+PokemonModel pidgey = PokemonModel(
+  id: 016,
+  name: 'Pidgey',
+  image: 'assets/images/images_pokemons/016.png',
+  sprite: 'assets/images/sprites_pokemons/16.gif',
+  hp: 40,
+  damage: 45,
+  speed: 56,
+  isCaptured: false,
+  isFavorite: false,
+  types: [normal, flying],
+  commonAttacks: [
+    gust,
+    gust,
+    tackle,
+    quickAttack,
+  ],
+  advancedAttacks: [
+    wingAttack,
+    featherDance,
+    twister,
+  ],
+  specialAttacks: [
+    mirrorMove,
+    airSlash,
+  ],
+);
+
+PokemonModel pidgeotto = PokemonModel(
+  id: 017,
+  name: 'Pidgeotto',
+  image: 'assets/images/images_pokemons/017.png',
+  sprite: 'assets/images/sprites_pokemons/17.gif',
+  hp: 63,
+  damage: 60,
+  speed: 71,
+  isCaptured: false,
+  isFavorite: false,
+  types: [normal, flying],
+  commonAttacks: [
+    gust,
+    gust,
+    tackle,
+    quickAttack,
+  ],
+  advancedAttacks: [
+    wingAttack,
+    featherDance,
+    twister,
+  ],
+  specialAttacks: [
+    mirrorMove,
+    airSlash,
+    fly,
+  ],
+);
+
+PokemonModel pidgeot = PokemonModel(
+  id: 018,
+  name: 'Pidgeot',
+  image: 'assets/images/images_pokemons/018.png',
+  sprite: 'assets/images/sprites_pokemons/18.gif',
+  hp: 83,
+  damage: 80,
+  speed: 91,
+  isCaptured: false,
+  isFavorite: false,
+  types: [normal, flying],
+  commonAttacks: [
+    gust,
+    gust,
+    tackle,
+    quickAttack,
+  ],
+  advancedAttacks: [
+    wingAttack,
+    featherDance,
+    twister,
+  ],
+  specialAttacks: [
+    mirrorMove,
+    airSlash,
+    fly,
+  ],
+);
+
+PokemonModel pikachu = PokemonModel(
+  id: 025,
+  name: 'Pikachu',
+  image: 'assets/images/images_pokemons/025.png',
+  sprite: 'assets/images/sprites_pokemons/25.gif',
+  hp: 35,
+  damage: 55,
+  speed: 90,
+  isCaptured: false,
+  isFavorite: false,
+  types: [electric],
+  commonAttacks: [
+    thunderShock,
+    thunderShock,
+    quickAttack,
+    agility,
+  ],
+  advancedAttacks: [
+    thunderWave,
+    thunderbolt,
+    doubleTeam,
+    lightScreen,
+  ],
+  specialAttacks: [
+    thunder,
+    slam,
+  ],
+);
+
+PokemonModel raichu = PokemonModel(
+  id: 026,
+  name: 'Raichu',
+  image: 'assets/images/images_pokemons/026.png',
+  sprite: 'assets/images/sprites_pokemons/26.gif',
+  hp: 60,
+  damage: 90,
+  speed: 100,
+  isCaptured: false,
+  isFavorite: false,
+  types: [electric],
+  commonAttacks: [
+    thunderShock,
+    thunderShock,
+    quickAttack,
+    agility,
+  ],
+  advancedAttacks: [
+    thunderWave,
+    thunderbolt,
+    doubleTeam,
+    lightScreen,
+  ],
+  specialAttacks: [
+    thunder,
+    slam,
+  ],
+);
+
+PokemonModel nidoranM = PokemonModel(
+  id: 032,
+  name: 'Nidoran',
+  image: 'assets/images/images_pokemons/032.png',
+  sprite: 'assets/images/sprites_pokemons/32.gif',
+  hp: 46,
+  damage: 57,
+  speed: 41,
+  isCaptured: false,
+  isFavorite: false,
+  types: [poison],
+  commonAttacks: [
+    furyAttack,
+    poisonSting,
+    hornAttack,
+    doubleKick,
+  ],
+  advancedAttacks: [
+    focusEnergy,
+    dig,
+  ],
+  specialAttacks: [
+    hornDrill,
+    megaHorn,
+  ],
+);
+
+PokemonModel nidorino = PokemonModel(
+  id: 033,
+  name: 'Nidorino',
+  image: 'assets/images/images_pokemons/033.png',
+  sprite: 'assets/images/sprites_pokemons/33.gif',
+  hp: 61,
+  damage: 72,
+  speed: 56,
+  isCaptured: false,
+  isFavorite: false,
+  types: [poison],
+  commonAttacks: [
+    furyAttack,
+    poisonSting,
+    hornAttack,
+    doubleKick,
+  ],
+  advancedAttacks: [
+    focusEnergy,
+    dig,
+  ],
+  specialAttacks: [
+    hornDrill,
+    megaHorn,
+    poisonJab,
+  ],
+);
+
+PokemonModel nidoking = PokemonModel(
+  id: 034,
+  name: 'Nidoking',
+  image: 'assets/images/images_pokemons/034.png',
+  sprite: 'assets/images/sprites_pokemons/34.gif',
+  hp: 81,
+  damage: 92,
+  speed: 76,
+  isCaptured: false,
+  isFavorite: false,
+  types: [poison, ground],
+  commonAttacks: [
+    furyAttack,
+    poisonSting,
+    hornAttack,
+    doubleKick,
+  ],
+  advancedAttacks: [
+    focusEnergy,
+    dig,
+  ],
+  specialAttacks: [
+    hornDrill,
+    megaHorn,
+    poisonJab,
+  ],
+);
+
 //       PokemonModel(
 //           032, //ID
 //           "Nidoran", //Name

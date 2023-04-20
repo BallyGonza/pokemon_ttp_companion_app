@@ -246,7 +246,7 @@ AttackModel waterGun = AttackModel(
   damage: 40,
   pp: 25,
   accuracy: 100,
-  attackType: common,
+  attackType: advanced,
   description:
       'A strong attack that can be used only on a target with a grass-like body.',
 );
@@ -298,7 +298,7 @@ AttackModel leer = AttackModel(
   damage: 0,
   pp: 30,
   accuracy: 100,
-  attackType: advanced,
+  attackType: common,
   description:
       'A strong attack that can be used only on a target with a grass-like body.',
 );
@@ -324,6 +324,396 @@ AttackModel rainDance = AttackModel(
   damage: 0,
   pp: 5,
   accuracy: 0,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel poisonSting = AttackModel(
+  id: 25,
+  name: 'Poison Sting',
+  image: '',
+  type: poison,
+  damage: 15,
+  pp: 35,
+  accuracy: 100,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel stringShot = AttackModel(
+  id: 26,
+  name: 'String Shot',
+  image: '',
+  type: bug,
+  damage: 0,
+  pp: 40,
+  accuracy: 95,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel focusEnergy = AttackModel(
+  id: 27,
+  name: 'Focus Energy',
+  image: '',
+  type: normal,
+  damage: 0,
+  pp: 30,
+  accuracy: 0,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel pinMissile = AttackModel(
+  id: 28,
+  name: 'Pin Missile',
+  image: '',
+  type: bug,
+  damage: 25,
+  pp: 20,
+  accuracy: 95,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel harden = AttackModel(
+  id: 29,
+  name: 'Harden',
+  image: '',
+  type: normal,
+  damage: 0,
+  pp: 30,
+  accuracy: 0,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel agility = AttackModel(
+  id: 30,
+  name: 'Agility',
+  image: '',
+  type: normal,
+  damage: 0,
+  pp: 30,
+  accuracy: 0,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel twineedle = AttackModel(
+  id: 31,
+  name: 'Twineedle',
+  image: '',
+  type: bug,
+  damage: 25,
+  pp: 20,
+  accuracy: 100,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel xScissor = AttackModel(
+  id: 32,
+  name: 'X-Scissor',
+  image: '',
+  type: bug,
+  damage: 80,
+  pp: 15,
+  accuracy: 100,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel gust = AttackModel(
+  id: 33,
+  name: 'Gust',
+  image: '',
+  type: flying,
+  damage: 40,
+  pp: 35,
+  accuracy: 100,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel quickAttack = AttackModel(
+  id: 34,
+  name: 'Quick Attack',
+  image: '',
+  type: normal,
+  damage: 40,
+  pp: 30,
+  accuracy: 100,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel wingAttack = AttackModel(
+  id: 35,
+  name: 'Wing Attack',
+  image: '',
+  type: flying,
+  damage: 60,
+  pp: 35,
+  accuracy: 100,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel featherDance = AttackModel(
+  id: 36,
+  name: 'Feather Dance',
+  image: '',
+  type: flying,
+  damage: 0,
+  pp: 15,
+  accuracy: 100,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel twister = AttackModel(
+  id: 37,
+  name: 'Twister',
+  image: '',
+  type: dragon,
+  damage: 40,
+  pp: 20,
+  accuracy: 100,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel mirrorMove = AttackModel(
+  id: 38,
+  name: 'Mirror Move',
+  image: '',
+  type: flying,
+  damage: 0,
+  pp: 20,
+  accuracy: 0,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel airSlash = AttackModel(
+  id: 39,
+  name: 'Air Slash',
+  image: '',
+  type: flying,
+  damage: 75,
+  pp: 15,
+  accuracy: 95,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel fly = AttackModel(
+  id: 40,
+  name: 'Fly',
+  image: '',
+  type: flying,
+  damage: 90,
+  pp: 15,
+  accuracy: 95,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel thunderShock = AttackModel(
+  id: 41,
+  name: 'Thunder Shock',
+  image: '',
+  type: electric,
+  damage: 40,
+  pp: 30,
+  accuracy: 100,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel thunderWave = AttackModel(
+  id: 42,
+  name: 'Thunder Wave',
+  image: '',
+  type: electric,
+  damage: 0,
+  pp: 20,
+  accuracy: 100,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel thunderbolt = AttackModel(
+  id: 43,
+  name: 'Thunderbolt',
+  image: '',
+  type: electric,
+  damage: 90,
+  pp: 15,
+  accuracy: 100,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel doubleTeam = AttackModel(
+  id: 44,
+  name: 'Double Team',
+  image: '',
+  type: normal,
+  damage: 0,
+  pp: 15,
+  accuracy: 0,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel lightScreen = AttackModel(
+  id: 45,
+  name: 'Light Screen',
+  image: '',
+  type: psychic,
+  damage: 0,
+  pp: 30,
+  accuracy: 0,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel thunder = AttackModel(
+  id: 46,
+  name: 'Thunder',
+  image: '',
+  type: electric,
+  damage: 110,
+  pp: 10,
+  accuracy: 70,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel slam = AttackModel(
+  id: 47,
+  name: 'Slam',
+  image: '',
+  type: normal,
+  damage: 80,
+  pp: 20,
+  accuracy: 75,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel hornAttack = AttackModel(
+  id: 48,
+  name: 'Horn Attack',
+  image: '',
+  type: normal,
+  damage: 65,
+  pp: 25,
+  accuracy: 100,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel doubleKick = AttackModel(
+  id: 49,
+  name: 'Double Kick',
+  image: '',
+  type: fighting,
+  damage: 30,
+  pp: 30,
+  accuracy: 100,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel dig = AttackModel(
+  id: 50,
+  name: 'Dig',
+  image: '',
+  type: ground,
+  damage: 80,
+  pp: 10,
+  accuracy: 100,
+  attackType: advanced,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel hornDrill = AttackModel(
+  id: 51,
+  name: 'Horn Drill',
+  image: '',
+  type: normal,
+  damage: 0,
+  pp: 5,
+  accuracy: 30,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel furyAttack = AttackModel(
+  id: 52,
+  name: 'Fury Attack',
+  image: '',
+  type: normal,
+  damage: 15,
+  pp: 20,
+  accuracy: 85,
+  attackType: common,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel megaHorn = AttackModel(
+  id: 53,
+  name: 'Mega Horn',
+  image: '',
+  type: normal,
+  damage: 120,
+  pp: 10,
+  accuracy: 85,
+  attackType: special,
+  description:
+      'A strong attack that can be used only on a target with a grass-like body.',
+);
+
+AttackModel poisonJab = AttackModel(
+  id: 54,
+  name: 'Poison Jab',
+  image: '',
+  type: poison,
+  damage: 80,
+  pp: 20,
+  accuracy: 100,
   attackType: special,
   description:
       'A strong attack that can be used only on a target with a grass-like body.',
