@@ -10,23 +10,20 @@ class UserModel {
   @HiveField(1)
   String name;
   @HiveField(2)
-  List<PokemonModel> pokemonTeam;
-  @HiveField(3)
-  List<PokemonModel> catchedPokemons;
-  @HiveField(4)
   List<PokemonModel> pokedex;
-  @HiveField(5)
+  @HiveField(3)
   List<TrainerModel> trainers;
-  @HiveField(6)
+  @HiveField(4)
   int coins;
+  @HiveField(5)
+  List<PokemonModel> pokemonTeam;
 
   UserModel({
     required this.id,
     required this.name,
-    required this.pokemonTeam,
-    required this.catchedPokemons,
     required this.pokedex,
     required this.trainers,
     required this.coins,
+    required this.pokemonTeam,
   });
 }

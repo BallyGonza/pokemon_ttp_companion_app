@@ -20,24 +20,21 @@ mixin _$PokedexEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
-    required TResult Function(int pokemonId) favoritePokemon,
-    required TResult Function(int pokemonId) unfavoritePokemon,
+    required TResult Function(int pokemonId) toggleFavoritePokemon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
-    TResult? Function(int pokemonId)? favoritePokemon,
-    TResult? Function(int pokemonId)? unfavoritePokemon,
+    TResult? Function(int pokemonId)? toggleFavoritePokemon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
-    TResult Function(int pokemonId)? favoritePokemon,
-    TResult Function(int pokemonId)? unfavoritePokemon,
+    TResult Function(int pokemonId)? toggleFavoritePokemon,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -45,26 +42,24 @@ mixin _$PokedexEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(PokedexInitialEvent value) init,
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
-    required TResult Function(PokedexFavoritePokemonEvent value)
-        favoritePokemon,
-    required TResult Function(PokedexUnfavoritePokemonEvent value)
-        unfavoritePokemon,
+    required TResult Function(PokedexToggleFavoritePokemonEvent value)
+        toggleFavoritePokemon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PokedexInitialEvent value)? init,
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult? Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult? Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult? Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PokedexInitialEvent value)? init,
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,8 +123,7 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
-    required TResult Function(int pokemonId) favoritePokemon,
-    required TResult Function(int pokemonId) unfavoritePokemon,
+    required TResult Function(int pokemonId) toggleFavoritePokemon,
   }) {
     return init();
   }
@@ -139,8 +133,7 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
-    TResult? Function(int pokemonId)? favoritePokemon,
-    TResult? Function(int pokemonId)? unfavoritePokemon,
+    TResult? Function(int pokemonId)? toggleFavoritePokemon,
   }) {
     return init?.call();
   }
@@ -150,8 +143,7 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
-    TResult Function(int pokemonId)? favoritePokemon,
-    TResult Function(int pokemonId)? unfavoritePokemon,
+    TResult Function(int pokemonId)? toggleFavoritePokemon,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -165,10 +157,8 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(PokedexInitialEvent value) init,
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
-    required TResult Function(PokedexFavoritePokemonEvent value)
-        favoritePokemon,
-    required TResult Function(PokedexUnfavoritePokemonEvent value)
-        unfavoritePokemon,
+    required TResult Function(PokedexToggleFavoritePokemonEvent value)
+        toggleFavoritePokemon,
   }) {
     return init(this);
   }
@@ -178,8 +168,8 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PokedexInitialEvent value)? init,
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult? Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult? Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult? Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
   }) {
     return init?.call(this);
   }
@@ -189,8 +179,8 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PokedexInitialEvent value)? init,
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -273,8 +263,7 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
-    required TResult Function(int pokemonId) favoritePokemon,
-    required TResult Function(int pokemonId) unfavoritePokemon,
+    required TResult Function(int pokemonId) toggleFavoritePokemon,
   }) {
     return catchPokemon(pokemonId);
   }
@@ -284,8 +273,7 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
-    TResult? Function(int pokemonId)? favoritePokemon,
-    TResult? Function(int pokemonId)? unfavoritePokemon,
+    TResult? Function(int pokemonId)? toggleFavoritePokemon,
   }) {
     return catchPokemon?.call(pokemonId);
   }
@@ -295,8 +283,7 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
-    TResult Function(int pokemonId)? favoritePokemon,
-    TResult Function(int pokemonId)? unfavoritePokemon,
+    TResult Function(int pokemonId)? toggleFavoritePokemon,
     required TResult orElse(),
   }) {
     if (catchPokemon != null) {
@@ -310,10 +297,8 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(PokedexInitialEvent value) init,
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
-    required TResult Function(PokedexFavoritePokemonEvent value)
-        favoritePokemon,
-    required TResult Function(PokedexUnfavoritePokemonEvent value)
-        unfavoritePokemon,
+    required TResult Function(PokedexToggleFavoritePokemonEvent value)
+        toggleFavoritePokemon,
   }) {
     return catchPokemon(this);
   }
@@ -323,8 +308,8 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PokedexInitialEvent value)? init,
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult? Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult? Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult? Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
   }) {
     return catchPokemon?.call(this);
   }
@@ -334,8 +319,8 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PokedexInitialEvent value)? init,
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
     required TResult orElse(),
   }) {
     if (catchPokemon != null) {
@@ -356,22 +341,23 @@ abstract class PokedexCatchPokemonEvent implements PokedexEvent {
 }
 
 /// @nodoc
-abstract class _$$PokedexFavoritePokemonEventCopyWith<$Res> {
-  factory _$$PokedexFavoritePokemonEventCopyWith(
-          _$PokedexFavoritePokemonEvent value,
-          $Res Function(_$PokedexFavoritePokemonEvent) then) =
-      __$$PokedexFavoritePokemonEventCopyWithImpl<$Res>;
+abstract class _$$PokedexToggleFavoritePokemonEventCopyWith<$Res> {
+  factory _$$PokedexToggleFavoritePokemonEventCopyWith(
+          _$PokedexToggleFavoritePokemonEvent value,
+          $Res Function(_$PokedexToggleFavoritePokemonEvent) then) =
+      __$$PokedexToggleFavoritePokemonEventCopyWithImpl<$Res>;
   @useResult
   $Res call({int pokemonId});
 }
 
 /// @nodoc
-class __$$PokedexFavoritePokemonEventCopyWithImpl<$Res>
-    extends _$PokedexEventCopyWithImpl<$Res, _$PokedexFavoritePokemonEvent>
-    implements _$$PokedexFavoritePokemonEventCopyWith<$Res> {
-  __$$PokedexFavoritePokemonEventCopyWithImpl(
-      _$PokedexFavoritePokemonEvent _value,
-      $Res Function(_$PokedexFavoritePokemonEvent) _then)
+class __$$PokedexToggleFavoritePokemonEventCopyWithImpl<$Res>
+    extends _$PokedexEventCopyWithImpl<$Res,
+        _$PokedexToggleFavoritePokemonEvent>
+    implements _$$PokedexToggleFavoritePokemonEventCopyWith<$Res> {
+  __$$PokedexToggleFavoritePokemonEventCopyWithImpl(
+      _$PokedexToggleFavoritePokemonEvent _value,
+      $Res Function(_$PokedexToggleFavoritePokemonEvent) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -379,7 +365,7 @@ class __$$PokedexFavoritePokemonEventCopyWithImpl<$Res>
   $Res call({
     Object? pokemonId = null,
   }) {
-    return _then(_$PokedexFavoritePokemonEvent(
+    return _then(_$PokedexToggleFavoritePokemonEvent(
       null == pokemonId
           ? _value.pokemonId
           : pokemonId // ignore: cast_nullable_to_non_nullable
@@ -390,22 +376,23 @@ class __$$PokedexFavoritePokemonEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PokedexFavoritePokemonEvent implements PokedexFavoritePokemonEvent {
-  const _$PokedexFavoritePokemonEvent(this.pokemonId);
+class _$PokedexToggleFavoritePokemonEvent
+    implements PokedexToggleFavoritePokemonEvent {
+  const _$PokedexToggleFavoritePokemonEvent(this.pokemonId);
 
   @override
   final int pokemonId;
 
   @override
   String toString() {
-    return 'PokedexEvent.favoritePokemon(pokemonId: $pokemonId)';
+    return 'PokedexEvent.toggleFavoritePokemon(pokemonId: $pokemonId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PokedexFavoritePokemonEvent &&
+            other is _$PokedexToggleFavoritePokemonEvent &&
             (identical(other.pokemonId, pokemonId) ||
                 other.pokemonId == pokemonId));
   }
@@ -416,19 +403,19 @@ class _$PokedexFavoritePokemonEvent implements PokedexFavoritePokemonEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PokedexFavoritePokemonEventCopyWith<_$PokedexFavoritePokemonEvent>
-      get copyWith => __$$PokedexFavoritePokemonEventCopyWithImpl<
-          _$PokedexFavoritePokemonEvent>(this, _$identity);
+  _$$PokedexToggleFavoritePokemonEventCopyWith<
+          _$PokedexToggleFavoritePokemonEvent>
+      get copyWith => __$$PokedexToggleFavoritePokemonEventCopyWithImpl<
+          _$PokedexToggleFavoritePokemonEvent>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
-    required TResult Function(int pokemonId) favoritePokemon,
-    required TResult Function(int pokemonId) unfavoritePokemon,
+    required TResult Function(int pokemonId) toggleFavoritePokemon,
   }) {
-    return favoritePokemon(pokemonId);
+    return toggleFavoritePokemon(pokemonId);
   }
 
   @override
@@ -436,10 +423,9 @@ class _$PokedexFavoritePokemonEvent implements PokedexFavoritePokemonEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
-    TResult? Function(int pokemonId)? favoritePokemon,
-    TResult? Function(int pokemonId)? unfavoritePokemon,
+    TResult? Function(int pokemonId)? toggleFavoritePokemon,
   }) {
-    return favoritePokemon?.call(pokemonId);
+    return toggleFavoritePokemon?.call(pokemonId);
   }
 
   @override
@@ -447,12 +433,11 @@ class _$PokedexFavoritePokemonEvent implements PokedexFavoritePokemonEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
-    TResult Function(int pokemonId)? favoritePokemon,
-    TResult Function(int pokemonId)? unfavoritePokemon,
+    TResult Function(int pokemonId)? toggleFavoritePokemon,
     required TResult orElse(),
   }) {
-    if (favoritePokemon != null) {
-      return favoritePokemon(pokemonId);
+    if (toggleFavoritePokemon != null) {
+      return toggleFavoritePokemon(pokemonId);
     }
     return orElse();
   }
@@ -462,12 +447,10 @@ class _$PokedexFavoritePokemonEvent implements PokedexFavoritePokemonEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(PokedexInitialEvent value) init,
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
-    required TResult Function(PokedexFavoritePokemonEvent value)
-        favoritePokemon,
-    required TResult Function(PokedexUnfavoritePokemonEvent value)
-        unfavoritePokemon,
+    required TResult Function(PokedexToggleFavoritePokemonEvent value)
+        toggleFavoritePokemon,
   }) {
-    return favoritePokemon(this);
+    return toggleFavoritePokemon(this);
   }
 
   @override
@@ -475,10 +458,10 @@ class _$PokedexFavoritePokemonEvent implements PokedexFavoritePokemonEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PokedexInitialEvent value)? init,
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult? Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult? Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult? Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
   }) {
-    return favoritePokemon?.call(this);
+    return toggleFavoritePokemon?.call(this);
   }
 
   @override
@@ -486,175 +469,24 @@ class _$PokedexFavoritePokemonEvent implements PokedexFavoritePokemonEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PokedexInitialEvent value)? init,
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
+    TResult Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
     required TResult orElse(),
   }) {
-    if (favoritePokemon != null) {
-      return favoritePokemon(this);
+    if (toggleFavoritePokemon != null) {
+      return toggleFavoritePokemon(this);
     }
     return orElse();
   }
 }
 
-abstract class PokedexFavoritePokemonEvent implements PokedexEvent {
-  const factory PokedexFavoritePokemonEvent(final int pokemonId) =
-      _$PokedexFavoritePokemonEvent;
+abstract class PokedexToggleFavoritePokemonEvent implements PokedexEvent {
+  const factory PokedexToggleFavoritePokemonEvent(final int pokemonId) =
+      _$PokedexToggleFavoritePokemonEvent;
 
   int get pokemonId;
   @JsonKey(ignore: true)
-  _$$PokedexFavoritePokemonEventCopyWith<_$PokedexFavoritePokemonEvent>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$PokedexUnfavoritePokemonEventCopyWith<$Res> {
-  factory _$$PokedexUnfavoritePokemonEventCopyWith(
-          _$PokedexUnfavoritePokemonEvent value,
-          $Res Function(_$PokedexUnfavoritePokemonEvent) then) =
-      __$$PokedexUnfavoritePokemonEventCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int pokemonId});
-}
-
-/// @nodoc
-class __$$PokedexUnfavoritePokemonEventCopyWithImpl<$Res>
-    extends _$PokedexEventCopyWithImpl<$Res, _$PokedexUnfavoritePokemonEvent>
-    implements _$$PokedexUnfavoritePokemonEventCopyWith<$Res> {
-  __$$PokedexUnfavoritePokemonEventCopyWithImpl(
-      _$PokedexUnfavoritePokemonEvent _value,
-      $Res Function(_$PokedexUnfavoritePokemonEvent) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? pokemonId = null,
-  }) {
-    return _then(_$PokedexUnfavoritePokemonEvent(
-      null == pokemonId
-          ? _value.pokemonId
-          : pokemonId // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$PokedexUnfavoritePokemonEvent implements PokedexUnfavoritePokemonEvent {
-  const _$PokedexUnfavoritePokemonEvent(this.pokemonId);
-
-  @override
-  final int pokemonId;
-
-  @override
-  String toString() {
-    return 'PokedexEvent.unfavoritePokemon(pokemonId: $pokemonId)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PokedexUnfavoritePokemonEvent &&
-            (identical(other.pokemonId, pokemonId) ||
-                other.pokemonId == pokemonId));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, pokemonId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PokedexUnfavoritePokemonEventCopyWith<_$PokedexUnfavoritePokemonEvent>
-      get copyWith => __$$PokedexUnfavoritePokemonEventCopyWithImpl<
-          _$PokedexUnfavoritePokemonEvent>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() init,
-    required TResult Function(int pokemonId) catchPokemon,
-    required TResult Function(int pokemonId) favoritePokemon,
-    required TResult Function(int pokemonId) unfavoritePokemon,
-  }) {
-    return unfavoritePokemon(pokemonId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? init,
-    TResult? Function(int pokemonId)? catchPokemon,
-    TResult? Function(int pokemonId)? favoritePokemon,
-    TResult? Function(int pokemonId)? unfavoritePokemon,
-  }) {
-    return unfavoritePokemon?.call(pokemonId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
-    TResult Function(int pokemonId)? catchPokemon,
-    TResult Function(int pokemonId)? favoritePokemon,
-    TResult Function(int pokemonId)? unfavoritePokemon,
-    required TResult orElse(),
-  }) {
-    if (unfavoritePokemon != null) {
-      return unfavoritePokemon(pokemonId);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PokedexInitialEvent value) init,
-    required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
-    required TResult Function(PokedexFavoritePokemonEvent value)
-        favoritePokemon,
-    required TResult Function(PokedexUnfavoritePokemonEvent value)
-        unfavoritePokemon,
-  }) {
-    return unfavoritePokemon(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PokedexInitialEvent value)? init,
-    TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult? Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult? Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
-  }) {
-    return unfavoritePokemon?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PokedexInitialEvent value)? init,
-    TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
-    TResult Function(PokedexFavoritePokemonEvent value)? favoritePokemon,
-    TResult Function(PokedexUnfavoritePokemonEvent value)? unfavoritePokemon,
-    required TResult orElse(),
-  }) {
-    if (unfavoritePokemon != null) {
-      return unfavoritePokemon(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PokedexUnfavoritePokemonEvent implements PokedexEvent {
-  const factory PokedexUnfavoritePokemonEvent(final int pokemonId) =
-      _$PokedexUnfavoritePokemonEvent;
-
-  int get pokemonId;
-  @JsonKey(ignore: true)
-  _$$PokedexUnfavoritePokemonEventCopyWith<_$PokedexUnfavoritePokemonEvent>
+  _$$PokedexToggleFavoritePokemonEventCopyWith<
+          _$PokedexToggleFavoritePokemonEvent>
       get copyWith => throw _privateConstructorUsedError;
 }

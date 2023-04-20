@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
-import 'package:poke_app/views/screens/pokemon_screen.dart';
 
 class PokemonList extends StatefulWidget {
   const PokemonList({required this.pokemons, Key? key}) : super(key: key);

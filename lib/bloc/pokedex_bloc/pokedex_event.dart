@@ -8,10 +8,7 @@ class PokedexEvent with _$PokedexEvent {
   const factory PokedexEvent.catchPokemon(
     int pokemonId,
   ) = PokedexCatchPokemonEvent;
-  const factory PokedexEvent.favoritePokemon(
+  const factory PokedexEvent.toggleFavoritePokemon(
     int pokemonId,
-  ) = PokedexFavoritePokemonEvent;
-  const factory PokedexEvent.unfavoritePokemon(
-    int pokemonId,
-  ) = PokedexUnfavoritePokemonEvent;
+  ) = PokedexToggleFavoritePokemonEvent;
 }

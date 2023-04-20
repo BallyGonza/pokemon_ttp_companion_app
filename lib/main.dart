@@ -31,9 +31,6 @@ Future<void> main() async {
         create: (context) => PokedexBloc(),
       ),
       BlocProvider(
-        create: (context) => CatchedPokemonsBloc(),
-      ),
-      BlocProvider(
         create: (context) => TeamPokemonBloc(),
       ),
       BlocProvider(
@@ -52,7 +49,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: pokemonAppTheme,
-      home: const LandingScreen(),
+      home: BlocBuilder<UserBloc, UserState>(
+        builder: (context, state) {
+          return state.maybeWhen(
+            loaded: (user) => const LandingScreen(),
+            orElse: () => const Center(child: CircularProgressIndicator()),
+          );
+        },
+      ),
     );
   }
 }

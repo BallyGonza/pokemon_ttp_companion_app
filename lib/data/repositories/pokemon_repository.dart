@@ -12,6 +12,16 @@ class PokemonRepository {
   }
 }
 
+final List<PokemonModel> defaultPokemons = [
+  bulbasaur,
+  ivysaur,
+  venusaur,
+  charmander,
+  charmeleon,
+  charizard,
+  squirtle,
+];
+
 PokemonModel bulbasaur = PokemonModel(
   id: 001,
   name: 'Bulbasaur',
@@ -99,9 +109,122 @@ PokemonModel venusaur = PokemonModel(
   ],
 );
 
-final List<PokemonModel> defaultPokemons = [bulbasaur, ivysaur, venusaur];
-final List<PokemonModel> defaultCatchedPokemons = [];
+PokemonModel charmander = PokemonModel(
+  id: 004,
+  name: 'Charmander',
+  image: 'assets/images/images_pokemons/004.png',
+  sprite: 'assets/images/sprites_pokemons/4.gif',
+  hp: 39,
+  damage: 52,
+  speed: 65,
+  isCaptured: false,
+  isFavorite: false,
+  types: [fire],
+  commonAttacks: [
+    ember,
+    ember,
+    scratch,
+  ],
+  advancedAttacks: [
+    flamethrower,
+    slash,
+    smokeScreen,
+    rage,
+    sunnyDay,
+  ],
+  specialAttacks: [
+    fireSpin,
+    overheat,
+  ],
+);
 
+PokemonModel charmeleon = PokemonModel(
+  id: 005,
+  name: 'Charmeleon',
+  image: 'assets/images/images_pokemons/005.png',
+  sprite: 'assets/images/sprites_pokemons/5.gif',
+  hp: 58,
+  damage: 64,
+  speed: 80,
+  isCaptured: false,
+  isFavorite: false,
+  types: [fire],
+  commonAttacks: [
+    ember,
+    ember,
+    scratch,
+  ],
+  advancedAttacks: [
+    flamethrower,
+    slash,
+    smokeScreen,
+    rage,
+    sunnyDay,
+  ],
+  specialAttacks: [
+    fireSpin,
+    overheat,
+  ],
+);
+
+PokemonModel charizard = PokemonModel(
+  id: 006,
+  name: 'Charizard',
+  image: 'assets/images/images_pokemons/006.png',
+  sprite: 'assets/images/sprites_pokemons/6.gif',
+  hp: 78,
+  damage: 84,
+  speed: 100,
+  isCaptured: false,
+  isFavorite: false,
+  types: [fire, flying],
+  commonAttacks: [
+    ember,
+    ember,
+    scratch,
+  ],
+  advancedAttacks: [
+    flamethrower,
+    slash,
+    smokeScreen,
+    rage,
+    sunnyDay,
+  ],
+  specialAttacks: [
+    fireSpin,
+    overheat,
+  ],
+);
+
+PokemonModel squirtle = PokemonModel(
+  id: 007,
+  name: 'Squirtle',
+  image: 'assets/images/images_pokemons/007.png',
+  sprite: 'assets/images/sprites_pokemons/7.gif',
+  hp: 44,
+  damage: 48,
+  speed: 43,
+  isCaptured: false,
+  isFavorite: false,
+  types: [water],
+  commonAttacks: [
+    bubble,
+    bubble,
+    tackle,
+    leer,
+  ],
+  advancedAttacks: [
+    waterGun,
+    waterGun,
+    bite,
+    rainDance,
+    ironDefense,
+  ],
+  specialAttacks: [
+    hydroPump,
+    surf,
+  ],
+);
 
 // );
 //   static List<PokemonModel> pokemons() {

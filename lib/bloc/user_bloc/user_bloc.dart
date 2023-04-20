@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/data/repositories/user_repository.dart';
 
@@ -14,15 +13,14 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     add(const UserEvent.init());
   }
 
+  final UserRepository userRepository = UserRepository();
   late UserModel user;
-  final Box<UserModel> userBox = Hive.box<UserModel>('user_box');
 
   Future<void> _onInit(
     UserInitialEvent event,
     Emitter<UserState> emit,
   ) async {
-    userBox.get(0) ?? userBox.put(0, defaultUser);
-    user = userBox.get(0)!;
+    user = await userRepository.getUser();
     emit(UserState.loaded(user));
   }
 }

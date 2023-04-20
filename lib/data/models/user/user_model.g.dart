@@ -19,32 +19,29 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
     return UserModel(
       id: fields[0] as int,
       name: fields[1] as String,
-      pokemonTeam: (fields[2] as List).cast<PokemonModel>(),
-      catchedPokemons: (fields[3] as List).cast<PokemonModel>(),
-      pokedex: (fields[4] as List).cast<PokemonModel>(),
-      trainers: (fields[5] as List).cast<TrainerModel>(),
-      coins: fields[6] as int,
+      pokedex: (fields[2] as List).cast<PokemonModel>(),
+      trainers: (fields[3] as List).cast<TrainerModel>(),
+      coins: fields[4] as int,
+      pokemonTeam: (fields[5] as List).cast<PokemonModel>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, UserModel obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
       ..write(obj.name)
       ..writeByte(2)
-      ..write(obj.pokemonTeam)
-      ..writeByte(3)
-      ..write(obj.catchedPokemons)
-      ..writeByte(4)
       ..write(obj.pokedex)
-      ..writeByte(5)
+      ..writeByte(3)
       ..write(obj.trainers)
-      ..writeByte(6)
-      ..write(obj.coins);
+      ..writeByte(4)
+      ..write(obj.coins)
+      ..writeByte(5)
+      ..write(obj.pokemonTeam);
   }
 
   @override

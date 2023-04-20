@@ -26,9 +26,6 @@ class _PokemonScreenState extends State<PokemonScreen> {
           context.read<PokedexBloc>().add(
                 PokedexEvent.catchPokemon(widget.pokemon.id),
               );
-          context.read<CatchedPokemonsBloc>().add(
-                CatchedPokemonsEvent.catchPokemon(widget.pokemon),
-              );
         },
         backgroundColor: Color(widget.pokemon.types[0].color),
         child: const FaIcon(
@@ -55,13 +52,9 @@ class _PokemonScreenState extends State<PokemonScreen> {
           IconButton(
             onPressed: () {
               setState(() {
-                widget.pokemon.isFavorite
-                    ? context.read<PokedexBloc>().add(
-                          PokedexEvent.unfavoritePokemon(widget.pokemon.id),
-                        )
-                    : context.read<PokedexBloc>().add(
-                          PokedexEvent.favoritePokemon(widget.pokemon.id),
-                        );
+                context.read<PokedexBloc>().add(
+                      PokedexEvent.toggleFavoritePokemon(widget.pokemon.id),
+                    );
               });
             },
             icon: widget.pokemon.isFavorite

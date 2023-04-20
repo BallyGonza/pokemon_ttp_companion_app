@@ -19,32 +19,44 @@ mixin _$TrainerEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
+    required TResult Function(int index, TrainerModel trainer) add,
+    required TResult Function(int index, TrainerModel trainer) remove,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
+    TResult? Function(int index, TrainerModel trainer)? add,
+    TResult? Function(int index, TrainerModel trainer)? remove,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function(int index, TrainerModel trainer)? add,
+    TResult Function(int index, TrainerModel trainer)? remove,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(TrainerInitialEvent value) init,
+    required TResult Function(TrainerAddEvent value) add,
+    required TResult Function(TrainerRemoveEvent value) remove,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TrainerInitialEvent value)? init,
+    TResult? Function(TrainerAddEvent value)? add,
+    TResult? Function(TrainerRemoveEvent value)? remove,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrainerInitialEvent value)? init,
+    TResult Function(TrainerAddEvent value)? add,
+    TResult Function(TrainerRemoveEvent value)? remove,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +119,8 @@ class _$TrainerInitialEvent implements TrainerInitialEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
+    required TResult Function(int index, TrainerModel trainer) add,
+    required TResult Function(int index, TrainerModel trainer) remove,
   }) {
     return init();
   }
@@ -115,6 +129,8 @@ class _$TrainerInitialEvent implements TrainerInitialEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
+    TResult? Function(int index, TrainerModel trainer)? add,
+    TResult? Function(int index, TrainerModel trainer)? remove,
   }) {
     return init?.call();
   }
@@ -123,6 +139,8 @@ class _$TrainerInitialEvent implements TrainerInitialEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function(int index, TrainerModel trainer)? add,
+    TResult Function(int index, TrainerModel trainer)? remove,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -135,6 +153,8 @@ class _$TrainerInitialEvent implements TrainerInitialEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(TrainerInitialEvent value) init,
+    required TResult Function(TrainerAddEvent value) add,
+    required TResult Function(TrainerRemoveEvent value) remove,
   }) {
     return init(this);
   }
@@ -143,6 +163,8 @@ class _$TrainerInitialEvent implements TrainerInitialEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TrainerInitialEvent value)? init,
+    TResult? Function(TrainerAddEvent value)? add,
+    TResult? Function(TrainerRemoveEvent value)? remove,
   }) {
     return init?.call(this);
   }
@@ -151,6 +173,8 @@ class _$TrainerInitialEvent implements TrainerInitialEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrainerInitialEvent value)? init,
+    TResult Function(TrainerAddEvent value)? add,
+    TResult Function(TrainerRemoveEvent value)? remove,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -162,4 +186,303 @@ class _$TrainerInitialEvent implements TrainerInitialEvent {
 
 abstract class TrainerInitialEvent implements TrainerEvent {
   const factory TrainerInitialEvent() = _$TrainerInitialEvent;
+}
+
+/// @nodoc
+abstract class _$$TrainerAddEventCopyWith<$Res> {
+  factory _$$TrainerAddEventCopyWith(
+          _$TrainerAddEvent value, $Res Function(_$TrainerAddEvent) then) =
+      __$$TrainerAddEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index, TrainerModel trainer});
+}
+
+/// @nodoc
+class __$$TrainerAddEventCopyWithImpl<$Res>
+    extends _$TrainerEventCopyWithImpl<$Res, _$TrainerAddEvent>
+    implements _$$TrainerAddEventCopyWith<$Res> {
+  __$$TrainerAddEventCopyWithImpl(
+      _$TrainerAddEvent _value, $Res Function(_$TrainerAddEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? trainer = null,
+  }) {
+    return _then(_$TrainerAddEvent(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == trainer
+          ? _value.trainer
+          : trainer // ignore: cast_nullable_to_non_nullable
+              as TrainerModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TrainerAddEvent implements TrainerAddEvent {
+  const _$TrainerAddEvent(this.index, this.trainer);
+
+  @override
+  final int index;
+  @override
+  final TrainerModel trainer;
+
+  @override
+  String toString() {
+    return 'TrainerEvent.add(index: $index, trainer: $trainer)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrainerAddEvent &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.trainer, trainer) || other.trainer == trainer));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, trainer);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TrainerAddEventCopyWith<_$TrainerAddEvent> get copyWith =>
+      __$$TrainerAddEventCopyWithImpl<_$TrainerAddEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(int index, TrainerModel trainer) add,
+    required TResult Function(int index, TrainerModel trainer) remove,
+  }) {
+    return add(index, trainer);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(int index, TrainerModel trainer)? add,
+    TResult? Function(int index, TrainerModel trainer)? remove,
+  }) {
+    return add?.call(index, trainer);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(int index, TrainerModel trainer)? add,
+    TResult Function(int index, TrainerModel trainer)? remove,
+    required TResult orElse(),
+  }) {
+    if (add != null) {
+      return add(index, trainer);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrainerInitialEvent value) init,
+    required TResult Function(TrainerAddEvent value) add,
+    required TResult Function(TrainerRemoveEvent value) remove,
+  }) {
+    return add(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(TrainerInitialEvent value)? init,
+    TResult? Function(TrainerAddEvent value)? add,
+    TResult? Function(TrainerRemoveEvent value)? remove,
+  }) {
+    return add?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrainerInitialEvent value)? init,
+    TResult Function(TrainerAddEvent value)? add,
+    TResult Function(TrainerRemoveEvent value)? remove,
+    required TResult orElse(),
+  }) {
+    if (add != null) {
+      return add(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TrainerAddEvent implements TrainerEvent {
+  const factory TrainerAddEvent(final int index, final TrainerModel trainer) =
+      _$TrainerAddEvent;
+
+  int get index;
+  TrainerModel get trainer;
+  @JsonKey(ignore: true)
+  _$$TrainerAddEventCopyWith<_$TrainerAddEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$TrainerRemoveEventCopyWith<$Res> {
+  factory _$$TrainerRemoveEventCopyWith(_$TrainerRemoveEvent value,
+          $Res Function(_$TrainerRemoveEvent) then) =
+      __$$TrainerRemoveEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index, TrainerModel trainer});
+}
+
+/// @nodoc
+class __$$TrainerRemoveEventCopyWithImpl<$Res>
+    extends _$TrainerEventCopyWithImpl<$Res, _$TrainerRemoveEvent>
+    implements _$$TrainerRemoveEventCopyWith<$Res> {
+  __$$TrainerRemoveEventCopyWithImpl(
+      _$TrainerRemoveEvent _value, $Res Function(_$TrainerRemoveEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? trainer = null,
+  }) {
+    return _then(_$TrainerRemoveEvent(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == trainer
+          ? _value.trainer
+          : trainer // ignore: cast_nullable_to_non_nullable
+              as TrainerModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TrainerRemoveEvent implements TrainerRemoveEvent {
+  const _$TrainerRemoveEvent(this.index, this.trainer);
+
+  @override
+  final int index;
+  @override
+  final TrainerModel trainer;
+
+  @override
+  String toString() {
+    return 'TrainerEvent.remove(index: $index, trainer: $trainer)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrainerRemoveEvent &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.trainer, trainer) || other.trainer == trainer));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, trainer);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TrainerRemoveEventCopyWith<_$TrainerRemoveEvent> get copyWith =>
+      __$$TrainerRemoveEventCopyWithImpl<_$TrainerRemoveEvent>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(int index, TrainerModel trainer) add,
+    required TResult Function(int index, TrainerModel trainer) remove,
+  }) {
+    return remove(index, trainer);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(int index, TrainerModel trainer)? add,
+    TResult? Function(int index, TrainerModel trainer)? remove,
+  }) {
+    return remove?.call(index, trainer);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(int index, TrainerModel trainer)? add,
+    TResult Function(int index, TrainerModel trainer)? remove,
+    required TResult orElse(),
+  }) {
+    if (remove != null) {
+      return remove(index, trainer);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrainerInitialEvent value) init,
+    required TResult Function(TrainerAddEvent value) add,
+    required TResult Function(TrainerRemoveEvent value) remove,
+  }) {
+    return remove(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(TrainerInitialEvent value)? init,
+    TResult? Function(TrainerAddEvent value)? add,
+    TResult? Function(TrainerRemoveEvent value)? remove,
+  }) {
+    return remove?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrainerInitialEvent value)? init,
+    TResult Function(TrainerAddEvent value)? add,
+    TResult Function(TrainerRemoveEvent value)? remove,
+    required TResult orElse(),
+  }) {
+    if (remove != null) {
+      return remove(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TrainerRemoveEvent implements TrainerEvent {
+  const factory TrainerRemoveEvent(
+      final int index, final TrainerModel trainer) = _$TrainerRemoveEvent;
+
+  int get index;
+  TrainerModel get trainer;
+  @JsonKey(ignore: true)
+  _$$TrainerRemoveEventCopyWith<_$TrainerRemoveEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
