@@ -7,16 +7,16 @@ List<PokemonTypeModel> types = [
   dragon,
   electric,
   fairy,
-  fighting,
+  fight,
   fire,
-  flying,
+  fly,
   ghost,
   grass,
   ground,
   ice,
   normal,
   poison,
-  psychic,
+  psy,
   rock,
   steel,
   water,
@@ -74,7 +74,7 @@ PokemonTypeModel fairy = PokemonTypeModel(
   // immunities: [dragon],
 );
 
-PokemonTypeModel fighting = PokemonTypeModel(
+PokemonTypeModel fight = PokemonTypeModel(
   id: 5,
   name: 'Fighting',
   image: fightIcon,
@@ -94,7 +94,7 @@ PokemonTypeModel fire = PokemonTypeModel(
   // resistances: [ice, grass, bug, steel, fairy],
 );
 
-PokemonTypeModel flying = PokemonTypeModel(
+PokemonTypeModel fly = PokemonTypeModel(
   id: 7,
   name: 'Flying',
   image: flyIcon,
@@ -166,7 +166,7 @@ PokemonTypeModel poison = PokemonTypeModel(
   // resistances: [grass, fighting],
 );
 
-PokemonTypeModel psychic = PokemonTypeModel(
+PokemonTypeModel psy = PokemonTypeModel(
   id: 14,
   name: 'Psychic',
   image: psyIcon,
