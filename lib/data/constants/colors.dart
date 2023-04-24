@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 //Biblioteca de Colores
@@ -8,10 +6,10 @@ const int fireColor = 0xffbff983f;
 const int waterColor = 0xffb3393dd;
 const int grassColor = 0xffb35c04a;
 const int poisonColor = 0xffbb667cf;
-const int psychicColor = 0xffbfae1b2;
+const int psychicColor = 0xffbF85788;
 const int steelColor = 0xffb598fa3;
 const int rockColor = 0xffbc9b787;
-const int fightingColor = 0xffe12c6a;
+const int fightingColor = 0xffC03028;
 const int darkColor = 0xffb5b5366;
 const int ghostColor = 0xffb4b6ab3;
 const int dragonColor = 0xffb0070ca;
