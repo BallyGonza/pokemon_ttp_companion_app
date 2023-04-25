@@ -10,16 +10,19 @@ class TrainerModel {
   @HiveField(1)
   String name;
   @HiveField(2)
-  TrainerTypeModel trainerType;
+  String image;
   @HiveField(3)
-  String description;
+  TrainerClassModel trainerClass;
   @HiveField(4)
+  String description;
+  @HiveField(5)
   int cost;
 
   TrainerModel({
     required this.id,
     required this.name,
-    required this.trainerType,
+    required this.image,
+    required this.trainerClass,
     required this.description,
     required this.cost,
   });

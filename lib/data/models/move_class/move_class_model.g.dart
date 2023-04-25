@@ -1,44 +1,41 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pokemon_type_model.dart';
+part of 'move_class_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class PokemonTypeModelAdapter extends TypeAdapter<PokemonTypeModel> {
+class MoveClassModelAdapter extends TypeAdapter<MoveClassModel> {
   @override
-  final int typeId = 3;
+  final int typeId = 1;
 
   @override
-  PokemonTypeModel read(BinaryReader reader) {
+  MoveClassModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return PokemonTypeModel(
+    return MoveClassModel(
       id: fields[0] as int,
       name: fields[1] as String,
-      image: fields[2] as String,
-      backImg: fields[3] as String,
-      color: fields[4] as int,
+      color: fields[2] as int,
+      icon: fields[3] as String,
     );
   }
 
   @override
-  void write(BinaryWriter writer, PokemonTypeModel obj) {
+  void write(BinaryWriter writer, MoveClassModel obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
       ..write(obj.name)
       ..writeByte(2)
-      ..write(obj.image)
+      ..write(obj.color)
       ..writeByte(3)
-      ..write(obj.backImg)
-      ..writeByte(4)
-      ..write(obj.color);
+      ..write(obj.icon);
   }
 
   @override
@@ -47,7 +44,7 @@ class PokemonTypeModelAdapter extends TypeAdapter<PokemonTypeModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is PokemonTypeModelAdapter &&
+      other is MoveClassModelAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

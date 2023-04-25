@@ -1,20 +1,18 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:poke_app/data/models/models.dart';
 
-part 'attack_model.g.dart';
+part 'move_model.g.dart';
 
 @HiveType(typeId: 0)
-class AttackModel {
+class MoveModel {
   @HiveField(0)
   int id;
   @HiveField(1)
   String name;
-  @HiveField(2)
-  String image;
   @HiveField(3)
-  PokemonTypeModel type;
+  TypeModel type;
   @HiveField(4)
-  AttackTypeModel attackType;
+  MoveClassModel moveClass;
   @HiveField(5)
   int damage;
   @HiveField(6)
@@ -24,15 +22,14 @@ class AttackModel {
   @HiveField(8)
   String description;
 
-  AttackModel({
+  MoveModel({
     required this.id,
     required this.name,
-    required this.image,
     required this.type,
     required this.damage,
     required this.pp,
     required this.accuracy,
-    required this.attackType,
+    required this.moveClass,
     required this.description,
   });
 }

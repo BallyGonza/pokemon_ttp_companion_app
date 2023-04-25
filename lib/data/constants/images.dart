@@ -62,18 +62,12 @@ const String groundBack = "assets/images/pokemon_types/ground/back/ground.png";
 const String fairyBack = "assets/images/pokemon_types/fairy/back/fairy.png";
 const String trainersBack = "assets/images/trainers/back/trainers.png";
 
-// Iconos C1,C2,C3,A1,A2,S Ataques
-const String c1AttackIcon = "assets/images/attacks_icons/C1.png";
-const String c2AttackIcon = "assets/images/attacks_icons/C2.png";
-const String c3AttackIcon = "assets/images/attacks_icons/C3.png";
-const String a1AttackIcon = "assets/images/attacks_icons/A1.png";
-const String a2AttackIcon = "assets/images/attacks_icons/A2.png";
-const String sAttackIcon = "assets/images/attacks_icons/S.png";
+// Move Icons
+const String commonMoveIcon = "assets/images/move_icons/common.png";
+const String advancedMoveIcon = "assets/images/move_icons/advanced.png";
+const String specialMoveIcon = "assets/images/move_icons/special.png";
 
 // Iconos Trainers
-const String c1TrainerIcon = "assets/images/trainers/class/c1.png";
-const String c2TrainerIcon = "assets/images/trainers/class/c2.png";
-const String c3TrainerIcon = "assets/images/trainers/class/c3.png";
-const String a1TrainerIcon = "assets/images/trainers/class/a1.png";
-const String a2TrainerIcon = "assets/images/trainers/class/a2.png";
-const String sTrainerIcon = "assets/images/trainers/class/s.png";
+const String commonTrainerIcon = "assets/images/trainers/class/common.png";
+const String advancedTrainerIcon = "assets/images/trainers/class/advanced.png";
+const String specialTrainerIcon = "assets/images/trainers/class/special.png";

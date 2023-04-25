@@ -83,7 +83,7 @@ flutter:
     - assets/images/trainers/back/
     - assets/images/trainers/class/
 
-    - assets/images/attacks_icons/
+    - assets/images/move_icons/
 
     - assets/images/pokemon_types/
     - assets/images/pokemon_types/bug/

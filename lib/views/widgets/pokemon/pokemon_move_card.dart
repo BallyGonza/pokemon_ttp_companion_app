@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-class PokemonAttackCard extends StatelessWidget {
-  const PokemonAttackCard({
+class PokemonMoveCard extends StatelessWidget {
+  const PokemonMoveCard({
     Key? key,
     this.number,
-    required this.attack,
+    required this.move,
   }) : super(key: key);
 
   final int? number;
-  final AttackModel attack;
+  final MoveModel move;
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +19,22 @@ class PokemonAttackCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        color: Color(attack.attackType.color),
+        color: Color(move.type.color),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
-              number == null
-                  ? const SizedBox.shrink()
-                  : Image.asset(
-                      "assets/images/attacks_icons/${attack.attackType.name}$number.png",
-                      width: 35,
-                    ),
+              Image.asset(
+                move.moveClass.icon,
+                width: 35,
+              ),
               const SizedBox(width: 8),
-              Text(attack.name, style: const TextStyle(fontSize: 20)),
+              Text(move.name, style: const TextStyle(fontSize: 20)),
+              const Spacer(),
+              Image.asset(
+                move.type.icon,
+                width: 35,
+              ),
             ],
           ),
         ),

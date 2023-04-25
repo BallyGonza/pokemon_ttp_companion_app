@@ -1,19 +1,22 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
-part 'trainer_type_model.g.dart';
+part 'trainer_class_model.g.dart';
 
 @HiveType(typeId: 5)
-class TrainerTypeModel {
+class TrainerClassModel {
   @HiveField(0)
   int id;
   @HiveField(1)
   String name;
   @HiveField(2)
+  int color;
+  @HiveField(3)
   String image;
 
-  TrainerTypeModel({
+  TrainerClassModel({
     required this.id,
     required this.name,
+    required this.color,
     required this.image,
   });
 }

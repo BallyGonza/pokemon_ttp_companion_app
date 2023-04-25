@@ -1,7 +1,7 @@
 import 'package:poke_app/data/constants/constants.dart';
 import 'package:poke_app/data/models/models.dart';
 
-List<PokemonTypeModel> types = [
+List<TypeModel> types = [
   bug,
   dark,
   dragon,
@@ -22,20 +22,20 @@ List<PokemonTypeModel> types = [
   water,
 ];
 
-PokemonTypeModel bug = PokemonTypeModel(
+TypeModel bug = TypeModel(
   id: 0,
   name: 'Bug',
-  image: bugIcon,
+  icon: bugIcon,
   backImg: bugBack,
   color: bugColor,
   // weaknesses: [fire, flying, rock],
   // resistances: [grass, fighting, ground],
 );
 
-PokemonTypeModel dark = PokemonTypeModel(
+TypeModel dark = TypeModel(
   id: 1,
   name: 'Dark',
-  image: darkIcon,
+  icon: darkIcon,
   backImg: darkBack,
   color: darkColor,
   // weaknesses: [fighting, bug, fairy],
@@ -43,30 +43,30 @@ PokemonTypeModel dark = PokemonTypeModel(
   // immunities: [psychic],
 );
 
-PokemonTypeModel dragon = PokemonTypeModel(
+TypeModel dragon = TypeModel(
   id: 2,
   name: 'Dragon',
-  image: dragonIcon,
+  icon: dragonIcon,
   backImg: dragonBack,
   color: dragonColor,
   // weaknesses: [ice, fairy],
   // resistances: [fire, water, grass, electric],
 );
 
-PokemonTypeModel electric = PokemonTypeModel(
+TypeModel electric = TypeModel(
   id: 3,
   name: 'Electric',
-  image: electricIcon,
+  icon: electricIcon,
   backImg: electricBack,
   color: electricColor,
   // weaknesses: [ground, fighting],
   // resistances: [steel, flying],
 );
 
-PokemonTypeModel fairy = PokemonTypeModel(
+TypeModel fairy = TypeModel(
   id: 4,
   name: 'Fairy',
-  image: fairyIcon,
+  icon: fairyIcon,
   backImg: fairyBack,
   color: fairyColor,
   // weaknesses: [poison, steel],
@@ -74,30 +74,30 @@ PokemonTypeModel fairy = PokemonTypeModel(
   // immunities: [dragon],
 );
 
-PokemonTypeModel fight = PokemonTypeModel(
+TypeModel fight = TypeModel(
   id: 5,
   name: 'Fighting',
-  image: fightIcon,
+  icon: fightIcon,
   backImg: fightBack,
   color: fightingColor,
   // weaknesses: [flying, psychic, fairy],
   // resistances: [bug, rock, dark],
 );
 
-PokemonTypeModel fire = PokemonTypeModel(
+TypeModel fire = TypeModel(
   id: 6,
   name: 'Fire',
-  image: fireIcon,
+  icon: fireIcon,
   backImg: fireBack,
   color: fireColor,
   // weaknesses: [water, ground, rock],
   // resistances: [ice, grass, bug, steel, fairy],
 );
 
-PokemonTypeModel fly = PokemonTypeModel(
+TypeModel fly = TypeModel(
   id: 7,
   name: 'Flying',
-  image: flyIcon,
+  icon: flyIcon,
   backImg: flyBack,
   color: flyingColor,
   // weaknesses: [electric, rock, ice],
@@ -105,10 +105,10 @@ PokemonTypeModel fly = PokemonTypeModel(
   // immunities: [ground],
 );
 
-PokemonTypeModel ghost = PokemonTypeModel(
+TypeModel ghost = TypeModel(
   id: 8,
   name: 'Ghost',
-  image: ghostIcon,
+  icon: ghostIcon,
   backImg: ghostBack,
   color: ghostColor,
   // weaknesses: [dark],
@@ -116,20 +116,20 @@ PokemonTypeModel ghost = PokemonTypeModel(
   // immunities: [normal, fighting],
 );
 
-PokemonTypeModel grass = PokemonTypeModel(
+TypeModel grass = TypeModel(
   id: 9,
   name: 'Grass',
-  image: grassIcon,
+  icon: grassIcon,
   backImg: grassBack,
   color: grassColor,
   // weaknesses: [fire, flying, ice, poison, bug],
   // resistances: [water, electric, ground],
 );
 
-PokemonTypeModel ground = PokemonTypeModel(
+TypeModel ground = TypeModel(
   id: 10,
   name: 'Ground',
-  image: groundIcon,
+  icon: groundIcon,
   backImg: groundBack,
   color: groundColor,
   // weaknesses: [water, grass, ice],
@@ -137,59 +137,59 @@ PokemonTypeModel ground = PokemonTypeModel(
   // immunities: [electric],
 );
 
-PokemonTypeModel ice = PokemonTypeModel(
+TypeModel ice = TypeModel(
   id: 11,
   name: 'Ice',
-  image: iceIcon,
+  icon: iceIcon,
   backImg: iceBack,
   color: iceColor,
   // weaknesses: [fire, fighting, rock, steel],
 );
 
-PokemonTypeModel normal = PokemonTypeModel(
+TypeModel normal = TypeModel(
   id: 12,
   name: 'Normal',
-  image: normalIcon,
+  icon: normalIcon,
   backImg: normalBack,
   color: normalColor,
   // weaknesses: [fighting],
   // immunities: [ghost],
 );
 
-PokemonTypeModel poison = PokemonTypeModel(
+TypeModel poison = TypeModel(
   id: 13,
   name: 'Poison',
-  image: poisonIcon,
+  icon: poisonIcon,
   backImg: poisonBack,
   color: poisonColor,
   // weaknesses: [ground, psychic],
   // resistances: [grass, fighting],
 );
 
-PokemonTypeModel psy = PokemonTypeModel(
+TypeModel psy = TypeModel(
   id: 14,
   name: 'Psychic',
-  image: psyIcon,
+  icon: psyIcon,
   backImg: psyBack,
   color: psychicColor,
   // weaknesses: [bug, ghost, dark],
   // resistances: [fighting],
 );
 
-PokemonTypeModel rock = PokemonTypeModel(
+TypeModel rock = TypeModel(
   id: 15,
   name: 'Rock',
-  image: rockIcon,
+  icon: rockIcon,
   backImg: rockBack,
   color: rockColor,
   // weaknesses: [water, grass, fighting, ground],
   // resistances: [fire, flying, poison, normal],
 );
 
-PokemonTypeModel steel = PokemonTypeModel(
+TypeModel steel = TypeModel(
   id: 16,
   name: 'Steel',
-  image: steelIcon,
+  icon: steelIcon,
   backImg: steelBack,
   color: steelColor,
   // weaknesses: [fire, fighting, ground],
@@ -197,10 +197,10 @@ PokemonTypeModel steel = PokemonTypeModel(
   // immunities: [poison],
 );
 
-PokemonTypeModel water = PokemonTypeModel(
+TypeModel water = TypeModel(
   id: 17,
   name: 'Water',
-  image: waterIcon,
+  icon: waterIcon,
   backImg: waterBack,
   color: waterColor,
   // weaknesses: [grass, electric],

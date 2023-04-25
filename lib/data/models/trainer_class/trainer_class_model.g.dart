@@ -1,56 +1,41 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'attack_model.dart';
+part of 'trainer_class_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class AttackModelAdapter extends TypeAdapter<AttackModel> {
+class TrainerClassModelAdapter extends TypeAdapter<TrainerClassModel> {
   @override
-  final int typeId = 0;
+  final int typeId = 5;
 
   @override
-  AttackModel read(BinaryReader reader) {
+  TrainerClassModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return AttackModel(
+    return TrainerClassModel(
       id: fields[0] as int,
       name: fields[1] as String,
-      image: fields[2] as String,
-      type: fields[3] as PokemonTypeModel,
-      damage: fields[5] as int,
-      pp: fields[6] as int,
-      accuracy: fields[7] as int,
-      attackType: fields[4] as AttackTypeModel,
-      description: fields[8] as String,
+      color: fields[2] as int,
+      image: fields[3] as String,
     );
   }
 
   @override
-  void write(BinaryWriter writer, AttackModel obj) {
+  void write(BinaryWriter writer, TrainerClassModel obj) {
     writer
-      ..writeByte(9)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
       ..write(obj.name)
       ..writeByte(2)
-      ..write(obj.image)
+      ..write(obj.color)
       ..writeByte(3)
-      ..write(obj.type)
-      ..writeByte(4)
-      ..write(obj.attackType)
-      ..writeByte(5)
-      ..write(obj.damage)
-      ..writeByte(6)
-      ..write(obj.pp)
-      ..writeByte(7)
-      ..write(obj.accuracy)
-      ..writeByte(8)
-      ..write(obj.description);
+      ..write(obj.image);
   }
 
   @override
@@ -59,7 +44,7 @@ class AttackModelAdapter extends TypeAdapter<AttackModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AttackModelAdapter &&
+      other is TrainerClassModelAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-class AttackCard extends StatelessWidget {
-  const AttackCard({
+class MoveCard extends StatelessWidget {
+  const MoveCard({
     Key? key,
-    required this.index,
-    required this.attack,
+    required this.move,
   }) : super(key: key);
 
-  final AttackModel attack;
-  final int index;
+  final MoveModel move;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class AttackCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Color(attack.attackType.color),
+          color: Color(move.type.color),
           border: Border.all(
             color: Colors.black,
             width: 0.5,
@@ -30,12 +28,12 @@ class AttackCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(attack.name,
+                  Text(move.name,
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.bold)),
                   const Spacer(),
                   Image.asset(
-                    attack.type.image,
+                    move.type.icon,
                     width: 30,
                   ),
                 ],
@@ -43,26 +41,25 @@ class AttackCard extends StatelessWidget {
               const SizedBox(height: 10),
               Row(
                 children: [
-                  Text('Poder: ${attack.damage}',
+                  Text('Poder: ${move.damage}',
                       style: const TextStyle(
                         fontSize: 16,
                       )),
                   const Spacer(),
-                  Text('Precision: ${attack.accuracy}',
+                  Text('Precision: ${move.accuracy}',
                       style: const TextStyle(fontSize: 16)),
                 ],
               ),
               Row(
                 children: [
-                  Text('PP: ${attack.pp}',
-                      style: const TextStyle(fontSize: 16)),
+                  Text('PP: ${move.pp}', style: const TextStyle(fontSize: 16)),
                   const Spacer(),
-                  Text('Tipo: ${attack.type.name}',
+                  Text('Tipo: ${move.type.name}',
                       style: const TextStyle(fontSize: 16)),
                 ],
               ),
               const SizedBox(height: 10),
-              Text(attack.description,
+              Text(move.description,
                   style: const TextStyle(
                       fontSize: 16, fontStyle: FontStyle.italic)),
             ],

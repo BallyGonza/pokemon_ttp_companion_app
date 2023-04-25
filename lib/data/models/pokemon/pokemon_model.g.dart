@@ -24,19 +24,23 @@ class PokemonModelAdapter extends TypeAdapter<PokemonModel> {
       hp: fields[4] as int,
       damage: fields[5] as int,
       speed: fields[6] as int,
-      types: (fields[7] as List).cast<PokemonTypeModel>(),
-      commonAttacks: (fields[8] as List).cast<AttackModel>(),
-      advancedAttacks: (fields[9] as List).cast<AttackModel>(),
-      specialAttacks: (fields[10] as List).cast<AttackModel>(),
-      isFavorite: fields[11] as bool,
-      isCaptured: fields[12] as bool,
+      types: (fields[7] as List).cast<TypeModel>(),
+      c1: fields[8] as MoveModel,
+      c2: fields[9] as MoveModel,
+      c3: fields[10] as MoveModel,
+      a1: fields[11] as MoveModel,
+      a2: fields[12] as MoveModel,
+      s: fields[13] as MoveModel,
+      moves: (fields[14] as List).cast<MoveModel>(),
+      isFavorite: fields[15] as bool,
+      isCaptured: fields[16] as bool,
     );
   }
 
   @override
   void write(BinaryWriter writer, PokemonModel obj) {
     writer
-      ..writeByte(13)
+      ..writeByte(17)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -54,14 +58,22 @@ class PokemonModelAdapter extends TypeAdapter<PokemonModel> {
       ..writeByte(7)
       ..write(obj.types)
       ..writeByte(8)
-      ..write(obj.commonAttacks)
+      ..write(obj.c1)
       ..writeByte(9)
-      ..write(obj.advancedAttacks)
+      ..write(obj.c2)
       ..writeByte(10)
-      ..write(obj.specialAttacks)
+      ..write(obj.c3)
       ..writeByte(11)
-      ..write(obj.isFavorite)
+      ..write(obj.a1)
       ..writeByte(12)
+      ..write(obj.a2)
+      ..writeByte(13)
+      ..write(obj.s)
+      ..writeByte(14)
+      ..write(obj.moves)
+      ..writeByte(15)
+      ..write(obj.isFavorite)
+      ..writeByte(16)
       ..write(obj.isCaptured);
   }
 

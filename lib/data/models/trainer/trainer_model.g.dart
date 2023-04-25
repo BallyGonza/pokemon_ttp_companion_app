@@ -19,25 +19,28 @@ class TrainerModelAdapter extends TypeAdapter<TrainerModel> {
     return TrainerModel(
       id: fields[0] as int,
       name: fields[1] as String,
-      trainerType: fields[2] as TrainerTypeModel,
-      description: fields[3] as String,
-      cost: fields[4] as int,
+      image: fields[2] as String,
+      trainerClass: fields[3] as TrainerClassModel,
+      description: fields[4] as String,
+      cost: fields[5] as int,
     );
   }
 
   @override
   void write(BinaryWriter writer, TrainerModel obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
       ..write(obj.name)
       ..writeByte(2)
-      ..write(obj.trainerType)
+      ..write(obj.image)
       ..writeByte(3)
-      ..write(obj.description)
+      ..write(obj.trainerClass)
       ..writeByte(4)
+      ..write(obj.description)
+      ..writeByte(5)
       ..write(obj.cost);
   }
 

@@ -1,19 +1,22 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
-part 'attack_type_model.g.dart';
+part 'move_class_model.g.dart';
 
 @HiveType(typeId: 1)
-class AttackTypeModel {
+class MoveClassModel {
   @HiveField(0)
   int id;
   @HiveField(1)
   String name;
   @HiveField(2)
   int color;
+  @HiveField(3)
+  String icon;
 
-  AttackTypeModel({
+  MoveClassModel({
     required this.id,
     required this.name,
     required this.color,
+    required this.icon,
   });
 }

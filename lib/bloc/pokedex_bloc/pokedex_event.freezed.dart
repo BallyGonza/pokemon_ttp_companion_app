@@ -21,6 +21,12 @@ mixin _$PokedexEvent {
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
     required TResult Function(int pokemonId) toggleFavoritePokemon,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeCommonAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeAdvancedAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeSpecialAttack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +34,9 @@ mixin _$PokedexEvent {
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
     TResult? Function(int pokemonId)? toggleFavoritePokemon,
+    TResult? Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeSpecialAttack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +44,9 @@ mixin _$PokedexEvent {
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
     TResult Function(int pokemonId)? toggleFavoritePokemon,
+    TResult Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeSpecialAttack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +56,12 @@ mixin _$PokedexEvent {
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
     required TResult Function(PokedexToggleFavoritePokemonEvent value)
         toggleFavoritePokemon,
+    required TResult Function(PokedexChangeAttackEvent value)
+        changeCommonAttack,
+    required TResult Function(PokedexChangeAdvancedAttackEvent value)
+        changeAdvancedAttack,
+    required TResult Function(PokedexChangeSpecialAttackEvent value)
+        changeSpecialAttack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,6 +70,11 @@ mixin _$PokedexEvent {
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult? Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult? Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult? Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult? Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +83,11 @@ mixin _$PokedexEvent {
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -124,6 +152,12 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
     required TResult Function(int pokemonId) toggleFavoritePokemon,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeCommonAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeAdvancedAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeSpecialAttack,
   }) {
     return init();
   }
@@ -134,6 +168,9 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
     TResult? Function(int pokemonId)? toggleFavoritePokemon,
+    TResult? Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeSpecialAttack,
   }) {
     return init?.call();
   }
@@ -144,6 +181,9 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
     TResult Function(int pokemonId)? toggleFavoritePokemon,
+    TResult Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeSpecialAttack,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -159,6 +199,12 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
     required TResult Function(PokedexToggleFavoritePokemonEvent value)
         toggleFavoritePokemon,
+    required TResult Function(PokedexChangeAttackEvent value)
+        changeCommonAttack,
+    required TResult Function(PokedexChangeAdvancedAttackEvent value)
+        changeAdvancedAttack,
+    required TResult Function(PokedexChangeSpecialAttackEvent value)
+        changeSpecialAttack,
   }) {
     return init(this);
   }
@@ -170,6 +216,11 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult? Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult? Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult? Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult? Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
   }) {
     return init?.call(this);
   }
@@ -181,6 +232,11 @@ class _$PokedexInitialEvent implements PokedexInitialEvent {
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -264,6 +320,12 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
     required TResult Function(int pokemonId) toggleFavoritePokemon,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeCommonAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeAdvancedAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeSpecialAttack,
   }) {
     return catchPokemon(pokemonId);
   }
@@ -274,6 +336,9 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
     TResult? Function(int pokemonId)? toggleFavoritePokemon,
+    TResult? Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeSpecialAttack,
   }) {
     return catchPokemon?.call(pokemonId);
   }
@@ -284,6 +349,9 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
     TResult Function(int pokemonId)? toggleFavoritePokemon,
+    TResult Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeSpecialAttack,
     required TResult orElse(),
   }) {
     if (catchPokemon != null) {
@@ -299,6 +367,12 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
     required TResult Function(PokedexToggleFavoritePokemonEvent value)
         toggleFavoritePokemon,
+    required TResult Function(PokedexChangeAttackEvent value)
+        changeCommonAttack,
+    required TResult Function(PokedexChangeAdvancedAttackEvent value)
+        changeAdvancedAttack,
+    required TResult Function(PokedexChangeSpecialAttackEvent value)
+        changeSpecialAttack,
   }) {
     return catchPokemon(this);
   }
@@ -310,6 +384,11 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult? Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult? Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult? Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult? Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
   }) {
     return catchPokemon?.call(this);
   }
@@ -321,6 +400,11 @@ class _$PokedexCatchPokemonEvent implements PokedexCatchPokemonEvent {
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
     required TResult orElse(),
   }) {
     if (catchPokemon != null) {
@@ -414,6 +498,12 @@ class _$PokedexToggleFavoritePokemonEvent
     required TResult Function() init,
     required TResult Function(int pokemonId) catchPokemon,
     required TResult Function(int pokemonId) toggleFavoritePokemon,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeCommonAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeAdvancedAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeSpecialAttack,
   }) {
     return toggleFavoritePokemon(pokemonId);
   }
@@ -424,6 +514,9 @@ class _$PokedexToggleFavoritePokemonEvent
     TResult? Function()? init,
     TResult? Function(int pokemonId)? catchPokemon,
     TResult? Function(int pokemonId)? toggleFavoritePokemon,
+    TResult? Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeSpecialAttack,
   }) {
     return toggleFavoritePokemon?.call(pokemonId);
   }
@@ -434,6 +527,9 @@ class _$PokedexToggleFavoritePokemonEvent
     TResult Function()? init,
     TResult Function(int pokemonId)? catchPokemon,
     TResult Function(int pokemonId)? toggleFavoritePokemon,
+    TResult Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeSpecialAttack,
     required TResult orElse(),
   }) {
     if (toggleFavoritePokemon != null) {
@@ -449,6 +545,12 @@ class _$PokedexToggleFavoritePokemonEvent
     required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
     required TResult Function(PokedexToggleFavoritePokemonEvent value)
         toggleFavoritePokemon,
+    required TResult Function(PokedexChangeAttackEvent value)
+        changeCommonAttack,
+    required TResult Function(PokedexChangeAdvancedAttackEvent value)
+        changeAdvancedAttack,
+    required TResult Function(PokedexChangeSpecialAttackEvent value)
+        changeSpecialAttack,
   }) {
     return toggleFavoritePokemon(this);
   }
@@ -460,6 +562,11 @@ class _$PokedexToggleFavoritePokemonEvent
     TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult? Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult? Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult? Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult? Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
   }) {
     return toggleFavoritePokemon?.call(this);
   }
@@ -471,6 +578,11 @@ class _$PokedexToggleFavoritePokemonEvent
     TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
     TResult Function(PokedexToggleFavoritePokemonEvent value)?
         toggleFavoritePokemon,
+    TResult Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
     required TResult orElse(),
   }) {
     if (toggleFavoritePokemon != null) {
@@ -488,5 +600,565 @@ abstract class PokedexToggleFavoritePokemonEvent implements PokedexEvent {
   @JsonKey(ignore: true)
   _$$PokedexToggleFavoritePokemonEventCopyWith<
           _$PokedexToggleFavoritePokemonEvent>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PokedexChangeAttackEventCopyWith<$Res> {
+  factory _$$PokedexChangeAttackEventCopyWith(_$PokedexChangeAttackEvent value,
+          $Res Function(_$PokedexChangeAttackEvent) then) =
+      __$$PokedexChangeAttackEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int pokemonId, int attackIndex});
+}
+
+/// @nodoc
+class __$$PokedexChangeAttackEventCopyWithImpl<$Res>
+    extends _$PokedexEventCopyWithImpl<$Res, _$PokedexChangeAttackEvent>
+    implements _$$PokedexChangeAttackEventCopyWith<$Res> {
+  __$$PokedexChangeAttackEventCopyWithImpl(_$PokedexChangeAttackEvent _value,
+      $Res Function(_$PokedexChangeAttackEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pokemonId = null,
+    Object? attackIndex = null,
+  }) {
+    return _then(_$PokedexChangeAttackEvent(
+      null == pokemonId
+          ? _value.pokemonId
+          : pokemonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == attackIndex
+          ? _value.attackIndex
+          : attackIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PokedexChangeAttackEvent implements PokedexChangeAttackEvent {
+  const _$PokedexChangeAttackEvent(this.pokemonId, this.attackIndex);
+
+  @override
+  final int pokemonId;
+  @override
+  final int attackIndex;
+
+  @override
+  String toString() {
+    return 'PokedexEvent.changeCommonAttack(pokemonId: $pokemonId, attackIndex: $attackIndex)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PokedexChangeAttackEvent &&
+            (identical(other.pokemonId, pokemonId) ||
+                other.pokemonId == pokemonId) &&
+            (identical(other.attackIndex, attackIndex) ||
+                other.attackIndex == attackIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pokemonId, attackIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PokedexChangeAttackEventCopyWith<_$PokedexChangeAttackEvent>
+      get copyWith =>
+          __$$PokedexChangeAttackEventCopyWithImpl<_$PokedexChangeAttackEvent>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(int pokemonId) catchPokemon,
+    required TResult Function(int pokemonId) toggleFavoritePokemon,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeCommonAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeAdvancedAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeSpecialAttack,
+  }) {
+    return changeCommonAttack(pokemonId, attackIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(int pokemonId)? catchPokemon,
+    TResult? Function(int pokemonId)? toggleFavoritePokemon,
+    TResult? Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeSpecialAttack,
+  }) {
+    return changeCommonAttack?.call(pokemonId, attackIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(int pokemonId)? catchPokemon,
+    TResult Function(int pokemonId)? toggleFavoritePokemon,
+    TResult Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeSpecialAttack,
+    required TResult orElse(),
+  }) {
+    if (changeCommonAttack != null) {
+      return changeCommonAttack(pokemonId, attackIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PokedexInitialEvent value) init,
+    required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
+    required TResult Function(PokedexToggleFavoritePokemonEvent value)
+        toggleFavoritePokemon,
+    required TResult Function(PokedexChangeAttackEvent value)
+        changeCommonAttack,
+    required TResult Function(PokedexChangeAdvancedAttackEvent value)
+        changeAdvancedAttack,
+    required TResult Function(PokedexChangeSpecialAttackEvent value)
+        changeSpecialAttack,
+  }) {
+    return changeCommonAttack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PokedexInitialEvent value)? init,
+    TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
+    TResult? Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
+    TResult? Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult? Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult? Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
+  }) {
+    return changeCommonAttack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PokedexInitialEvent value)? init,
+    TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
+    TResult Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
+    TResult Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
+    required TResult orElse(),
+  }) {
+    if (changeCommonAttack != null) {
+      return changeCommonAttack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PokedexChangeAttackEvent implements PokedexEvent {
+  const factory PokedexChangeAttackEvent(
+      final int pokemonId, final int attackIndex) = _$PokedexChangeAttackEvent;
+
+  int get pokemonId;
+  int get attackIndex;
+  @JsonKey(ignore: true)
+  _$$PokedexChangeAttackEventCopyWith<_$PokedexChangeAttackEvent>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PokedexChangeAdvancedAttackEventCopyWith<$Res> {
+  factory _$$PokedexChangeAdvancedAttackEventCopyWith(
+          _$PokedexChangeAdvancedAttackEvent value,
+          $Res Function(_$PokedexChangeAdvancedAttackEvent) then) =
+      __$$PokedexChangeAdvancedAttackEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int pokemonId, int attackIndex});
+}
+
+/// @nodoc
+class __$$PokedexChangeAdvancedAttackEventCopyWithImpl<$Res>
+    extends _$PokedexEventCopyWithImpl<$Res, _$PokedexChangeAdvancedAttackEvent>
+    implements _$$PokedexChangeAdvancedAttackEventCopyWith<$Res> {
+  __$$PokedexChangeAdvancedAttackEventCopyWithImpl(
+      _$PokedexChangeAdvancedAttackEvent _value,
+      $Res Function(_$PokedexChangeAdvancedAttackEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pokemonId = null,
+    Object? attackIndex = null,
+  }) {
+    return _then(_$PokedexChangeAdvancedAttackEvent(
+      null == pokemonId
+          ? _value.pokemonId
+          : pokemonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == attackIndex
+          ? _value.attackIndex
+          : attackIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PokedexChangeAdvancedAttackEvent
+    implements PokedexChangeAdvancedAttackEvent {
+  const _$PokedexChangeAdvancedAttackEvent(this.pokemonId, this.attackIndex);
+
+  @override
+  final int pokemonId;
+  @override
+  final int attackIndex;
+
+  @override
+  String toString() {
+    return 'PokedexEvent.changeAdvancedAttack(pokemonId: $pokemonId, attackIndex: $attackIndex)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PokedexChangeAdvancedAttackEvent &&
+            (identical(other.pokemonId, pokemonId) ||
+                other.pokemonId == pokemonId) &&
+            (identical(other.attackIndex, attackIndex) ||
+                other.attackIndex == attackIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pokemonId, attackIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PokedexChangeAdvancedAttackEventCopyWith<
+          _$PokedexChangeAdvancedAttackEvent>
+      get copyWith => __$$PokedexChangeAdvancedAttackEventCopyWithImpl<
+          _$PokedexChangeAdvancedAttackEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(int pokemonId) catchPokemon,
+    required TResult Function(int pokemonId) toggleFavoritePokemon,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeCommonAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeAdvancedAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeSpecialAttack,
+  }) {
+    return changeAdvancedAttack(pokemonId, attackIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(int pokemonId)? catchPokemon,
+    TResult? Function(int pokemonId)? toggleFavoritePokemon,
+    TResult? Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeSpecialAttack,
+  }) {
+    return changeAdvancedAttack?.call(pokemonId, attackIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(int pokemonId)? catchPokemon,
+    TResult Function(int pokemonId)? toggleFavoritePokemon,
+    TResult Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeSpecialAttack,
+    required TResult orElse(),
+  }) {
+    if (changeAdvancedAttack != null) {
+      return changeAdvancedAttack(pokemonId, attackIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PokedexInitialEvent value) init,
+    required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
+    required TResult Function(PokedexToggleFavoritePokemonEvent value)
+        toggleFavoritePokemon,
+    required TResult Function(PokedexChangeAttackEvent value)
+        changeCommonAttack,
+    required TResult Function(PokedexChangeAdvancedAttackEvent value)
+        changeAdvancedAttack,
+    required TResult Function(PokedexChangeSpecialAttackEvent value)
+        changeSpecialAttack,
+  }) {
+    return changeAdvancedAttack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PokedexInitialEvent value)? init,
+    TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
+    TResult? Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
+    TResult? Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult? Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult? Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
+  }) {
+    return changeAdvancedAttack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PokedexInitialEvent value)? init,
+    TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
+    TResult Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
+    TResult Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
+    required TResult orElse(),
+  }) {
+    if (changeAdvancedAttack != null) {
+      return changeAdvancedAttack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PokedexChangeAdvancedAttackEvent implements PokedexEvent {
+  const factory PokedexChangeAdvancedAttackEvent(
+          final int pokemonId, final int attackIndex) =
+      _$PokedexChangeAdvancedAttackEvent;
+
+  int get pokemonId;
+  int get attackIndex;
+  @JsonKey(ignore: true)
+  _$$PokedexChangeAdvancedAttackEventCopyWith<
+          _$PokedexChangeAdvancedAttackEvent>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PokedexChangeSpecialAttackEventCopyWith<$Res> {
+  factory _$$PokedexChangeSpecialAttackEventCopyWith(
+          _$PokedexChangeSpecialAttackEvent value,
+          $Res Function(_$PokedexChangeSpecialAttackEvent) then) =
+      __$$PokedexChangeSpecialAttackEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int pokemonId, int attackIndex});
+}
+
+/// @nodoc
+class __$$PokedexChangeSpecialAttackEventCopyWithImpl<$Res>
+    extends _$PokedexEventCopyWithImpl<$Res, _$PokedexChangeSpecialAttackEvent>
+    implements _$$PokedexChangeSpecialAttackEventCopyWith<$Res> {
+  __$$PokedexChangeSpecialAttackEventCopyWithImpl(
+      _$PokedexChangeSpecialAttackEvent _value,
+      $Res Function(_$PokedexChangeSpecialAttackEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pokemonId = null,
+    Object? attackIndex = null,
+  }) {
+    return _then(_$PokedexChangeSpecialAttackEvent(
+      null == pokemonId
+          ? _value.pokemonId
+          : pokemonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == attackIndex
+          ? _value.attackIndex
+          : attackIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PokedexChangeSpecialAttackEvent
+    implements PokedexChangeSpecialAttackEvent {
+  const _$PokedexChangeSpecialAttackEvent(this.pokemonId, this.attackIndex);
+
+  @override
+  final int pokemonId;
+  @override
+  final int attackIndex;
+
+  @override
+  String toString() {
+    return 'PokedexEvent.changeSpecialAttack(pokemonId: $pokemonId, attackIndex: $attackIndex)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PokedexChangeSpecialAttackEvent &&
+            (identical(other.pokemonId, pokemonId) ||
+                other.pokemonId == pokemonId) &&
+            (identical(other.attackIndex, attackIndex) ||
+                other.attackIndex == attackIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pokemonId, attackIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PokedexChangeSpecialAttackEventCopyWith<_$PokedexChangeSpecialAttackEvent>
+      get copyWith => __$$PokedexChangeSpecialAttackEventCopyWithImpl<
+          _$PokedexChangeSpecialAttackEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(int pokemonId) catchPokemon,
+    required TResult Function(int pokemonId) toggleFavoritePokemon,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeCommonAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeAdvancedAttack,
+    required TResult Function(int pokemonId, int attackIndex)
+        changeSpecialAttack,
+  }) {
+    return changeSpecialAttack(pokemonId, attackIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(int pokemonId)? catchPokemon,
+    TResult? Function(int pokemonId)? toggleFavoritePokemon,
+    TResult? Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult? Function(int pokemonId, int attackIndex)? changeSpecialAttack,
+  }) {
+    return changeSpecialAttack?.call(pokemonId, attackIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(int pokemonId)? catchPokemon,
+    TResult Function(int pokemonId)? toggleFavoritePokemon,
+    TResult Function(int pokemonId, int attackIndex)? changeCommonAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeAdvancedAttack,
+    TResult Function(int pokemonId, int attackIndex)? changeSpecialAttack,
+    required TResult orElse(),
+  }) {
+    if (changeSpecialAttack != null) {
+      return changeSpecialAttack(pokemonId, attackIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PokedexInitialEvent value) init,
+    required TResult Function(PokedexCatchPokemonEvent value) catchPokemon,
+    required TResult Function(PokedexToggleFavoritePokemonEvent value)
+        toggleFavoritePokemon,
+    required TResult Function(PokedexChangeAttackEvent value)
+        changeCommonAttack,
+    required TResult Function(PokedexChangeAdvancedAttackEvent value)
+        changeAdvancedAttack,
+    required TResult Function(PokedexChangeSpecialAttackEvent value)
+        changeSpecialAttack,
+  }) {
+    return changeSpecialAttack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PokedexInitialEvent value)? init,
+    TResult? Function(PokedexCatchPokemonEvent value)? catchPokemon,
+    TResult? Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
+    TResult? Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult? Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult? Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
+  }) {
+    return changeSpecialAttack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PokedexInitialEvent value)? init,
+    TResult Function(PokedexCatchPokemonEvent value)? catchPokemon,
+    TResult Function(PokedexToggleFavoritePokemonEvent value)?
+        toggleFavoritePokemon,
+    TResult Function(PokedexChangeAttackEvent value)? changeCommonAttack,
+    TResult Function(PokedexChangeAdvancedAttackEvent value)?
+        changeAdvancedAttack,
+    TResult Function(PokedexChangeSpecialAttackEvent value)?
+        changeSpecialAttack,
+    required TResult orElse(),
+  }) {
+    if (changeSpecialAttack != null) {
+      return changeSpecialAttack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PokedexChangeSpecialAttackEvent implements PokedexEvent {
+  const factory PokedexChangeSpecialAttackEvent(
+          final int pokemonId, final int attackIndex) =
+      _$PokedexChangeSpecialAttackEvent;
+
+  int get pokemonId;
+  int get attackIndex;
+  @JsonKey(ignore: true)
+  _$$PokedexChangeSpecialAttackEventCopyWith<_$PokedexChangeSpecialAttackEvent>
       get copyWith => throw _privateConstructorUsedError;
 }

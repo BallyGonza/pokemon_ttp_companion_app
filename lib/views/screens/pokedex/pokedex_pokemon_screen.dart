@@ -105,29 +105,29 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
             ),
             Column(
               children: [
-                PokemonAttackCard(
+                PokemonMoveCard(
                   number: 1,
-                  attack: widget.pokemon.commonAttacks[0],
+                  move: widget.pokemon.c1,
                 ),
-                PokemonAttackCard(
+                PokemonMoveCard(
                   number: 2,
-                  attack: widget.pokemon.commonAttacks[1],
+                  move: widget.pokemon.c2,
                 ),
-                PokemonAttackCard(
+                PokemonMoveCard(
                   number: 3,
-                  attack: widget.pokemon.commonAttacks[2],
+                  move: widget.pokemon.c3,
                 ),
-                PokemonAttackCard(
+                PokemonMoveCard(
                   number: 1,
-                  attack: widget.pokemon.advancedAttacks[0],
+                  move: widget.pokemon.a1,
                 ),
-                PokemonAttackCard(
+                PokemonMoveCard(
                   number: 2,
-                  attack: widget.pokemon.advancedAttacks[1],
+                  move: widget.pokemon.a2,
                 ),
-                PokemonAttackCard(
+                PokemonMoveCard(
                   number: 1,
-                  attack: widget.pokemon.specialAttacks[0],
+                  move: widget.pokemon.s,
                 ),
               ],
             ),

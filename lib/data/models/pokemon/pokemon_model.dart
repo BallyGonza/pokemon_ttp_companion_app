@@ -20,16 +20,24 @@ class PokemonModel {
   @HiveField(6)
   int speed;
   @HiveField(7)
-  List<PokemonTypeModel> types;
+  List<TypeModel> types;
   @HiveField(8)
-  List<AttackModel> commonAttacks;
+  MoveModel c1;
   @HiveField(9)
-  List<AttackModel> advancedAttacks;
+  MoveModel c2;
   @HiveField(10)
-  List<AttackModel> specialAttacks;
+  MoveModel c3;
   @HiveField(11)
-  bool isFavorite;
+  MoveModel a1;
   @HiveField(12)
+  MoveModel a2;
+  @HiveField(13)
+  MoveModel s;
+  @HiveField(14)
+  List<MoveModel> moves;
+  @HiveField(15)
+  bool isFavorite;
+  @HiveField(16)
   bool isCaptured;
 
   PokemonModel({
@@ -41,9 +49,13 @@ class PokemonModel {
     required this.damage,
     required this.speed,
     required this.types,
-    required this.commonAttacks,
-    required this.advancedAttacks,
-    required this.specialAttacks,
+    required this.c1,
+    required this.c2,
+    required this.c3,
+    required this.a1,
+    required this.a2,
+    required this.s,
+    required this.moves,
     required this.isFavorite,
     required this.isCaptured,
   });

@@ -43,7 +43,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
               child: Card(
                 child: ListTile(
                   leading: Image.asset(
-                    c1TrainerIcon,
+                    commonTrainerIcon,
                     width: 45,
                   ),
                   tileColor: commonTrainerColor,
@@ -56,7 +56,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
               child: Card(
                 child: ListTile(
                     leading: Image.asset(
-                      c2TrainerIcon,
+                      commonTrainerIcon,
                       width: 45,
                     ),
                     tileColor: commonTrainerColor,
@@ -68,7 +68,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
               child: Card(
                 child: ListTile(
                     leading: Image.asset(
-                      c3TrainerIcon,
+                      commonTrainerIcon,
                       width: 45,
                     ),
                     tileColor: commonTrainerColor,
@@ -80,7 +80,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
               child: Card(
                 child: ListTile(
                     leading: Image.asset(
-                      a1TrainerIcon,
+                      advancedTrainerIcon,
                       width: 45,
                     ),
                     tileColor: advancedTrainerColor,
@@ -92,7 +92,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
               child: Card(
                 child: ListTile(
                     leading: Image.asset(
-                      a2TrainerIcon,
+                      advancedTrainerIcon,
                       width: 45,
                     ),
                     tileColor: advancedTrainerColor,
@@ -104,7 +104,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
               child: Card(
                 child: ListTile(
                   leading: Image.asset(
-                    sTrainerIcon,
+                    specialTrainerIcon,
                     width: 45,
                   ),
                   tileColor: specialTrainerColor,

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:poke_app/data/data.dart';
-import 'package:poke_app/views/screens/team/pokemon/attack/attack_screen.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
-import 'attack/attack_card.dart';
-import 'catched_pokemon_attack_card.dart';
+import 'catched_pokemon_move_card.dart';
 
 class CatchedPokemonScreen extends StatelessWidget {
   const CatchedPokemonScreen({
@@ -84,95 +82,29 @@ class CatchedPokemonScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                CatchedPokemonAttackCard(
-                  number: 1,
-                  attack: pokemon.commonAttacks[0],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AttackScreen(
-                          attackType: 'C1',
-                          attacks: pokemon.commonAttacks,
-                        ),
-                      ),
-                    );
-                  },
+                CatchedPokemonMoveCard(
+                  move: pokemon.c1,
+                  moves: pokemon.moves,
                 ),
-                CatchedPokemonAttackCard(
-                  number: 2,
-                  attack: pokemon.commonAttacks[1],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AttackScreen(
-                          attacks: pokemon.commonAttacks,
-                          attackType: 'C2',
-                        ),
-                      ),
-                    );
-                  },
+                CatchedPokemonMoveCard(
+                  move: pokemon.c2,
+                  moves: pokemon.moves,
                 ),
-                CatchedPokemonAttackCard(
-                  number: 3,
-                  attack: pokemon.commonAttacks[2],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AttackScreen(
-                          attacks: pokemon.commonAttacks,
-                          attackType: 'C3',
-                        ),
-                      ),
-                    );
-                  },
+                CatchedPokemonMoveCard(
+                  move: pokemon.c3,
+                  moves: pokemon.moves,
                 ),
-                CatchedPokemonAttackCard(
-                  number: 1,
-                  attack: pokemon.advancedAttacks[0],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AttackScreen(
-                          attacks: pokemon.advancedAttacks,
-                          attackType: 'A1',
-                        ),
-                      ),
-                    );
-                  },
+                CatchedPokemonMoveCard(
+                  move: pokemon.a1,
+                  moves: pokemon.moves,
                 ),
-                CatchedPokemonAttackCard(
-                  number: 2,
-                  attack: pokemon.advancedAttacks[1],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AttackScreen(
-                          attacks: pokemon.advancedAttacks,
-                          attackType: 'A2',
-                        ),
-                      ),
-                    );
-                  },
+                CatchedPokemonMoveCard(
+                  move: pokemon.a2,
+                  moves: pokemon.moves,
                 ),
-                CatchedPokemonAttackCard(
-                  number: 1,
-                  attack: pokemon.specialAttacks[0],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AttackScreen(
-                          attacks: pokemon.specialAttacks,
-                          attackType: 'S',
-                        ),
-                      ),
-                    );
-                  },
+                CatchedPokemonMoveCard(
+                  move: pokemon.s,
+                  moves: pokemon.moves,
                 ),
               ],
             ),

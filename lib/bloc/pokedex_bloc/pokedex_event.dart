@@ -11,4 +11,16 @@ class PokedexEvent with _$PokedexEvent {
   const factory PokedexEvent.toggleFavoritePokemon(
     int pokemonId,
   ) = PokedexToggleFavoritePokemonEvent;
+  const factory PokedexEvent.changeCommonAttack(
+    int pokemonId,
+    int attackIndex,
+  ) = PokedexChangeAttackEvent;
+  const factory PokedexEvent.changeAdvancedAttack(
+    int pokemonId,
+    int attackIndex,
+  ) = PokedexChangeAdvancedAttackEvent;
+  const factory PokedexEvent.changeSpecialAttack(
+    int pokemonId,
+    int attackIndex,
+  ) = PokedexChangeSpecialAttackEvent;
 }
