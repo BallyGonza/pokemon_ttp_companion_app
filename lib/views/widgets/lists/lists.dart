@@ -1,3 +1,3 @@
-export 'pokemon_list.dart';
-export 'my_pokemon_list.dart';
-export 'attacks_list.dart';
+export 'pokedex_pokemon_list.dart';
+export 'catched_pokemon_list.dart';
+export 'pokemon_attack_list.dart';

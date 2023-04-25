@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:poke_app/data/data.dart';
-import 'package:poke_app/views/screens/attack_screen.dart';
+import 'package:poke_app/views/screens/team/pokemon/attack/attack_screen.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
-class MyPokemonScreen extends StatelessWidget {
-  const MyPokemonScreen({
+import 'attack/attack_card.dart';
+
+class CatchedPokemonScreen extends StatelessWidget {
+  const CatchedPokemonScreen({
     Key? key,
     required this.pokemon,
   }) : super(key: key);

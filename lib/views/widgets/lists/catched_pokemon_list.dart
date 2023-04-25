@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
+import 'package:poke_app/views/screens/team/pokemon/catched_pokemon_screen.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
 class MyPokemonList extends StatefulWidget {
@@ -21,8 +22,16 @@ class MyPokemonListState extends State<MyPokemonList> {
         : ListView.builder(
             itemCount: widget.catchedPokemons.length,
             itemBuilder: (BuildContext context, int index) {
-              return PokemonCard(
+              return PokemonCard.catched(
                 pokemon: widget.catchedPokemons[index],
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CatchedPokemonScreen(
+                      pokemon: widget.catchedPokemons[index],
+                    ),
+                  ),
+                ),
               );
             });
   }

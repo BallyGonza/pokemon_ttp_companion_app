@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
-
 import 'package:poke_app/data/data.dart';
-import 'package:poke_app/views/screens/pokemon_screen.dart';
 
 class PokemonCard extends StatelessWidget {
-  final PokemonModel pokemon;
-
-  const PokemonCard({
+  const PokemonCard.pokedex({
     Key? key,
+    required this.onTap,
     required this.pokemon,
   }) : super(key: key);
+
+  const PokemonCard.catched({
+    Key? key,
+    required this.pokemon,
+    required this.onTap,
+  }) : super(key: key);
+
+  final PokemonModel pokemon;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => PokemonScreen(
-            pokemon: pokemon,
-          ),
-        ),
-      ),
+      onTap: () => onTap(),
       child: Card(
         color: Color(pokemon.types[0].color),
         elevation: 3.5,

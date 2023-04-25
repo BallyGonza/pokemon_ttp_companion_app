@@ -5,8 +5,8 @@ import 'package:poke_app/bloc/bloc.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
-class PokemonScreen extends StatefulWidget {
-  const PokemonScreen({
+class PokedexPokemonScreen extends StatefulWidget {
+  const PokedexPokemonScreen({
     Key? key,
     required this.pokemon,
   }) : super(key: key);
@@ -14,10 +14,10 @@ class PokemonScreen extends StatefulWidget {
   final PokemonModel pokemon;
 
   @override
-  State<PokemonScreen> createState() => _PokemonScreenState();
+  State<PokedexPokemonScreen> createState() => _PokedexPokemonScreenState();
 }
 
-class _PokemonScreenState extends State<PokemonScreen> {
+class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,27 +105,27 @@ class _PokemonScreenState extends State<PokemonScreen> {
             ),
             Column(
               children: [
-                AttackCard(
+                PokemonAttackCard(
                   number: 1,
                   attack: widget.pokemon.commonAttacks[0],
                 ),
-                AttackCard(
+                PokemonAttackCard(
                   number: 2,
                   attack: widget.pokemon.commonAttacks[1],
                 ),
-                AttackCard(
+                PokemonAttackCard(
                   number: 3,
                   attack: widget.pokemon.commonAttacks[2],
                 ),
-                AttackCard(
+                PokemonAttackCard(
                   number: 1,
                   attack: widget.pokemon.advancedAttacks[0],
                 ),
-                AttackCard(
+                PokemonAttackCard(
                   number: 2,
                   attack: widget.pokemon.advancedAttacks[1],
                 ),
-                AttackCard(
+                PokemonAttackCard(
                   number: 1,
                   attack: widget.pokemon.specialAttacks[0],
                 ),

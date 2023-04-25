@@ -34,7 +34,7 @@ class _PokedexScreenState extends State<PokedexScreen> {
       body: BlocBuilder<PokedexBloc, PokedexState>(
         builder: (context, state) {
           return state.maybeWhen(
-            loaded: (pokedex) => PokemonList(pokemons: pokedex),
+            loaded: (pokedex) => PokedexPokemonList(pokemons: pokedex),
             orElse: () => const Center(child: CircularProgressIndicator()),
           );
         },
