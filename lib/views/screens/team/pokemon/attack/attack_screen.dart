@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/views/views.dart';
 
+import 'attack_list.dart';
+
 class AttackScreen extends StatefulWidget {
   const AttackScreen(
       {required this.attacks, required this.attackType, Key? key})
@@ -51,7 +53,7 @@ class _AttackScreenState extends State<AttackScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: PokedexPokemonAttackList(attacks: widget.attacks),
+        child: AttackList(attacks: widget.attacks),
       ),
     );
   }

@@ -3,27 +3,27 @@ import 'package:poke_app/data/data.dart';
 
 import 'attack_card.dart';
 
-class PokedexPokemonAttackList extends StatefulWidget {
-  const PokedexPokemonAttackList({required this.attacks, Key? key})
-      : super(key: key);
+class AttackList extends StatefulWidget {
+  const AttackList({required this.attacks, Key? key}) : super(key: key);
   final List<AttackModel> attacks;
 
   @override
-  State<StatefulWidget> createState() => PokedexPokemonAttackListState();
+  State<StatefulWidget> createState() => AttackListState();
 }
 
-class PokedexPokemonAttackListState extends State<PokedexPokemonAttackList> {
+class AttackListState extends State<AttackList> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: widget.attacks.length,
-        itemBuilder: (BuildContext context, int index) {
-          return InkWell(
-            child: AttackCard(
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      child: ListView.builder(
+          itemCount: widget.attacks.length,
+          itemBuilder: (BuildContext context, int index) {
+            return AttackCard(
+              index: index,
               attack: widget.attacks[index],
-            ),
-            onTap: () {},
-          );
-        });
+            );
+          }),
+    );
   }
 }

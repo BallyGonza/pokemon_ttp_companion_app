@@ -4,40 +4,68 @@ import 'package:poke_app/data/data.dart';
 class AttackCard extends StatelessWidget {
   const AttackCard({
     Key? key,
-    this.number,
+    required this.index,
     required this.attack,
-    this.onTap,
   }) : super(key: key);
 
-  final int? number;
   final AttackModel attack;
-  final VoidCallback? onTap;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-      child: InkWell(
-        onTap: onTap,
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
           color: Color(attack.attackType.color),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                number == null
-                    ? const SizedBox.shrink()
-                    : Image.asset(
-                        "assets/images/attacks_icons/${attack.attackType.name}$number.png",
-                        width: 35,
-                      ),
-                const SizedBox(width: 8),
-                Text(attack.name, style: const TextStyle(fontSize: 20)),
-              ],
-            ),
+          border: Border.all(
+            color: Colors.black,
+            width: 0.5,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Text(attack.name,
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+                  const Spacer(),
+                  Image.asset(
+                    attack.type.image,
+                    width: 30,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  Text('Poder: ${attack.damage}',
+                      style: const TextStyle(
+                        fontSize: 16,
+                      )),
+                  const Spacer(),
+                  Text('Precision: ${attack.accuracy}',
+                      style: const TextStyle(fontSize: 16)),
+                ],
+              ),
+              Row(
+                children: [
+                  Text('PP: ${attack.pp}',
+                      style: const TextStyle(fontSize: 16)),
+                  const Spacer(),
+                  Text('Tipo: ${attack.type.name}',
+                      style: const TextStyle(fontSize: 16)),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Text(attack.description,
+                  style: const TextStyle(
+                      fontSize: 16, fontStyle: FontStyle.italic)),
+            ],
           ),
         ),
       ),

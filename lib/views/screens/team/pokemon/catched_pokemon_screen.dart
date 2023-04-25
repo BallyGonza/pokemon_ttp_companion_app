@@ -5,6 +5,7 @@ import 'package:poke_app/views/screens/team/pokemon/attack/attack_screen.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
 import 'attack/attack_card.dart';
+import 'catched_pokemon_attack_card.dart';
 
 class CatchedPokemonScreen extends StatelessWidget {
   const CatchedPokemonScreen({
@@ -83,7 +84,7 @@ class CatchedPokemonScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                AttackCard(
+                CatchedPokemonAttackCard(
                   number: 1,
                   attack: pokemon.commonAttacks[0],
                   onTap: () {
@@ -98,7 +99,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                     );
                   },
                 ),
-                AttackCard(
+                CatchedPokemonAttackCard(
                   number: 2,
                   attack: pokemon.commonAttacks[1],
                   onTap: () {
@@ -113,7 +114,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                     );
                   },
                 ),
-                AttackCard(
+                CatchedPokemonAttackCard(
                   number: 3,
                   attack: pokemon.commonAttacks[2],
                   onTap: () {
@@ -128,7 +129,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                     );
                   },
                 ),
-                AttackCard(
+                CatchedPokemonAttackCard(
                   number: 1,
                   attack: pokemon.advancedAttacks[0],
                   onTap: () {
@@ -143,7 +144,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                     );
                   },
                 ),
-                AttackCard(
+                CatchedPokemonAttackCard(
                   number: 2,
                   attack: pokemon.advancedAttacks[1],
                   onTap: () {
@@ -158,7 +159,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                     );
                   },
                 ),
-                AttackCard(
+                CatchedPokemonAttackCard(
                   number: 1,
                   attack: pokemon.specialAttacks[0],
                   onTap: () {
