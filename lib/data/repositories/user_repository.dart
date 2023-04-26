@@ -90,6 +90,48 @@ class UserRepository {
     user.trainers[index] = trainer;
     await saveUser(user);
   }
+
+  //change c1 move
+  Future<void> changeC1Move(int pokemonId, MoveModel move) async {
+    final user = await getUser();
+    user.pokedex.firstWhere((element) => element.id == pokemonId).c1 = move;
+    await saveUser(user);
+  }
+
+  //change c2 move
+  Future<void> changeC2Move(int pokemonId, MoveModel move) async {
+    final user = await getUser();
+    user.pokedex.firstWhere((element) => element.id == pokemonId).c2 = move;
+    await saveUser(user);
+  }
+
+  //change c3 move
+  Future<void> changeC3Move(int pokemonId, MoveModel move) async {
+    final user = await getUser();
+    user.pokedex.firstWhere((element) => element.id == pokemonId).c3 = move;
+    await saveUser(user);
+  }
+
+  //change a1 move
+  Future<void> changeA1Move(int pokemonId, MoveModel move) async {
+    final user = await getUser();
+    user.pokedex.firstWhere((element) => element.id == pokemonId).a1 = move;
+    await saveUser(user);
+  }
+
+  //change a2 move
+  Future<void> changeA2Move(int pokemonId, MoveModel move) async {
+    final user = await getUser();
+    user.pokedex.firstWhere((element) => element.id == pokemonId).a2 = move;
+    await saveUser(user);
+  }
+
+  //change s move
+  Future<void> changeSMove(int pokemonId, MoveModel move) async {
+    final user = await getUser();
+    user.pokedex.firstWhere((element) => element.id == pokemonId).s = move;
+    await saveUser(user);
+  }
 }
 
 UserModel defaultUser = UserModel(

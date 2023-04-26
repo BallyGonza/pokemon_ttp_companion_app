@@ -106,27 +106,21 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
             Column(
               children: [
                 PokemonMoveCard(
-                  number: 1,
                   move: widget.pokemon.c1,
                 ),
                 PokemonMoveCard(
-                  number: 2,
                   move: widget.pokemon.c2,
                 ),
                 PokemonMoveCard(
-                  number: 3,
                   move: widget.pokemon.c3,
                 ),
                 PokemonMoveCard(
-                  number: 1,
                   move: widget.pokemon.a1,
                 ),
                 PokemonMoveCard(
-                  number: 2,
                   move: widget.pokemon.a2,
                 ),
                 PokemonMoveCard(
-                  number: 1,
                   move: widget.pokemon.s,
                 ),
               ],

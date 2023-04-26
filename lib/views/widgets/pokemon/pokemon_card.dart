@@ -29,12 +29,8 @@ class PokemonCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Image.asset(
-                pokemon.image,
-                height: 70,
-              ),
+            Image.asset(
+              pokemon.sprite,
             ),
             Text(
               pokemon.name,

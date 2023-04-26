@@ -1,34 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-import 'move/move_screen.dart';
-
 class CatchedPokemonMoveCard extends StatelessWidget {
   const CatchedPokemonMoveCard({
     Key? key,
     required this.move,
-    required this.moves,
+    required this.pokemon,
+    required this.onTap,
   }) : super(key: key);
 
+  final PokemonModel pokemon;
   final MoveModel move;
-  final List<MoveModel> moves;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       child: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => MoveScreen(
-                moveClass: move.moveClass,
-                moves: moves,
-              ),
-            ),
-          );
-        },
+        onTap: () => onTap(),
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),

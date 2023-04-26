@@ -4,11 +4,9 @@ import 'package:poke_app/data/data.dart';
 class PokemonMoveCard extends StatelessWidget {
   const PokemonMoveCard({
     Key? key,
-    this.number,
     required this.move,
   }) : super(key: key);
 
-  final int? number;
   final MoveModel move;
 
   @override

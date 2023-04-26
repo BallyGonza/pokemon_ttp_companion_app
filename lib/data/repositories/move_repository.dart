@@ -4,8 +4,13 @@ class MoveRepository {
   MoveRepository();
 
   List<MoveModel> getMovesByClass(
-      List<MoveModel> moves, MoveClassModel moveClass) {
-    return moves.where((move) => move.moveClass == moveClass).toList();
+    List<MoveModel> moves,
+    MoveClassModel moveClass,
+  ) {
+    final List<MoveModel> filteredMoves =
+        moves.where((move) => move.moveClass.id == moveClass.id).toList();
+
+    return filteredMoves;
   }
 }
 

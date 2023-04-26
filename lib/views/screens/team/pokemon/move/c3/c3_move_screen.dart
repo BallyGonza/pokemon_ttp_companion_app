@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-import 'move_list.dart';
+import 'c3_move_list.dart';
 
-class MoveScreen extends StatefulWidget {
-  const MoveScreen({
-    required this.moves,
-    required this.moveClass,
+class C3MoveScreen extends StatelessWidget {
+  const C3MoveScreen({
+    required this.pokemon,
     Key? key,
   }) : super(key: key);
 
-  final List<MoveModel> moves;
-  final MoveClassModel moveClass;
+  final PokemonModel pokemon;
 
-  @override
-  State<MoveScreen> createState() => _MoveScreenState();
-}
-
-class _MoveScreenState extends State<MoveScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(widget.moves[0].type.color),
+        backgroundColor: Color(pokemon.moves[0].type.color),
         automaticallyImplyLeading: false,
         title: const Align(
           alignment: Alignment.centerLeft,
@@ -37,7 +30,7 @@ class _MoveScreenState extends State<MoveScreen> {
         ),
         actions: [
           Image.asset(
-            widget.moveClass.icon,
+            common.icon,
             width: 40,
           ),
           const SizedBox(width: 10),
@@ -46,13 +39,12 @@ class _MoveScreenState extends State<MoveScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(widget.moves[0].type.backImg),
+            image: AssetImage(pokemon.moves[0].type.backImg),
             fit: BoxFit.cover,
           ),
         ),
-        child: MoveList(
-          moves: widget.moves,
-          moveClass: widget.moveClass,
+        child: C3MoveList(
+          pokemon: pokemon,
         ),
       ),
     );
