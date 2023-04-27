@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:poke_app/bloc/bloc.dart';
 import 'package:poke_app/data/data.dart';
-import 'package:poke_app/views/widgets/widgets.dart';
 
 class PokedexPokemonScreen extends StatefulWidget {
   const PokedexPokemonScreen({
@@ -121,40 +120,52 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
                   Container(
                     margin: const EdgeInsets.only(top: 170),
                     width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.6,
+                    height: MediaQuery.of(context).size.height * 0.55,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                      ),
-                      child: Column(
-                        children: [
-                          const SizedBox(
-                            height: 65,
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 50,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              'About',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'Base Stats',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'Evolution',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'Moves',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
                           ),
-                          PokemonMoveCard(
-                            move: widget.pokemon.c1,
+                          child: Text(
+                            widget.pokemon.description,
+                            style: const TextStyle(
+                              fontSize: 15,
+                            ),
                           ),
-                          PokemonMoveCard(
-                            move: widget.pokemon.c2,
-                          ),
-                          PokemonMoveCard(
-                            move: widget.pokemon.c3,
-                          ),
-                          PokemonMoveCard(
-                            move: widget.pokemon.a1,
-                          ),
-                          PokemonMoveCard(
-                            move: widget.pokemon.a2,
-                          ),
-                          PokemonMoveCard(
-                            move: widget.pokemon.s,
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   Align(

@@ -174,6 +174,8 @@ PokemonModel bulbasaur = PokemonModel(
   isCaptured: false,
   isFavorite: false,
   types: [grass, poison],
+  description:
+      'There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.',
   c1: vineWhip,
   c2: vineWhip,
   c3: vineWhip,
@@ -203,6 +205,8 @@ PokemonModel ivysaur = PokemonModel(
   isCaptured: false,
   isFavorite: false,
   types: [grass, poison],
+  description:
+      'When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.',
   c1: vineWhip,
   c2: vineWhip,
   c3: vineWhip,
@@ -233,6 +237,8 @@ PokemonModel venusaur = PokemonModel(
   isCaptured: false,
   isFavorite: false,
   types: [grass, poison],
+  description:
+      'The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.',
   c1: vineWhip,
   c2: vineWhip,
   c3: vineWhip,
@@ -262,6 +268,8 @@ PokemonModel charmander = PokemonModel(
   isCaptured: false,
   isFavorite: false,
   types: [fire],
+  description:
+      'Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.',
   c1: ember,
   c2: ember,
   c3: scratch,
@@ -292,6 +300,8 @@ PokemonModel charmeleon = PokemonModel(
   isCaptured: false,
   isFavorite: false,
   types: [fire],
+  description:
+      'When it swings its burning tail, it elevates the temperature to unbearably high levels.',
   c1: ember,
   c2: ember,
   c3: scratch,
@@ -323,6 +333,8 @@ PokemonModel charizard = PokemonModel(
   isCaptured: false,
   isFavorite: false,
   types: [fire, fly],
+  description:
+      'Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.',
   c1: ember,
   c2: ember,
   c3: scratch,

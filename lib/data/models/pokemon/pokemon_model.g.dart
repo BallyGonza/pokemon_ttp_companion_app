@@ -32,16 +32,17 @@ class PokemonModelAdapter extends TypeAdapter<PokemonModel> {
       a2: fields[12] as MoveModel,
       s: fields[13] as MoveModel,
       moves: (fields[14] as List).cast<MoveModel>(),
-      isFavorite: fields[15] as bool,
-      isCaptured: fields[16] as bool,
-      imageHeight: fields[17] as double,
+      description: fields[15] as String,
+      isFavorite: fields[16] as bool,
+      isCaptured: fields[17] as bool,
+      imageHeight: fields[18] as double,
     );
   }
 
   @override
   void write(BinaryWriter writer, PokemonModel obj) {
     writer
-      ..writeByte(18)
+      ..writeByte(19)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -73,10 +74,12 @@ class PokemonModelAdapter extends TypeAdapter<PokemonModel> {
       ..writeByte(14)
       ..write(obj.moves)
       ..writeByte(15)
-      ..write(obj.isFavorite)
+      ..write(obj.description)
       ..writeByte(16)
-      ..write(obj.isCaptured)
+      ..write(obj.isFavorite)
       ..writeByte(17)
+      ..write(obj.isCaptured)
+      ..writeByte(18)
       ..write(obj.imageHeight);
   }
 

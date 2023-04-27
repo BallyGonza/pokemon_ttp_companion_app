@@ -36,10 +36,12 @@ class PokemonModel {
   @HiveField(14)
   List<MoveModel> moves;
   @HiveField(15)
-  bool isFavorite;
+  String description;
   @HiveField(16)
-  bool isCaptured;
+  bool isFavorite;
   @HiveField(17)
+  bool isCaptured;
+  @HiveField(18)
   double imageHeight;
 
   PokemonModel({
@@ -58,6 +60,7 @@ class PokemonModel {
     required this.a2,
     required this.s,
     required this.moves,
+    required this.description,
     required this.isFavorite,
     required this.isCaptured,
     this.imageHeight = 200,
