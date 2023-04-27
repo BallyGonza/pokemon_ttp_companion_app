@@ -39,6 +39,8 @@ class PokemonModel {
   bool isFavorite;
   @HiveField(16)
   bool isCaptured;
+  @HiveField(17)
+  double imageHeight;
 
   PokemonModel({
     required this.id,
@@ -58,5 +60,6 @@ class PokemonModel {
     required this.moves,
     required this.isFavorite,
     required this.isCaptured,
+    this.imageHeight = 200,
   });
 }

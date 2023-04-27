@@ -35,6 +35,7 @@ const String fairyIcon =
 
 // Pokeball Fondo Pokemon en Pokedex
 const pokeballBack = 'assets/images/pokeball.png';
+const pokeballVector = 'assets/images/pokeball_vector.png';
 
 // Fondo pokedex
 const pokedexBack = 'assets/images/back_pokedex.jpg';

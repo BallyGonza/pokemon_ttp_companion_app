@@ -26,31 +26,68 @@ class PokemonCard extends StatelessWidget {
         elevation: 3.5,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Image.asset(
-              pokemon.sprite,
-            ),
-            Text(
-              pokemon.name,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
-                color: Colors.white,
-              ),
-            ),
-            const Spacer(),
-            pokemon.isCaptured
-                ? Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Image.asset(
-                      pokeballBack,
-                      height: 25,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Row(
+                children: [
+                  Text(
+                    '#${pokemon.id.toString().padLeft(3, '0')}',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Colors.white,
                     ),
-                  )
-                : const SizedBox.shrink()
-          ],
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  pokemon.isCaptured
+                      ? Image.asset(
+                          pokeballBack,
+                          height: 15,
+                        )
+                      : const SizedBox(
+                          height: 15,
+                          width: 15,
+                        ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        pokemon.name,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Image.asset(
+                        pokeballVector,
+                        height: 100,
+                        color: Colors.white.withOpacity(0.3),
+                      ),
+                      Image.asset(
+                        pokemon.image,
+                        height: 100,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

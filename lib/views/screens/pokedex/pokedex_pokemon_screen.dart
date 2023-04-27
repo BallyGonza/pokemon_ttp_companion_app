@@ -21,33 +21,9 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.read<PokedexBloc>().add(
-                PokedexEvent.catchPokemon(widget.pokemon.id),
-              );
-        },
-        backgroundColor: Color(widget.pokemon.types[0].color),
-        child: const FaIcon(
-          FontAwesomeIcons.plus,
-          color: Colors.white,
-        ),
-      ),
       appBar: AppBar(
         backgroundColor: Color(widget.pokemon.types[0].color),
         automaticallyImplyLeading: false,
-        title: Align(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            widget.pokemon.name,
-            textAlign: TextAlign.left,
-            style: const TextStyle(
-              fontSize: 30,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -64,68 +40,143 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
         ],
       ),
       body: Container(
+        width: double.infinity,
+        height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(widget.pokemon.types[0].backImg),
-            fit: BoxFit.cover,
-          ),
+          color: Color(widget.pokemon.types[0].color),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.25,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    width: 150,
-                    height: 150,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(pokeballBack),
-                        fit: BoxFit.fill,
-                        opacity: 0.7,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 5,
+                ),
+                child: Text(
+                  widget.pokemon.name,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 5,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text(
+                        widget.pokemon.types[0].name,
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.8),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                    child: Image.asset(
-                      widget.pokemon.image,
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    widget.pokemon.types.length > 1
+                        ? Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 5,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Text(
+                              widget.pokemon.types[1].name,
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.8),
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        : const SizedBox.shrink(),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Stack(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 170),
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 65,
+                          ),
+                          PokemonMoveCard(
+                            move: widget.pokemon.c1,
+                          ),
+                          PokemonMoveCard(
+                            move: widget.pokemon.c2,
+                          ),
+                          PokemonMoveCard(
+                            move: widget.pokemon.c3,
+                          ),
+                          PokemonMoveCard(
+                            move: widget.pokemon.a1,
+                          ),
+                          PokemonMoveCard(
+                            move: widget.pokemon.a2,
+                          ),
+                          PokemonMoveCard(
+                            move: widget.pokemon.s,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      PokemonSpec(title: 'Speed', value: widget.pokemon.speed),
-                      PokemonSpec(
-                          title: 'Damage', value: widget.pokemon.damage),
-                    ],
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Image.asset(
+                      pokeballVector,
+                      width: 200,
+                      height: 200,
+                      color: Colors.white.withOpacity(0.3),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      widget.pokemon.image,
+                      height: widget.pokemon.imageHeight,
+                    ),
                   ),
                 ],
               ),
-            ),
-            Column(
-              children: [
-                PokemonMoveCard(
-                  move: widget.pokemon.c1,
-                ),
-                PokemonMoveCard(
-                  move: widget.pokemon.c2,
-                ),
-                PokemonMoveCard(
-                  move: widget.pokemon.c3,
-                ),
-                PokemonMoveCard(
-                  move: widget.pokemon.a1,
-                ),
-                PokemonMoveCard(
-                  move: widget.pokemon.a2,
-                ),
-                PokemonMoveCard(
-                  move: widget.pokemon.s,
-                ),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

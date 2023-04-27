@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 //Biblioteca de Colores
 const int normalColor = 0xffb929ba3;
-const int fireColor = 0xffbff983f;
-const int waterColor = 0xffb3393dd;
-const int grassColor = 0xffb35c04a;
+int fireColor = Colors.red[300]!.value;
+int waterColor = Colors.blue[300]!.value;
+int grassColor = Colors.green[300]!.value;
 const int poisonColor = 0xffbb667cf;
 const int psychicColor = 0xffbF85788;
 const int steelColor = 0xffb598fa3;
