@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-import 'c1_move_list.dart';
+import 'package:poke_app/views/screens/team/pokemon/move/c1/c1_move_list.dart';
 
 class C1MoveScreen extends StatelessWidget {
   const C1MoveScreen({
     required this.pokemon,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PokemonModel pokemon;
 

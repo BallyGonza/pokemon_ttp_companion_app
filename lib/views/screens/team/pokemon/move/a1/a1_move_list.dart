@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-import 'a1_move_card.dart';
+import 'package:poke_app/views/screens/team/pokemon/move/a1/a1_move_card.dart';
 
 class A1MoveList extends StatefulWidget {
   const A1MoveList({
@@ -33,13 +33,14 @@ class _A1MoveListState extends State<A1MoveList> {
     return Container(
       margin: const EdgeInsets.only(top: 10),
       child: ListView.builder(
-          itemCount: moves.length,
-          itemBuilder: (BuildContext context, int index) {
-            return A1MoveCard(
-              pokemon: widget.pokemon,
-              move: moves[index],
-            );
-          }),
+        itemCount: moves.length,
+        itemBuilder: (BuildContext context, int index) {
+          return A1MoveCard(
+            pokemon: widget.pokemon,
+            move: moves[index],
+          );
+        },
+      ),
     );
   }
 }

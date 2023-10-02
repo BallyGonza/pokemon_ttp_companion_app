@@ -1,9 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:poke_app/bloc/pokedex_bloc/pokedex_event.dart';
+import 'package:poke_app/bloc/pokedex_bloc/pokedex_state.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/data/repositories/user_repository.dart';
-
-import 'pokedex_event.dart';
-import 'pokedex_state.dart';
 
 class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
   PokedexBloc() : super(const PokedexState.initial()) {

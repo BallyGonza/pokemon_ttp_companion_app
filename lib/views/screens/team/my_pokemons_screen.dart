@@ -5,7 +5,7 @@ import 'package:poke_app/data/data.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
 class MyPokemonsScreen extends StatefulWidget {
-  const MyPokemonsScreen({Key? key}) : super(key: key);
+  const MyPokemonsScreen({super.key});
 
   @override
   State<MyPokemonsScreen> createState() => _MyPokemonsScreenState();
@@ -21,12 +21,14 @@ class _MyPokemonsScreenState extends State<MyPokemonsScreen> {
         backgroundColor: Colors.black,
         title: const Align(
           alignment: Alignment.centerLeft,
-          child: Text('My Pokemons',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              )),
+          child: Text(
+            'My Pokemons',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ),
       body: BlocBuilder<PokedexBloc, PokedexState>(

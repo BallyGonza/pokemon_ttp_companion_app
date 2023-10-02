@@ -5,6 +5,28 @@ part 'pokemon_model.g.dart';
 
 @HiveType(typeId: 2)
 class PokemonModel {
+  PokemonModel({
+    required this.id,
+    required this.name,
+    required this.image,
+    required this.sprite,
+    required this.hp,
+    required this.damage,
+    required this.speed,
+    required this.types,
+    required this.c1,
+    required this.c2,
+    required this.c3,
+    required this.a1,
+    required this.a2,
+    required this.s,
+    required this.moves,
+    required this.description,
+    required this.isFavorite,
+    required this.isCaptured,
+    this.imageHeight = 200,
+  });
+
   @HiveField(0)
   int id;
   @HiveField(1)
@@ -43,26 +65,4 @@ class PokemonModel {
   bool isCaptured;
   @HiveField(18)
   double imageHeight;
-
-  PokemonModel({
-    required this.id,
-    required this.name,
-    required this.image,
-    required this.sprite,
-    required this.hp,
-    required this.damage,
-    required this.speed,
-    required this.types,
-    required this.c1,
-    required this.c2,
-    required this.c3,
-    required this.a1,
-    required this.a2,
-    required this.s,
-    required this.moves,
-    required this.description,
-    required this.isFavorite,
-    required this.isCaptured,
-    this.imageHeight = 200,
-  });
 }

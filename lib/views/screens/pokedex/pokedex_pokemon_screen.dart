@@ -6,9 +6,9 @@ import 'package:poke_app/data/data.dart';
 
 class PokedexPokemonScreen extends StatefulWidget {
   const PokedexPokemonScreen({
-    Key? key,
     required this.pokemon,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PokemonModel pokemon;
 
@@ -89,26 +89,27 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
                     const SizedBox(
                       width: 10,
                     ),
-                    widget.pokemon.types.length > 1
-                        ? Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 5,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.2),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Text(
-                              widget.pokemon.types[1].name,
-                              style: TextStyle(
-                                color: Colors.white.withOpacity(0.8),
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          )
-                        : const SizedBox.shrink(),
+                    if (widget.pokemon.types.length > 1)
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 5,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Text(
+                          widget.pokemon.types[1].name,
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.8),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      )
+                    else
+                      const SizedBox.shrink(),
                   ],
                 ),
               ),
@@ -130,9 +131,9 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
                         const SizedBox(
                           height: 50,
                         ),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
+                          children: [
                             Text(
                               'About',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -178,7 +179,6 @@ class _PokedexPokemonScreenState extends State<PokedexPokemonScreen> {
                     ),
                   ),
                   Align(
-                    alignment: Alignment.center,
                     child: Image.asset(
                       widget.pokemon.image,
                       height: widget.pokemon.imageHeight,

@@ -5,6 +5,15 @@ part 'user_model.g.dart';
 
 @HiveType(typeId: 6)
 class UserModel {
+  UserModel({
+    required this.id,
+    required this.name,
+    required this.pokedex,
+    required this.trainers,
+    required this.coins,
+    required this.pokemonTeam,
+  });
+
   @HiveField(0)
   int id;
   @HiveField(1)
@@ -17,13 +26,4 @@ class UserModel {
   int coins;
   @HiveField(5)
   List<PokemonModel> pokemonTeam;
-
-  UserModel({
-    required this.id,
-    required this.name,
-    required this.pokedex,
-    required this.trainers,
-    required this.coins,
-    required this.pokemonTeam,
-  });
 }

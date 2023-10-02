@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-import 'c3_move_list.dart';
+import 'package:poke_app/views/screens/team/pokemon/move/c3/c3_move_list.dart';
 
 class C3MoveScreen extends StatelessWidget {
   const C3MoveScreen({
     required this.pokemon,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PokemonModel pokemon;
 

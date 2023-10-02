@@ -4,6 +4,13 @@ part 'move_class_model.g.dart';
 
 @HiveType(typeId: 1)
 class MoveClassModel {
+  MoveClassModel({
+    required this.id,
+    required this.name,
+    required this.color,
+    required this.icon,
+  });
+
   @HiveField(0)
   int id;
   @HiveField(1)
@@ -12,11 +19,4 @@ class MoveClassModel {
   int color;
   @HiveField(3)
   String icon;
-
-  MoveClassModel({
-    required this.id,
-    required this.name,
-    required this.color,
-    required this.icon,
-  });
 }

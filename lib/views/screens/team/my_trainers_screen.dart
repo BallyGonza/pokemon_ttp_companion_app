@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
 class MyTrainersScreen extends StatefulWidget {
-  const MyTrainersScreen({Key? key}) : super(key: key);
+  const MyTrainersScreen({super.key});
 
   @override
   State<MyTrainersScreen> createState() => _MyTrainersScreenState();
@@ -18,7 +18,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
         title: const Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            "Trainer Cards",
+            'Trainer Cards',
             textAlign: TextAlign.left,
             style: TextStyle(
               fontSize: 25,
@@ -52,55 +52,59 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Card(
                 child: ListTile(
-                    leading: Image.asset(
-                      commonTrainerIcon,
-                      width: 45,
-                    ),
-                    tileColor: commonTrainerColor,
-                    title: const Text('C2')),
+                  leading: Image.asset(
+                    commonTrainerIcon,
+                    width: 45,
+                  ),
+                  tileColor: commonTrainerColor,
+                  title: const Text('C2'),
+                ),
               ),
             ), // ATAQUE C2
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Card(
                 child: ListTile(
-                    leading: Image.asset(
-                      commonTrainerIcon,
-                      width: 45,
-                    ),
-                    tileColor: commonTrainerColor,
-                    title: const Text('C3')),
+                  leading: Image.asset(
+                    commonTrainerIcon,
+                    width: 45,
+                  ),
+                  tileColor: commonTrainerColor,
+                  title: const Text('C3'),
+                ),
               ),
             ), // ATAQUE C3
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Card(
                 child: ListTile(
-                    leading: Image.asset(
-                      advancedTrainerIcon,
-                      width: 45,
-                    ),
-                    tileColor: advancedTrainerColor,
-                    title: const Text('A1')),
+                  leading: Image.asset(
+                    advancedTrainerIcon,
+                    width: 45,
+                  ),
+                  tileColor: advancedTrainerColor,
+                  title: const Text('A1'),
+                ),
               ),
             ), // ATAQUE A1
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Card(
                 child: ListTile(
-                    leading: Image.asset(
-                      advancedTrainerIcon,
-                      width: 45,
-                    ),
-                    tileColor: advancedTrainerColor,
-                    title: const Text('A2')),
+                  leading: Image.asset(
+                    advancedTrainerIcon,
+                    width: 45,
+                  ),
+                  tileColor: advancedTrainerColor,
+                  title: const Text('A2'),
+                ),
               ),
             ), // ATAQUE A2
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Card(
                 child: ListTile(
                   leading: Image.asset(
@@ -109,7 +113,7 @@ class _MyTrainersScreenState extends State<MyTrainersScreen> {
                   ),
                   tileColor: specialTrainerColor,
                   title: const Text(
-                    "S",
+                    'S',
                   ),
                 ), // ATAQUE S
               ),

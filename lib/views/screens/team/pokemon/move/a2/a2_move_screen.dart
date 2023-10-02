@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:poke_app/data/data.dart';
 
-import 'a2_move_list.dart';
+import 'package:poke_app/views/screens/team/pokemon/move/a2/a2_move_list.dart';
 
 class A2MoveScreen extends StatelessWidget {
   const A2MoveScreen({
     required this.pokemon,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PokemonModel pokemon;
 

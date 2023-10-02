@@ -10,7 +10,7 @@ class UserRepository {
     if (userBox.isEmpty) {
       await saveUser(defaultUser);
     } else if (userBox.isNotEmpty) {
-      UserModel user = userBox.getAt(0)!;
+      final user = userBox.getAt(0)!;
       await updatePokedex(user);
     }
     return userBox.getAt(0)!;
@@ -19,8 +19,10 @@ class UserRepository {
   Future<void> updatePokedex(UserModel user) async {
     if (user.pokedex.length != defaultPokemons.length) {
       final newPokemons = defaultPokemons
-          .where((element) =>
-              !user.pokedex.any((userPokemon) => userPokemon.id == element.id))
+          .where(
+            (element) => !user.pokedex
+                .any((userPokemon) => userPokemon.id == element.id),
+          )
           .toList();
 
       user.pokedex = [...user.pokedex, ...newPokemons];

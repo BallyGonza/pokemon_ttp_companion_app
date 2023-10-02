@@ -1,10 +1,8 @@
 import 'package:bloc/bloc.dart';
-
+import 'package:poke_app/bloc/user_bloc/user_event.dart';
+import 'package:poke_app/bloc/user_bloc/user_state.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/data/repositories/user_repository.dart';
-
-import 'user_event.dart';
-import 'user_state.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {
   UserBloc() : super(const UserState.initial()) {

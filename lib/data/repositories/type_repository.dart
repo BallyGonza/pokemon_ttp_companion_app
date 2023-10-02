@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'package:poke_app/data/constants/constants.dart';
 import 'package:poke_app/data/models/models.dart';
 

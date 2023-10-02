@@ -3,16 +3,16 @@ import 'package:poke_app/data/data.dart';
 
 class PokemonCard extends StatelessWidget {
   const PokemonCard.pokedex({
-    Key? key,
     required this.onTap,
     required this.pokemon,
-  }) : super(key: key);
+    super.key,
+  });
 
   const PokemonCard.catched({
-    Key? key,
     required this.pokemon,
     required this.onTap,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PokemonModel pokemon;
   final VoidCallback onTap;
@@ -20,7 +20,7 @@ class PokemonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => onTap(),
+      onTap: onTap,
       child: Card(
         color: Color(pokemon.types[0].color),
         elevation: 3.5,
@@ -44,15 +44,16 @@ class PokemonCard extends StatelessWidget {
                   const SizedBox(
                     width: 5,
                   ),
-                  pokemon.isCaptured
-                      ? Image.asset(
-                          pokeballBack,
-                          height: 15,
-                        )
-                      : const SizedBox(
-                          height: 15,
-                          width: 15,
-                        ),
+                  if (pokemon.isCaptured)
+                    Image.asset(
+                      pokeballBack,
+                      height: 15,
+                    )
+                  else
+                    const SizedBox(
+                      height: 15,
+                      width: 15,
+                    ),
                 ],
               ),
               Row(

@@ -4,6 +4,14 @@ part 'type_model.g.dart';
 
 @HiveType(typeId: 3)
 class TypeModel {
+  TypeModel({
+    required this.id,
+    required this.name,
+    required this.icon,
+    required this.backImg,
+    required this.color,
+  });
+
   @HiveField(0)
   int id;
   @HiveField(1)
@@ -14,12 +22,4 @@ class TypeModel {
   String backImg;
   @HiveField(4)
   int color;
-
-  TypeModel({
-    required this.id,
-    required this.name,
-    required this.icon,
-    required this.backImg,
-    required this.color,
-  });
 }

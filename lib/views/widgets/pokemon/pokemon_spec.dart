@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class PokemonSpec extends StatelessWidget {
   const PokemonSpec({
-    Key? key,
     required this.title,
     required this.value,
-  }) : super(key: key);
+    super.key,
+  });
 
   final String title;
   final int value;
@@ -32,7 +32,7 @@ class PokemonSpec extends StatelessWidget {
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
-          )
+          ),
         ],
       ),
     );

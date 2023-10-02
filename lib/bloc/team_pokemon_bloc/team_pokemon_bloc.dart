@@ -1,11 +1,7 @@
 import 'package:bloc/bloc.dart';
-
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:poke_app/bloc/bloc.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/data/repositories/user_repository.dart';
-
-import 'team_pokemon_event.dart';
-import 'team_pokemon_state.dart';
 
 class TeamPokemonBloc extends Bloc<TeamPokemonEvent, TeamPokemonState> {
   TeamPokemonBloc() : super(const TeamPokemonState.initial()) {

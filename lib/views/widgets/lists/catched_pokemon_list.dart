@@ -4,8 +4,7 @@ import 'package:poke_app/views/screens/team/pokemon/catched_pokemon_screen.dart'
 import 'package:poke_app/views/widgets/widgets.dart';
 
 class MyPokemonList extends StatefulWidget {
-  const MyPokemonList({required this.catchedPokemons, Key? key})
-      : super(key: key);
+  const MyPokemonList({required this.catchedPokemons, super.key});
   final List<PokemonModel> catchedPokemons;
 
   @override
@@ -26,13 +25,14 @@ class MyPokemonListState extends State<MyPokemonList> {
                 pokemon: widget.catchedPokemons[index],
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  MaterialPageRoute<CatchedPokemonScreen>(
                     builder: (context) => CatchedPokemonScreen(
                       pokemon: widget.catchedPokemons[index],
                     ),
                   ),
                 ),
               );
-            });
+            },
+          );
   }
 }

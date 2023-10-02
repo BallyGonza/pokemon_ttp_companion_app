@@ -1,9 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:poke_app/bloc/trainer_bloc/trainer_event.dart';
+import 'package:poke_app/bloc/trainer_bloc/trainer_state.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/data/repositories/user_repository.dart';
-
-import 'trainer_event.dart';
-import 'trainer_state.dart';
 
 class TrainerBloc extends Bloc<TrainerEvent, TrainerState> {
   TrainerBloc() : super(const TrainerState.initial()) {

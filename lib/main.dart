@@ -5,7 +5,7 @@ import 'package:poke_app/bloc/bloc.dart';
 import 'package:poke_app/data/data.dart';
 import 'package:poke_app/theme.dart';
 
-import 'views/screens/landing_screen.dart';
+import 'package:poke_app/views/screens/landing_screen.dart';
 
 Future<void> main() async {
   Hive
@@ -22,27 +22,29 @@ Future<void> main() async {
   await Hive.initFlutter();
   await Hive.openBox<UserModel>('user_box');
 
-  runApp(MultiBlocProvider(
-    providers: [
-      BlocProvider(
-        create: (context) => UserBloc(),
-      ),
-      BlocProvider(
-        create: (context) => PokedexBloc(),
-      ),
-      BlocProvider(
-        create: (context) => TeamPokemonBloc(),
-      ),
-      BlocProvider(
-        create: (context) => TrainerBloc(),
-      ),
-    ],
-    child: const MyApp(),
-  ));
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => UserBloc(),
+        ),
+        BlocProvider(
+          create: (context) => PokedexBloc(),
+        ),
+        BlocProvider(
+          create: (context) => TeamPokemonBloc(),
+        ),
+        BlocProvider(
+          create: (context) => TrainerBloc(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:poke_app/bloc/bloc.dart';
 import 'package:poke_app/data/data.dart';
+import 'package:poke_app/views/screens/team/pokemon/catched_pokemon_move_card.dart';
 import 'package:poke_app/views/screens/team/pokemon/move/a1/a1_move_screen.dart';
 import 'package:poke_app/views/screens/team/pokemon/move/a2/a2_move_screen.dart';
+import 'package:poke_app/views/screens/team/pokemon/move/c1/c1_move_screen.dart';
+import 'package:poke_app/views/screens/team/pokemon/move/c2/c2_move_screen.dart';
 import 'package:poke_app/views/screens/team/pokemon/move/c3/c3_move_screen.dart';
 import 'package:poke_app/views/screens/team/pokemon/move/s/s_move_screen.dart';
+import 'package:poke_app/views/views.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
-
-import 'catched_pokemon_move_card.dart';
-import 'move/c1/c1_move_screen.dart';
-import 'move/c2/c2_move_screen.dart';
 
 class CatchedPokemonScreen extends StatelessWidget {
   const CatchedPokemonScreen({
-    Key? key,
     required this.pokemon,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PokemonModel pokemon;
 
@@ -52,7 +51,6 @@ class CatchedPokemonScreen extends StatelessWidget {
                 ),
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.25,
@@ -91,7 +89,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
+                            MaterialPageRoute<C1MoveScreen>(
                               builder: (context) => C1MoveScreen(
                                 pokemon: pokemon,
                               ),
@@ -105,7 +103,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
+                            MaterialPageRoute<C2MoveScreen>(
                               builder: (context) => C2MoveScreen(
                                 pokemon: pokemon,
                               ),
@@ -119,7 +117,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
+                            MaterialPageRoute<C3MoveScreen>(
                               builder: (context) => C3MoveScreen(
                                 pokemon: pokemon,
                               ),
@@ -133,7 +131,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
+                            MaterialPageRoute<A1MoveScreen>(
                               builder: (context) => A1MoveScreen(
                                 pokemon: pokemon,
                               ),
@@ -147,7 +145,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
+                            MaterialPageRoute<A2MoveScreen>(
                               builder: (context) => A2MoveScreen(
                                 pokemon: pokemon,
                               ),
@@ -161,7 +159,7 @@ class CatchedPokemonScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
+                            MaterialPageRoute<SMoveScreen>(
                               builder: (context) => SMoveScreen(
                                 pokemon: pokemon,
                               ),

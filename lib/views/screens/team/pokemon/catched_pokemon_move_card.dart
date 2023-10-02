@@ -3,29 +3,29 @@ import 'package:poke_app/data/data.dart';
 
 class CatchedPokemonMoveCard extends StatelessWidget {
   const CatchedPokemonMoveCard({
-    Key? key,
     required this.move,
     required this.pokemon,
     required this.onTap,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PokemonModel pokemon;
   final MoveModel move;
-  final Function onTap;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       child: InkWell(
-        onTap: () => onTap(),
+        onTap: onTap,
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
           color: Color(move.type.color),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8),
             child: Row(
               children: [
                 Image.asset(

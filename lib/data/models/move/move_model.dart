@@ -5,6 +5,17 @@ part 'move_model.g.dart';
 
 @HiveType(typeId: 0)
 class MoveModel {
+  MoveModel({
+    required this.id,
+    required this.name,
+    required this.type,
+    required this.damage,
+    required this.pp,
+    required this.accuracy,
+    required this.moveClass,
+    required this.description,
+  });
+
   @HiveField(0)
   int id;
   @HiveField(1)
@@ -21,15 +32,4 @@ class MoveModel {
   int accuracy;
   @HiveField(8)
   String description;
-
-  MoveModel({
-    required this.id,
-    required this.name,
-    required this.type,
-    required this.damage,
-    required this.pp,
-    required this.accuracy,
-    required this.moveClass,
-    required this.description,
-  });
 }

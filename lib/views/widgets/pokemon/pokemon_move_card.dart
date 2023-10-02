@@ -3,9 +3,9 @@ import 'package:poke_app/data/data.dart';
 
 class PokemonMoveCard extends StatelessWidget {
   const PokemonMoveCard({
-    Key? key,
     required this.move,
-  }) : super(key: key);
+    super.key,
+  });
 
   final MoveModel move;
 
@@ -19,7 +19,7 @@ class PokemonMoveCard extends StatelessWidget {
         ),
         color: Color(move.type.color),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: Row(
             children: [
               Image.asset(

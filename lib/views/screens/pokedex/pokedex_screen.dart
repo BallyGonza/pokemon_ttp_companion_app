@@ -1,13 +1,10 @@
-import 'package:easy_search_bar/easy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:poke_app/bloc/bloc.dart';
-import 'package:poke_app/data/data.dart';
 import 'package:poke_app/views/widgets/widgets.dart';
 
 class PokedexScreen extends StatefulWidget {
-  const PokedexScreen({Key? key}) : super(key: key);
+  const PokedexScreen({super.key});
 
   @override
   State<PokedexScreen> createState() => _PokedexScreenState();

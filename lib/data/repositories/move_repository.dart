@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars, avoid_escaping_inner_quotes
+
 import 'package:poke_app/data/data.dart';
 
 class MoveRepository {
@@ -7,7 +9,7 @@ class MoveRepository {
     List<MoveModel> moves,
     MoveClassModel moveClass,
   ) {
-    final List<MoveModel> filteredMoves =
+    final filteredMoves =
         moves.where((move) => move.moveClass.id == moveClass.id).toList();
 
     return filteredMoves;
