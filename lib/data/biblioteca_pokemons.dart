@@ -1,8 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:poke_app/data/constants/colors.dart';
-import 'package:poke_app/data/constants/images.dart';
-
 // Bulbasaur
 int bulbasaur_id = 001; //ID
 String bulbasaur_upload = '';
